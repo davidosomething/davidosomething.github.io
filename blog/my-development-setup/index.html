@@ -1,0 +1,486 @@
+<!doctype html>
+<html itemscope="" itemtype="https://schema.org/BlogPosting" dir="ltr" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+		<meta name="author" content="David O'Trakoun">
+	<meta name="google-site-verification" content="CUF_b2uUr3xngYZU_Assv-CXFtDTzQjFdoh3_S35FDQ">
+	<meta name="msvalidate.01" content="DB32AB8ADBD71157CA9F135EAD9EFE23">
+	<meta name="p:domain_verify" content="87f3b7851e149ff74531fdb012c62bf3">
+	<meta property="fb:app_id" content="285126294854913">
+	<meta property="fb:admins" content="16109547">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@davidosomething">
+<meta name="robots" content="index,noodp,follow">
+<meta name="twitter:title" property="og:title" content="My Development Setup">
+<meta property="og:url" content="http://davidosomething.com/blog/my-development-setup">
+<meta property="og:site_name" content="davidosomething.com">
+<meta property="og:type" content="article">
+	<meta name="description" content="How I set up my dev environment and projects for 2010">
+	<meta name="twitter:description" property="og:description" content="How I set up my dev environment and projects for 2010">
+	<meta name="twitter:image" property="og:image" content="/assets/img/avatar.png">
+	<meta name="keywords" content="apache,bitbucket,commandline,cygwin,development,DNS,FTP,LAMP,Linux,Mercurial,MongoDB,mysql,node.js,php,router,SSH,Ubuntu,virtualbox">
+<meta itemprop="dateModified" content="2010-11-29T20:35:48.000Z">
+	<title>davidosomething.com | My Development Setup</title>
+	<link rel="author" type="text/plain" href="/humans.txt">
+	<link rel="canonical" href="http://davidosomething.com/blog/my-development-setup">
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<link rel="alternate" type="application/rss+xml" title="davidosomething.com | RSS Feed" href="/rss.xml">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//davidosomething.disqus.com">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,700,900">
+	<link rel="stylesheet" href="/assets/css/global.css">
+	<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments);};ga.l=+new Date;ga('create','UA-9710641-1','auto');ga('send','pageview');</script>
+</head>
+<body id="top" class="type--post section--blog slug--my-development-setup">
+	<header class="siteHeader">
+	<div class="siteHeader__title"><a href="/" class="siteHeader__siteName">davidosomething.com</a> | <a href="#main" class="siteHeader__pageTitle">My Development Setup</a></div>
+</header>
+	<div class="globalBody">
+		<header class="globalHeader"><section class="bio" itemprop="author publisher" itemscope="" itemtype="http://schema.org/Organization">
+	<h2 class="bio__author">
+		<a class="bio__author__name" href="/" rel="me" itemprop="name">David O'Trakoun
+	</a></h2>
+	<div class="bio__avatar" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+		<a class="bio__avatar__link" href="/" rel="me"><img alt="Avatar" src="/assets/img/avatar.png" height="80" width="80" itemprop="url"></a>
+	</div>
+	<ul class="bio__links">
+		<li><a href="https://twitter.com/davidosomething" class="icon-twitter-with-circle" itemprop="sameAs url"><span>Twitter</span></a></li>
+		<li><a href="https://github.com/davidosomething" class="icon-github" itemprop="sameAs url"><span>GitHub</span></a></li>
+		<li><a href="https://plus.google.com/u/0/107476188736969594066" class="icon-google-plus3" itemprop="sameAs url"><span>Google+</span></a></li>
+		<li><a href="https://www.linkedin.com/in/davidosomething/" class="icon-linkedin-with-circle" itemprop="sameAs url"><span>LinkedIn</span></a></li>
+	</ul>
+</section>
+</header>
+		<div class="globalContent">
+			<main class="globalDiv" id="main">
+<article class="article" itemprop="mainEntity">
+	<meta itemprop="name" content="my-development-setup">
+	<header class="article__header">
+		<h1 class="article__title" itemprop="headline"><a rel="bookmark" class="article__header__link article__header__link--permalink" href="http://davidosomething.com/blog/my-development-setup" itemprop="mainEntityOfPage url">My Development&nbsp;Setup</a></h1>
+		<h2 class="article__subheader" itemprop="alternativeHeadline">How I set up my dev environment and projects for&nbsp;2010</h2>
+		<div class="article__meta">
+			<time datetime="2010-11-29T20:35:48.000Z" itemprop="datePublished">November 29, 2010</time>
+			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">apache</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">bitbucket</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">commandline</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">cygwin</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">development</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">DNS</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">FTP</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">LAMP</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">Linux</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">Mercurial</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">MongoDB</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">mysql</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">node.js</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">php</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">router</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">SSH</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">Ubuntu</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">virtualbox</span></a>
+		</li>
+</ul>
+		</div>
+	</header>
+	<section class="article__body" itemprop="articleBody"><p>Although I primarily develop on a Windows PC, I still consider Linux (also Unix
+and OSX) the most powerful and practical environment for setting up web and
+database servers, DNS, and version control repositories (as a master on DVCS).
+A few of the benefits include:</p>
+<ul>
+<li>Using SSH to connect to a Linux commandline is faster compared to RDP’ing or
+VNC’ing into a Windows machine (also saves battery life on smartphones).
+Cygwin is a slow alternative.</li>
+<li>Package management for easy (and frequent) upgrades.</li>
+<li>More robustly integrated file permissions between the file system and web
+server (that is, IIS doesn’t use NTFS file permissions, but instead Windows
+account permissions).</li>
+<li>File paths and naming make more sense on *nix than Windows. For instance,
+<samp>.htaccess</samp> is a system file, not an unnamed file with the
+htaccess extension.</li>
+</ul>
+<h2 id="the-setup">The setup</h2>
+<p>For my personal set up, I’ve currently got a VM running on my media center PC
+with the following:</p>
+<ul>
+<li>OpenSSH on port 22</li>
+<li>Apache Server 2.2, listening on port 80 for incoming web traffic</li>
+<li>Apache Tomcat, listening on port 8080 for incoming web traffic</li>
+<li>vsFTPd on port 21</li>
+<li>awstats for Apache log file analysis</li>
+<li>PHP 5</li>
+<li>Railo for Adobe Coldfusion</li>
+<li>MySQL</li>
+<li>Git – to get node.js and other source</li>
+<li>Mercurial – for my own version control</li>
+<li>node.js as a daemon</li>
+<li>MongoDB (for Hummingbird and anything else)</li>
+<li>Hummingbird through node.js server, listening on port 8000 for <strong>live</strong>
+analytics… just to play with</li>
+<li>Icinga (Nagios fork) for service monitoring</li>
+</ul>
+<p>It’s accessible via RDP using VirtualBox’s VRDP on port 4000. That means I can
+access it using a Remote Desktop client like the one that comes with Windows.
+With that I can access an X-Windows environment (xinit, or desktops like Gnome,
+KDE, XFCE) without having to do X11 forwarding to the local computer (such as
+through XMing or Cygwin/X). For the record, RDP is faster than X11 forwarding
+but doesn’t allow for seamless integration.</p>
+<h2 id="here-are-the-steps-i-took-to-set-up-my-vm">Here are the steps I took to set up my VM</h2>
+<h3 id="setting-up-the-host-computer">Setting up the host computer</h3>
+<ol>
+<li>Allow Wake-on-LAN<ol>
+<li>Enable BIOS setting</li>
+<li>Enable NIC card setting in Windows Device Manager</li>
+<li>Set up router port forwarding</li>
+</ol>
+</li>
+<li>Install TightVNC Server<ol>
+<li>Run as service</li>
+<li>Forward ports on router: 5800 for java client, 5900 for vnc clients</li>
+</ol>
+</li>
+</ol>
+<h3 id="setting-up-the-virtual-machine">Setting up the Virtual Machine</h3>
+<ol>
+<li>Install Ubuntu Server Edition into new VirtualBox virtual machine<ol>
+<li>Use default LAMP settings</li>
+<li>Install OpenSSH</li>
+</ol>
+</li>
+<li>Configure VRDP on Port 4000 instead of port 3389. This way, RDPing into
+3389 allows you to access the host, 4000 the VM. Forward the ports to the
+computer with the router.</li>
+<li>Create a shared drive to interact with the host computer, follow this:
+<a href="http://ipggi.wordpress.com/2010/03/11/virtualbox-shared-folders-with-ubuntu-server-guest/">http://ipggi.wordpress.com/2010/03/11/virtualbox-shared-folders-with-ubuntu-server-guest/</a></li>
+<li>Since the machine runs headless most of the time, the VM is opened using
+VBoxHeadlessTray: <a href="http://www.toptensoftware.com/VBoxHeadlessTray/">http://www.toptensoftware.com/VBoxHeadlessTray/</a></li>
+<li>Install the following tools:<ul>
+<li>emacs (or whatever you want for text editing)</li>
+<li>curl</li>
+<li>wget</li>
+<li>unzip</li>
+<li>elinks (or whatever you want)</li>
+</ul>
+</li>
+</ol>
+<h3 id="setting-up-lamp">Setting up LAMP</h3>
+<p>There’s so many tutorials on this, it’s ridiculously easy. Also, the default
+config is not bad for development purposes.</p>
+<h3 id="setting-up-phpmyadmin">Setting up phpMyAdmin</h3>
+<p>You can basically just let the aptitude installer do everything. The instance
+will be accessible at <a href="http://localhost/phpmyadmin">http://localhost/phpmyadmin</a></p>
+<ol>
+<li><kbd>sudo apt-get install phpmyadmin</kbd></li>
+</ol>
+<h3 id="setting-up-awstats">Setting up awstats</h3>
+<p>Follow <a href="http://maestric.com/doc/ubuntu/awstats">http://maestric.com/doc/ubuntu/awstats</a></p>
+<h3 id="setting-up-the-file-system-and-vsftpd">Setting up the file system and vsftpd</h3>
+<p>Regular install, then edit the config file in /etc/ and change some permissions:</p>
+<ol>
+<li>Add default user to group www-data (apache default group): <kbd>sudo usermod
+-a -G www-data username</kbd></li>
+<li>chmod /var/www, allowing group read and write</li>
+<li>Allow owner and group and write using local_umask = 002</li>
+<li>Set the default FTP path to /var/www</li>
+</ol>
+<h3 id="setting-up-mercurial">Setting up Mercurial</h3>
+<ol>
+<li>Follow this to get apt-add-repository <a href="https://help.ubuntu.com/community/Repositories/CommandLine#Adding Launchpad PPA Repositories">https://help.ubuntu.com/community/Repositories/CommandLine#Adding Launchpad PPA Repositories</a></li>
+<li>Then, follow this to add the mercurial repository and install it
+<a href="http://icephoenix.us/linuxunix/installing-mercurial-1-5-or-1-6-on-ubuntu-lucid-lynx-10-04/">http://icephoenix.us/linuxunix/installing-mercurial-1-5-or-1-6-on-ubuntu-lucid-lynx-10-04/</a>.
+TortoiseHg is not needed since we’re doing everything from the commandline.</li>
+<li>I didn’t want to use bitbucket, so I installed hg cgi server (hg serve only
+allows one unsecured connection at a time) to create my own web based
+repository:<ol>
+<li>Get the mercurial source tar.gz using wget or elinks</li>
+<li>Copy hgweb.cgi and all the folders from /templates/ to
+/var/hg (chmod -R g+w www-data:www-data)</li>
+<li>Edit hgweb.cgi, set:
+<code>config = &quot;/var/hg/hgweb.config&quot;</code></li>
+<li>Put the repo paths/collections on the drive that is shared with the host
+(this way the files aren’t stored in the virtual hard disk–you can back
+them up easily). I mounted my share drive at <samp>/mnt/share</samp> and
+created the <var>repos</var> folder in there. Because the share is on
+a windows host, the permissions are always 777 chowned to root:root</li>
+<li>More help here:
+<a href="http://mercurial.selenic.com/wiki/HgWebDirStepByStep#Directory_Structure">http://mercurial.selenic.com/wiki/HgWebDirStepByStep#Directory_Structure</a></li>
+</ol>
+</li>
+<li>I had some existing local repositories on my Windows development PC that
+I wanted centralized onto this computer so I cloned them:<ol>
+<li>Use hg serve on the development PC (can be done through TortoiseHg!)</li>
+<li>From the VM, hg clone the existing repos (use the development PC’s IP as
+the source URL)</li>
+</ol>
+</li>
+<li><p>Currently the repositories are all unsecured, so to secure them:</p>
+<ol>
+<li>Use apache to password protect repository (no native security in hg, use basic or digest auth. SSH can be used, too, but then why bother with hgweb?)</li>
+<li><p>Under directory directive of main.conf in /etc/apache/hg/</p>
+<pre><code class="hljs apache"> &lt;Location /hg&gt;
+   AuthType Basic
+   AuthName &quot;Mercurial repositories&quot;
+   AuthUserFile /var/htpasswd/hg
+   Require valid-user
+ &lt;/Location&gt;
+</code></pre>
+</li>
+<li><p>See more on Apache security here:
+<a href="http://httpd.apache.org/docs/2.0/howto/auth.html">http://httpd.apache.org/docs/2.0/howto/auth.html</a></p>
+</li>
+<li>Allow push using http by following the troubleshooting instructions here:
+<a href="http://mercurial.selenic.com/wiki/PublishingRepositories#Troubleshooting">http://mercurial.selenic.com/wiki/PublishingRepositories#Troubleshooting</a></li>
+</ol>
+</li>
+</ol>
+<h3 id="setting-up-railo-for-coldfusion">Setting up Railo for ColdFusion</h3>
+<p>The only thing to note here is that Ubuntu no longer uses
+<var>sun-java6-jdk</var>. Instead use <var>openjdk-6-jdk</var> or
+<var>default-jdk</var> (same thing).</p>
+<h3 id="notes-on-setting-up-mongodb">Notes on setting up MongoDB</h3>
+<ol>
+<li><kbd>sudo apt-get install mongodb-stable</kbd> (not mongodb, they’re
+different).</li>
+<li>Set up for PHP/Apache using php’s PECL (need php-dev for phpize and php-pear
+for pecl)</li>
+<li>If mongod won’t start, make sure the default dbpath isn’t locked.</li>
+</ol>
+<h3 id="setting-up-node-js">Setting up node.js</h3>
+<ol>
+<li>Set up a la <a href="http://www.codediesel.com/linux/installing-node-js-on-ubuntu-10-04/">http://www.codediesel.com/linux/installing-node-js-on-ubuntu-10-04/</a></li>
+<li>After cloning the git repo, check out a stable tag:<ul>
+<li>To list tags: <kbd>git tag -l</kbd></li>
+<li>To checkout a tag: <kbd>git checkout v0.2.4</kbd></li>
+</ul>
+</li>
+<li>Node.js can be set up to run as a daemon following this: <a href="http://howtonode.org/deploying-node-upstart-monit">http://howtonode.org/deploying-node-upstart-monit</a></li>
+<li>See the related post on how to install npm safely (link at bottom).</li>
+</ol>
+<h3 id="hummingbird">Hummingbird</h3>
+<ol>
+<li>Requires STABLE version of node.js</li>
+<li>Install via
+<a href="https://github.com/mnutt/hummingbird/blob/master/README.md">https://github.com/mnutt/hummingbird/blob/master/README.md</a>
+– the instructions on the Hummingbird site website are outdated.</li>
+</ol>
+<h3 id="icinga">Icinga</h3>
+<ol>
+<li><kbd>sudo apt-get install icinga</kbd></li>
+<li>Use NO CONFIG for postfix when it comes to it. You’ll have to set this up
+later if you want e-mail notifications.</li>
+<li>The instance will be available at <a href="http://localhost/icinga">http://localhost/icinga</a> – username is
+icingaadmin</li>
+</ol>
+<h3 id="final-router-configuration">Final router configuration</h3>
+<ol>
+<li>Bridging network connections gives the VM its own network IP. This changes
+the host’s network IP to a new IP so any previous port forwarding or virtual
+servers will have to point to the new IP.<ol>
+<li>Select host and VirtualBox connection</li>
+<li>Bridge connections</li>
+</ol>
+</li>
+<li>Router: Port forwarding<ol>
+<li>Finding your IP addresses:<ol>
+<li>From the host machine, go to whatismyip.com for the router / external IP.</li>
+<li>From the host machine, run cmd &gt; ipconfig for the bridged network IP.</li>
+<li>From the VM, type ifconfig for the VM’s network IP.</li>
+</ol>
+</li>
+<li>Final port forwarding configuration:<ul>
+<li>21 to VM for FTP</li>
+<li>22 to VM for SSH</li>
+<li>80 to VM for HTTP</li>
+<li>443 to VM for HTTPS</li>
+<li>3389 to Host PC for RDP</li>
+<li>4000 to VM for RDP</li>
+<li>5800 to Host PC for VNC</li>
+<li>5900 to Host PC for VNC</li>
+<li>8000-8888 to VM for node.js, Hummingbird, Tomcat and Railo</li>
+</ul>
+</li>
+<li>DynDNS setup should be done via router, otherwise forward all to Host
+machine and use DynDNS updater software on host machine, have host
+machine forward to VM.</li>
+</ol>
+</li>
+</ol>
+<p>From this point on I was able to access my VM and all of the forwarded ports
+using the DynDNS address. It’s really convenient to be able to VNC onto the host
+machine if something needs changing, SSH into the VM to do updates or set up
+virtual hosts, and do an Hg push to this address as a master repository. Getting
+all the puzzle pieces working together and having a good setup has really
+improved my workflow.</p>
+</section>
+	<footer class="article__footer"><div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = 'http://davidosomething.com/blog/my-development-setup';
+	this.page.identifier = 'my-development-setup';
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//davidosomething.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+</footer>
+</article>
+			</main>
+			<nav class="globalDiv globalNav">
+	<aside class="widget widget--sharePost">
+	<header class="widget__header">
+		<h2 class="widget__title">Share this post</h2>
+	</header>
+	<div class="widget__body">
+		<ul class="shareButtonList">
+			<li><a class="shareButton shareButton--twitter" href="https://twitter.com/intent/tweet?text=My%20Development%20Setup&amp;url=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fmy-development-setup&amp;via=davidosomething"><i class="icon-twitter-with-circle"></i><span>Tweet this post</span></a></li>
+			<li><a class="shareButton shareButton--facebook" href="http://www.facebook.com/dialog/share?app_id=285126294854913&amp;display=popup&amp;href=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fmy-development-setup&amp;redirect_uri=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fmy-development-setup"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+			<li><a class="shareButton shareButton--google" href="https://plus.google.com/share?url=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fmy-development-setup"><i class="icon-google-plus3"></i><span>Share on Google+</span></a></li>
+		</ul>
+	</div>
+</aside>
+
+	
+	<aside class="widget widget--aboutMe">
+	<header class="widget__header">
+		<h2 class="widget__title">About me</h2>
+	</header>
+	<div class="widget__body">
+		<p>I'm a web developer in NYC. I primarly work in JavaScript and PHP,
+		and sometimes Python, shell, and Lua. I'm a Vim and GNU/Linux user.</p>
+		<p>I am currently Senior Frontend Developer at Elite Daily (yes, that
+		one). I previously held similar roles at Time Inc., Arnold NYC, and
+		Arnold Worldwide.<br>
+		I was an Adjunct Instructor at Boston University CDIA for a while,
+		where I taught web development and WordPress stuff.<br>
+		I used to freelance regularly, but now I prefer tinkering with open
+		source.
+		</p>
+	</div>
+</aside>
+
+	<aside class="widget widget--latestPosts mq--large">
+	<header class="widget__header">
+		<h2 class="widget__title">Latest Posts</h2>
+	</header>
+	<div class="widget__body">
+		<ol class="widget__postlist">
+			<li><article class="articleTile">
+	<h2><a href="/blog/rebuilding-davidosomethingcom-as-a-static-site">Rebuilding davidosomething.com as a static&nbsp;site</a></h2>
+	<time datetime="2015-12-29T00:00:00.000Z">December 28, 2015</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/grunt-wendy-casperjs">grunt-wendy – CasperJS for&nbsp;GruntJS</a></h2>
+	<time datetime="2015-09-19T00:00:07.000Z">September 18, 2015</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/git-my">git-my</a></h2>
+	<time datetime="2015-03-29T22:39:39.000Z">March 29, 2015</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-3">Linux on the Lenovo Thinkpad W510 – Part&nbsp;3</a></h2>
+	<time datetime="2014-10-30T21:45:11.000Z">October 30, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/how-i-work">How I&nbsp;Work</a></h2>
+	<time datetime="2014-06-11T21:35:24.000Z">June 11, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-2">Linux on the Lenovo ThinkPad W510 – Part&nbsp;2</a></h2>
+	<time datetime="2014-05-29T18:25:31.000Z">May 29, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510">Linux on the Lenovo ThinkPad&nbsp;W510</a></h2>
+	<time datetime="2014-05-01T22:15:13.000Z">May 1, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/grunt-toggl">grunt-toggl</a></h2>
+	<time datetime="2014-04-29T22:30:24.000Z">April 29, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/first-week-developing-on-a-mac">First week developing on a&nbsp;Mac</a></h2>
+	<time datetime="2011-06-20T19:59:45.000Z">June 20, 2011</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/shuttle-pc-new-harddrive-clonezilla-windows-7">Shuttle PC - new harddrive, Clonezilla &#038; Windows&nbsp;7</a></h2>
+	<time datetime="2010-12-03T23:12:44.000Z">December 3, 2010</time>
+</article>
+</li>
+		</ol>
+	</div>
+</aside>
+
+	
+</nav>
+
+		</div>
+		<footer class="globalFooter">
+			<div>
+				<span class="globalFooter__copyright">
+					Copyright &copy; <a href="mailto:me@davidosomething.com" rel="me">David O'Trakoun</a>.
+				</span>
+				(<a rel="alternate" type="application/rss+xml" href="/rss.xml">RSS</a>)
+			</div>
+		</footer>
+	</div>
+	<script async src="//www.google-analytics.com/analytics.js"></script>
+<script async src="/assets/js/global.js"></script>
+</body>
+</html>

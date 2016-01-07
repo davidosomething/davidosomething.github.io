@@ -1,0 +1,12 @@
+/* TEAM */
+Owner:        David O'Trakoun
+Twitter:      @davidosomething
+
+/* SITE */
+Name:         davidosomething.com
+Domain:       davidosomething.com
+Language:     English
+
+/* GENERATORS */
+Favicons:     http://www.favicon-generator.org/
+

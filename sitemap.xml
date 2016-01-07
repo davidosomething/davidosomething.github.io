@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>http://davidosomething.com/</loc> <lastmod>2016-01-07</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/first-week-developing-on-a-mac</loc> <lastmod>2011-06-20</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/git-my</loc> <lastmod>2015-03-29</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/grunt-toggl</loc> <lastmod>2014-04-29</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/grunt-wendy-casperjs</loc> <lastmod>2015-09-18</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/honda-metropolitan-in-boston</loc> <lastmod>2010-04-02</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/how-i-work</loc> <lastmod>2014-06-11</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/jqrpg-an-old-school-style-rpg-in-jquery</loc> <lastmod>2010-02-19</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-2</loc> <lastmod>2014-05-29</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-3</loc> <lastmod>2014-10-30</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/linux-lenovo-thinkpad-w510</loc> <lastmod>2014-05-01</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/my-development-setup</loc> <lastmod>2010-11-29</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/putting-together-my-new-shuttle-pc</loc> <lastmod>2010-10-20</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site</loc> <lastmod>2015-12-28</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/shuttle-pc-new-harddrive-clonezilla-windows-7</loc> <lastmod>2010-12-03</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/shuttle-pc-part-2</loc> <lastmod>2010-10-28</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/takeaways-from-an-event-apart-dc-2010</loc> <lastmod>2010-09-20</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/tips-faster-psd-html-conversions</loc> <lastmod>2010-02-27</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/understanding-font-face-and-typography</loc> <lastmod>2010-02-04</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://davidosomething.com/blog/using-notepad-for-web-development</loc> <lastmod>2010-02-02</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>

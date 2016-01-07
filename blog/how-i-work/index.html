@@ -1,0 +1,432 @@
+<!doctype html>
+<html itemscope="" itemtype="https://schema.org/BlogPosting" dir="ltr" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+		<meta name="author" content="David O'Trakoun">
+	<meta name="google-site-verification" content="CUF_b2uUr3xngYZU_Assv-CXFtDTzQjFdoh3_S35FDQ">
+	<meta name="msvalidate.01" content="DB32AB8ADBD71157CA9F135EAD9EFE23">
+	<meta name="p:domain_verify" content="87f3b7851e149ff74531fdb012c62bf3">
+	<meta property="fb:app_id" content="285126294854913">
+	<meta property="fb:admins" content="16109547">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@davidosomething">
+<meta name="robots" content="index,noodp,follow">
+<meta name="twitter:title" property="og:title" content="How I Work">
+<meta property="og:url" content="http://davidosomething.com/blog/how-i-work">
+<meta property="og:site_name" content="davidosomething.com">
+<meta property="og:type" content="article">
+	<meta name="description" content="The things I do for web projects.">
+	<meta name="twitter:description" property="og:description" content="The things I do for web projects.">
+	<meta name="twitter:image" property="og:image" content="/assets/img/avatar.png">
+	<meta name="keywords" content="bower,branches,bundler,composer,dependency,development,docker,gem,npm,package,projects,structure,tooling,vagrant,vm,web">
+<meta itemprop="dateModified" content="2014-06-11T21:35:24.000Z">
+	<title>davidosomething.com | How I Work</title>
+	<link rel="author" type="text/plain" href="/humans.txt">
+	<link rel="canonical" href="http://davidosomething.com/blog/how-i-work">
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+	<link rel="alternate" type="application/rss+xml" title="davidosomething.com | RSS Feed" href="/rss.xml">
+	<link rel="dns-prefetch" href="//fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//davidosomething.disqus.com">
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,700,900">
+	<link rel="stylesheet" href="/assets/css/global.css">
+	<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments);};ga.l=+new Date;ga('create','UA-9710641-1','auto');ga('send','pageview');</script>
+</head>
+<body id="top" class="type--post section--blog slug--how-i-work">
+	<header class="siteHeader">
+	<div class="siteHeader__title"><a href="/" class="siteHeader__siteName">davidosomething.com</a> | <a href="#main" class="siteHeader__pageTitle">How I Work</a></div>
+</header>
+	<div class="globalBody">
+		<header class="globalHeader"><section class="bio" itemprop="author publisher" itemscope="" itemtype="http://schema.org/Organization">
+	<h2 class="bio__author">
+		<a class="bio__author__name" href="/" rel="me" itemprop="name">David O'Trakoun
+	</a></h2>
+	<div class="bio__avatar" itemprop="logo" itemscope="" itemtype="http://schema.org/ImageObject">
+		<a class="bio__avatar__link" href="/" rel="me"><img alt="Avatar" src="/assets/img/avatar.png" height="80" width="80" itemprop="url"></a>
+	</div>
+	<ul class="bio__links">
+		<li><a href="https://twitter.com/davidosomething" class="icon-twitter-with-circle" itemprop="sameAs url"><span>Twitter</span></a></li>
+		<li><a href="https://github.com/davidosomething" class="icon-github" itemprop="sameAs url"><span>GitHub</span></a></li>
+		<li><a href="https://plus.google.com/u/0/107476188736969594066" class="icon-google-plus3" itemprop="sameAs url"><span>Google+</span></a></li>
+		<li><a href="https://www.linkedin.com/in/davidosomething/" class="icon-linkedin-with-circle" itemprop="sameAs url"><span>LinkedIn</span></a></li>
+	</ul>
+</section>
+</header>
+		<div class="globalContent">
+			<main class="globalDiv" id="main">
+<article class="article" itemprop="mainEntity">
+	<meta itemprop="name" content="how-i-work">
+	<header class="article__header">
+		<h1 class="article__title" itemprop="headline"><a rel="bookmark" class="article__header__link article__header__link--permalink" href="http://davidosomething.com/blog/how-i-work" itemprop="mainEntityOfPage url">How I&nbsp;Work</a></h1>
+		<h2 class="article__subheader" itemprop="alternativeHeadline">The things I do for web&nbsp;projects.</h2>
+		<div class="article__meta">
+			<time datetime="2014-06-11T21:35:24.000Z" itemprop="datePublished">June 11, 2014</time>
+			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">bower</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">branches</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">bundler</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">composer</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">dependency</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">development</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">docker</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">gem</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">npm</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">package</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">projects</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">structure</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">tooling</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vagrant</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vm</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">web</span></a>
+		</li>
+</ul>
+		</div>
+	</header>
+	<section class="article__body" itemprop="articleBody"><p>Creating a website is just not as simple as it used to be. In order to do things
+right, I need all kinds of tools: compilers, linters, package managers,
+optimizers and minifiers, etc. Aside from that I need to consider things like
+portability, organization, and maintainability.</p>
+<p>I just started a new job so I&#8217;ve had some time to think about the cleanest
+way to get everything installed and organized. I follow some basic rules to keep
+my environments clean. Here are the principles I follow and the reasoning behind
+them:</p>
+<h2 id="install-as-many-of-the-dependencies-as-possible-in-the-userspace-">Install as many of the dependencies as possible in the userspace.</h2>
+<p>That is, don&#8217;t run npm or bower or others as root / with sudo. This is
+important because I might be deploying to a shared host or I might run into file
+permissions problems if my files/binaries are owned or run as root.</p>
+<p>Furthermore, if something happens to an executable npm package &#8212; like
+grunt gets hacked so that it deletes the filesystem &#8212; I don&#8217;t want
+to run it as root.</p>
+<p>On OSX, homebrew is pretty much the only thing I need to install with sudo.</p>
+<h2 id="don-8217-t-use-system-or-system-package-manager-binaries-">Don&#8217;t use system or system package manager binaries.</h2>
+<p>The versions of Ruby and PHP that comes with OSX are outdated. The ones in the
+apt sources or pacman may be outdated, but more than likely they don&#8217;t
+match the ones on my server environment.</p>
+<p>To get around using the system/system packaged tools, use environment tools like
+<a href="https://github.com/creationix/nvm">nvm</a> for node (my
+choice because it&#8217;s usually already on CentOS hosts),
+<a href="https://github.com/postmodern/chruby">chruby</a> for ruby,
+<a href="https://github.com/phpenv/phpenv">phpenv</a> for php, and
+<a href="http://virtualenv.readthedocs.org/en/latest/">virtualenv</a> for python.
+You may need to install these with sudo so they&#8217;re available globally.</p>
+<p>There are alternatives for each besides the ones I listed, but the important
+part is once they&#8217;re installed I can use them to install the version
+I need. Also, they install their respective binaries in the userspace (so I can
+use npm, gem, composer, and pip without sudo), which ties back into the previous
+rule.</p>
+<h2 id="everything-external-needs-to-be-easily-upgradable">Everything external needs to be easily upgradable</h2>
+<p>For instance, it should be trivial to upgrade JavaScript and CSS frameworks.
+That should be as simple as doing a <code>bower update</code> or <code>composer update</code>, or jam
+or npm or bundle, whichever you&#8217;re dealing with. The hard part should be
+fixing the things that break after the upgrade.</p>
+<p>Another big thing to know: you can specify almost ANYTHING (URLs to individual
+files, git repositories) as a dependency in bower, bundler, composer, and npm.
+If you didn&#8217;t write it, consider using a package manager to manage it.
+Whether or not you keep it in version control, it makes it easier to find the
+original copy.</p>
+<h2 id="only-commit-clean-code">Only commit clean code</h2>
+<p>To ensure this, there are linters for every language. I don&#8217;t make a big
+deal out of committing code that doesn&#8217;t do what it&#8217;s supposed to
+(sometimes I commit code just to save it &#8212; I can squash the commit later
+before issuing a pull request), but if the indentation is wrong it will be a lot
+harder to fix.</p>
+<p>Adding a lint task to a pre-commit hook is a good idea. So is running the lint
+tasks through some filewatcher like <code>grunt watch</code>. Neither is mandatory if
+you&#8217;re using an editor with built in linting (e.g. Vim with Syntastic or
+Sublime/Atom/Brackets with the right plugins) and you&#8217;re good about
+clearing the errors/warnings before you save and commit.</p>
+<p>I also run the linter during the build phase on deploy and fail builds on poor
+code.</p>
+<h2 id="don-8217-t-run-sites-off-your-system">Don&#8217;t run sites off your system</h2>
+<p>Welcome to the new world. I use vagrant for everything now, and that&#8217;s
+considered old-school (because it&#8217;s slow and memory intensive). The new
+school way is to run dev servers (even local ones) off of docker. Docker makes
+creating new servers as cheap as making git branches. On my Linux box I actually
+plan on running docker with <a href="https://github.com/progrium/dokku">dokku</a> through
+a VirtualBox anyway, just so I can limit memory and CPU usage more closely.</p>
+<p>Again, this is a way to ensure my dev environment mirrors the production server
+as closely as possible. It also keeps my system lean &#8212; I can shut down the
+VM when I&#8217;m not doing dev work and I&#8217;ll reclaim all the memory in
+one command: <code>vagrant suspend</code>. This beats having to stop the nginx, apache,
+php-fpm, unicorn, etc. processes one-by-one (or writing a shell script to do
+it). Finally, committing a Vagrantfile or dockerfile with my repo means any
+other developer can get a working version of the project up and running easily.</p>
+<h2 id="create-a-developer-bootstrap-script">Create a developer bootstrap script</h2>
+<p>It&#8217;s simple, it should get a developer up-and-running. Here&#8217;s an
+example:</p>
+<pre><code class="hljs bash">composer install  # gets framework/plugins/etc.
+bundle install    # gets sass/compass
+npm install       # gets grunt and plugins, jshint, etc.
+vagrant up
+</code></pre>
+<p>The <code>vagrant up</code> command runs the provisioner (chef, puppet, or docker) and
+triggers a build (run your grunt/gulp/npm/etc. tasks). There&#8217;s tools to
+get a provisioner setup and repos examples on GitHub so you don&#8217;t really
+have to learn those devops DSLs. I prefer Chef for its structure, though.</p>
+<p>Check out <a href="https://puphpet.com/">PuPHPet</a> or <a href="http://www.rove.io/">rove.io</a> for
+custom setups, or search GitHub for stacks (even in ansible or salt if
+that&#8217;s your thing).</p>
+<h2 id="branch-and-test-the-branches">Branch and test the branches</h2>
+<p>With my site running through a VM or docker I can easily stage branches locally.
+A separate shallow git clone can be used if I wanted two instances running side
+by side. I just change the VM&#8217;s port for the branch clone.</p>
+<p>I run a local DNS to map my local dev sites, so that&#8217;s one challenging
+thing to manage. In order to remedy that I will eventually set up dokku or
+a PaaS-like platform such as <a href="http://cosmos.layervault.com/divergence.html">LayerVault&#8217;s
+Divergence</a>. These would allow me
+to reach my branches at dev subdomains like <code>newfeature.mysite.dev</code>.</p>
+<h2 id="directory-structure">Directory structure</h2>
+<p>The directory structure I typically use now is something like the below for
+a WordPress site. Note that <strong>anything that can be retrieved or generated is
+typically not kept in version control</strong> (e.g. sqldumps, bower components,
+node_modules, compiled css, composer packages, etc.).</p>
+<p>This is not a rule &#8212; some servers don&#8217;t allow you to run binaries so
+your options are either commit the dependencies or upload them from a separate
+server as part of the deploy script. It&#8217;s sometimes advisable to do the
+latter if you don&#8217;t want to be dependent on a dependency archive
+(packagist/npm/rubygems might be down and you still need to be able to build
+a mission critical app).</p>
+<h3 id="example-for-a-wordpress-site">Example for a WordPress site</h3>
+<p>This is what I use for single-server WordPress sites. For multi-server, or when
+other kinds of scaling are involved, I&#8217;d break it up even more.</p>
+<ul>
+<li>.git/</li>
+<li>assets/  -- PSDs and stuff (versioned separately or symlinked to dropbox)</li>
+<li>sqldump/ -- backups (generated on deploy and kept in S3, glacier, dropbox,
+etc.)</li>
+<li>www/ -- work from here<ul>
+<li>config/ -- capistrano, chef cookbooks, etc.</li>
+<li>log/ -- I put all server logs (error.log, cachegrind, etc) here</li>
+<li>migrations/ -- custom sql migrations if this were a custom app</li>
+<li>node_modules/ -- if using any node modules not part of theme</li>
+<li>public/ -- this is the webroot</li>
+<li>config/</li>
+<li>content/<ul>
+<li>themes/<ul>
+<li>mytheme/ -- for redistributable themes, I sometimes keep these in
+a separate repository and use composer to pull it into
+a main project as a dependency, or as a git subtree<ul>
+<li>node_modules/</li>
+<li>build/</li>
+<li>components/</li>
+<li>fonts/</li>
+<li>img/</li>
+<li>js/</li>
+<li>sass/<ul>
+<li>common/<ul>
+<li>mixins, variables, extends, fonts, icons</li>
+</ul>
+</li>
+<li>layouts/  -- grid, nav, things that modify sets of modules</li>
+<li>modules/  -- media unit, post unit, header, footer</li>
+<li>pages/    -- page specific</li>
+<li>vendor/   -- 3rd party grids, h5bp, copied css from components/</li>
+</ul>
+</li>
+<li>lib/ -- server side</li>
+<li>release/ -- compiled build ends up here<ul>
+<li>css/</li>
+</ul>
+</li>
+<li>tests/</li>
+<li>.agignore -- because I use the_silver_searcher</li>
+<li>.bowerrc -- set build/components as the components dir</li>
+<li>.gitignore</li>
+<li>.jshintrc -- for portability, set here instead of in gruntfile</li>
+<li>.sass-lint.yml -- ditto above</li>
+<li>Gruntfile.js</li>
+<li>bower.json</li>
+<li>config.rb -- compass config</li>
+<li>package.json</li>
+<li>style.css</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>uploads/ -- usually a symlink to shared folder between releases</li>
+</ul>
+</li>
+<li>plugins/</li>
+<li>wp/</li>
+<li>Capfile -- I use capistrano and script the build there</li>
+<li>Gemfile</li>
+<li>Gemfile.lock -- sometimes in version control even though it is generated</li>
+<li>Vagrantfile</li>
+<li>composer.json</li>
+<li>composer.lock -- sometimes versioned</li>
+<li>package.json</li>
+<li>wp-cli.yml</li>
+</ul>
+</li>
+<li>.gitignore</li>
+<li>README.md</li>
+<li>TODO.md</li>
+</ul>
+</section>
+	<footer class="article__footer"><div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+	this.page.url = 'http://davidosomething.com/blog/how-i-work';
+	this.page.identifier = 'how-i-work';
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = '//davidosomething.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+</footer>
+</article>
+			</main>
+			<nav class="globalDiv globalNav">
+	<aside class="widget widget--sharePost">
+	<header class="widget__header">
+		<h2 class="widget__title">Share this post</h2>
+	</header>
+	<div class="widget__body">
+		<ul class="shareButtonList">
+			<li><a class="shareButton shareButton--twitter" href="https://twitter.com/intent/tweet?text=How%20I%20Work&amp;url=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fhow-i-work&amp;via=davidosomething"><i class="icon-twitter-with-circle"></i><span>Tweet this post</span></a></li>
+			<li><a class="shareButton shareButton--facebook" href="http://www.facebook.com/dialog/share?app_id=285126294854913&amp;display=popup&amp;href=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fhow-i-work&amp;redirect_uri=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fhow-i-work"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+			<li><a class="shareButton shareButton--google" href="https://plus.google.com/share?url=http%3A%2F%2Fdavidosomething.com%2Fblog%2Fhow-i-work"><i class="icon-google-plus3"></i><span>Share on Google+</span></a></li>
+		</ul>
+	</div>
+</aside>
+
+	
+	<aside class="widget widget--aboutMe">
+	<header class="widget__header">
+		<h2 class="widget__title">About me</h2>
+	</header>
+	<div class="widget__body">
+		<p>I'm a web developer in NYC. I primarly work in JavaScript and PHP,
+		and sometimes Python, shell, and Lua. I'm a Vim and GNU/Linux user.</p>
+		<p>I am currently Senior Frontend Developer at Elite Daily (yes, that
+		one). I previously held similar roles at Time Inc., Arnold NYC, and
+		Arnold Worldwide.<br>
+		I was an Adjunct Instructor at Boston University CDIA for a while,
+		where I taught web development and WordPress stuff.<br>
+		I used to freelance regularly, but now I prefer tinkering with open
+		source.
+		</p>
+	</div>
+</aside>
+
+	<aside class="widget widget--latestPosts mq--large">
+	<header class="widget__header">
+		<h2 class="widget__title">Latest Posts</h2>
+	</header>
+	<div class="widget__body">
+		<ol class="widget__postlist">
+			<li><article class="articleTile">
+	<h2><a href="/blog/rebuilding-davidosomethingcom-as-a-static-site">Rebuilding davidosomething.com as a static&nbsp;site</a></h2>
+	<time datetime="2015-12-29T00:00:00.000Z">December 28, 2015</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/grunt-wendy-casperjs">grunt-wendy – CasperJS for&nbsp;GruntJS</a></h2>
+	<time datetime="2015-09-19T00:00:07.000Z">September 18, 2015</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/git-my">git-my</a></h2>
+	<time datetime="2015-03-29T22:39:39.000Z">March 29, 2015</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-3">Linux on the Lenovo Thinkpad W510 – Part&nbsp;3</a></h2>
+	<time datetime="2014-10-30T21:45:11.000Z">October 30, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/how-i-work">How I&nbsp;Work</a></h2>
+	<time datetime="2014-06-11T21:35:24.000Z">June 11, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-2">Linux on the Lenovo ThinkPad W510 – Part&nbsp;2</a></h2>
+	<time datetime="2014-05-29T18:25:31.000Z">May 29, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510">Linux on the Lenovo ThinkPad&nbsp;W510</a></h2>
+	<time datetime="2014-05-01T22:15:13.000Z">May 1, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/grunt-toggl">grunt-toggl</a></h2>
+	<time datetime="2014-04-29T22:30:24.000Z">April 29, 2014</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/first-week-developing-on-a-mac">First week developing on a&nbsp;Mac</a></h2>
+	<time datetime="2011-06-20T19:59:45.000Z">June 20, 2011</time>
+</article>
+</li><li><article class="articleTile">
+	<h2><a href="/blog/shuttle-pc-new-harddrive-clonezilla-windows-7">Shuttle PC - new harddrive, Clonezilla &#038; Windows&nbsp;7</a></h2>
+	<time datetime="2010-12-03T23:12:44.000Z">December 3, 2010</time>
+</article>
+</li>
+		</ol>
+	</div>
+</aside>
+
+	
+</nav>
+
+		</div>
+		<footer class="globalFooter">
+			<div>
+				<span class="globalFooter__copyright">
+					Copyright &copy; <a href="mailto:me@davidosomething.com" rel="me">David O'Trakoun</a>.
+				</span>
+				(<a rel="alternate" type="application/rss+xml" href="/rss.xml">RSS</a>)
+			</div>
+		</footer>
+	</div>
+	<script async src="//www.google-analytics.com/analytics.js"></script>
+<script async src="/assets/js/global.js"></script>
+</body>
+</html>
