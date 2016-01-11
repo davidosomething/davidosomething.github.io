@@ -79,7 +79,7 @@
 		<h1 class="article__title" itemprop="headline"><a rel="bookmark" class="article__header__link article__header__link--permalink" href="http://davidosomething.com/blog/vim-for-javascript/" itemprop="mainEntityOfPage url">Setting up Vim for JavaScript&nbsp;development</a></h1>
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Comparisons and information for useful JavaScript-specific&nbsp;plugins</h2>
 		<div class="article__meta">
-			<time datetime="2016-01-09T00:00:00.000Z" itemprop="datePublished">January 08, 2016</time>
+			<time datetime="2016-01-09T00:00:00.000Z" itemprop="datePublished">January 09, 2016</time>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -99,6 +99,9 @@
 	<section class="article__body" itemprop="articleBody"><h2 id="installing-plugins">Installing plugins</h2>
 <p>I recommend using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> to install plugins. It&#39;s simple, works on both Vim
 and Neovim, and can perform operations asynchronously.</p>
+<ul>
+<li><a href="https://github.com/junegunn/vim-plug">vim-plug</a></li>
+</ul>
 <h2 id="syntax">Syntax</h2>
 <p>Vim comes with a JavaScript syntax file. It is automatically loaded when you
 open up a JavaScript file (where the value of <code>filetype</code> is <code>javascript</code>).</p>
@@ -153,8 +156,9 @@ too.</p>
 <pre><code class="hljs viml">Plug <span class="hljs-string">'othree/yajs.vim`, { '</span>fo<span class="hljs-string">r': '</span>javascript<span class="hljs-string">' }</span>
 </code></pre>
 <p>The additional requirement at the end makes sure the syntax plugin is loaded in
-a Vim autocommand based on filetype detection. This way the main Vim syntax
-plugin will have already run, and the plugin&#39;s syntax will override it.</p>
+a Vim autocommand based on filetype detection (as opposed to relying on Vim&#39;s
+<code>runtimepath</code> based sourcing mechanism. This way the main Vim syntax plugin
+will have already run, and the plugin&#39;s syntax will override it.</p>
 <h3 id="plugins-that-provide-better-indentation-support">Plugins that provide better indentation support</h3>
 <p>Vim&#39;s bundled JavaScript indent may be enough for you, especially if you use
 a strictly C-style whitespace (Vim&#39;s indent options even call themselves
@@ -185,10 +189,15 @@ that.</li>
 <p>Since I use <code>othree/yajs.vim</code> for my syntax, I tack on pangloss&#39;s indent via the
 <code>gavocanov/vim-js-indent plugin</code>.</p>
 <h2 id="related-syntaxes">Related syntaxes</h2>
+<p>During JavaScript development you may find yourself editing a lot of other
+filetypes that plain JavaScript.</p>
 <h3 id="es-next-es2016-es7-support">es.next / ES2016 / ES7 support</h3>
 <p>othree has a syntax plugin that provides support for planned, but not-yet-final
 EcmaScript features: <a href="https://github.com/othree/es.next.syntax.vim">othree/es.next.syntax.vim</a>. I personally don&#39;t use it
 since I currently stick to the ES2015 at most.</p>
+<ul>
+<li><a href="https://github.com/othree/es.next.syntax.vim">othree/es.next.syntax.vim</a></li>
+</ul>
 <h3 id="jsx-support-for-react">JSX support for React</h3>
 <p>If you write React and use its optional JSX syntax, adding the following plugin
 will provide you with syntax highlighting for those inline XML-nodes:</p>
@@ -197,29 +206,43 @@ will provide you with syntax highlighting for those inline XML-nodes:</p>
 <p>This plugin requires a JavaScript syntax plugin from above to define certain
 JavaScript regions. It specifically mentions pangloss&#39; extension in the docs but
 <a href="https://github.com/mxw/vim-jsx/commit/80dbab7588c615126f47e50fa4d9c329d080ff95#diff-604ad63592f45d351d97cdc9eeae21a3R28">actually supports any of them</a>.</p>
-<p>During JavaScript development you may find yourself editing a lot of other
-filetypes that JavaScript.</p>
+<ul>
+<li><a href="https://github.com/mxw/vim-jsx">mxw/vim-jsx</a></li>
+</ul>
 <h3 id="json">JSON</h3>
 <p>A lot of things use JSON for configuration, so I recommend <a href="https://github.com/elzr/vim-json">elzr/vim-json</a> for
-that:</p>
+that. Check out its options, I don&#39;t like some of the defaults so I turn them
+off, but you might want them:</p>
 <pre><code class="hljs viml"><span class="hljs-attribute">Plug</span> <span class="hljs-string">'elzr/vim-json'</span>
 </code></pre>
+<ul>
+<li><a href="https://github.com/elzr/vim-json">elzr/vim-json</a></li>
+</ul>
 <h3 id="jsdoc">JSDoc</h3>
 <p>If you document using JSDoc, all of the syntax plugins above support JSDoc
 already. There&#39;s a plugin called <code>othree/jsdoc-syntax.vim</code> that pulls that
 support out of <code>othree/yajs.vim</code>, but it is only for adding JSDoc support to
 <em>other</em> languages like TypeScript.</p>
+<ul>
+<li><a href="https://github.com/othree/jsdoc-syntax.vim">othree/jsdoc-syntax.vim</a></li>
+</ul>
 <h3 id="jquery-plugins">jQuery Plugins</h3>
 <p>Files named <code>jquery.*.js</code> are typically jQuery plugins. There&#39;s a specific
 syntax highlighting plugin for such files: <code>itspriddle/vim-jquery</code>, but it&#39;s
 pretty old and you&#39;ll have better support combining an up-to-date syntax plugin
 with the JavaScript libraries plugin in the next section.</p>
+<ul>
+<li><a href="https://github.com/itspriddle/vim-jquery">itspriddle/vim-jquery</a></li>
+</ul>
 <h3 id="javascript-libraries">JavaScript libraries</h3>
 <p>othree has a syntax plugin, <a href="https://github.com/othree/javascript-libraries-syntax.vim">othree/javascript-libraries-syntax.vim</a>, that
 supports special highlighting of functions and keywords for various libraries
 such as jQuery, lodash, React, Handlebars, Chai, etc. For an extensive list, see
 the README at the plugin&#39;s homepage.</p>
 <p>I personally do use this plugin.</p>
+<ul>
+<li><a href="https://github.com/othree/javascript-libraries-syntax.vim">othree/javascript-libraries-syntax.vim</a></li>
+</ul>
 <h2 id="javascript-code-completion-for-vim">JavaScript code completion for Vim</h2>
 <h3 id="omni-completion">Omni completion</h3>
 <p>I won&#39;t go into too much detail about this since it isn&#39;t JavaScript specific.</p>
@@ -234,7 +257,7 @@ completion than what&#39;s in the current Vim buffer.</p>
 though, so whatever might be missing in one can probably be configured into it.</p>
 <h3 id="code-analysis-based-completion-via-ternjs">Code-analysis based completion via TernJS</h3>
 <p>TernJS is kind of like IntelliSense if you&#39;ve ever used Visual Studio, or like
-the autocompletion for many very robust IDEs. It parses your code you extracts
+the autocompletion for many very robust IDEs. It parses your code and extracts
 various symbols, like function names, variable names, and values, and provides
 those to Vim&#39;s auto-completion engine.</p>
 <p>The official vim plugin can also show you function signatures (what parameters
@@ -248,6 +271,9 @@ installation, is done like this:</p>
 in the background while you&#39;re editing).</p>
 <p>I use this plugin with many of its extra features turned off, just keeping the
 completion.</p>
+<ul>
+<li><a href="https://github.com/marijnh/tern_for_vim">marijnh/tern_for_vim</a></li>
+</ul>
 <h3 id="function-parameter-completion">Function parameter completion</h3>
 <p>othree has a plugin called JavaScript Parameter Complete that detects when
 you&#39;re inside a function argument and provides some common autocomplete
@@ -257,21 +283,31 @@ suggest things like <code>click</code>, and <code>mouseover</code> for you. You 
 suggestions it provides in its <a href="https://github.com/othree/jspc.vim/blob/master/autoload/jspc/javascript.vim">GitHub source</a>. Install the plugin via:</p>
 <pre><code class="hljs viml"><span class="hljs-attribute">Plug</span> <span class="hljs-string">'othree/jspc.vim'</span>
 </code></pre>
+<ul>
+<li><a href="https://github.com/othree/jspc.vim">othree/jspc.vim</a></li>
+</ul>
 <h2 id="code-navigation">Code navigation</h2>
 <h3 id="jumping-between-commonjs-modules">Jumping between CommonJS modules</h3>
 <p>The plugin <a href="https://github.com/moll/vim-node">moll/vim-node</a> adds keybindings for jumping to files in your
 CommonJS <code>require</code> statements.</p>
 <pre><code class="hljs viml">Plug 'moll/vim-<span class="hljs-keyword">node</span><span class="hljs-title">'</span>
 </code></pre>
+<ul>
+<li><a href="https://github.com/moll/vim-node">moll/vim-node</a></li>
+</ul>
 <h3 id="ctags-symbol-based-navigation">CTags - Symbol based navigation</h3>
 <p>CTags are lists of all symbols in your projects (function names, variable names,
 filenames, etc.). Vim provides ctag support by default, with keybindings to jump
 to declarations and definitions, and there are a slew of plugins (e.g.
 <a href="https://github.com/ludovicchabant/vim-gutentags">ludovicchabant/vim-gutentags</a>) that can auto-generate the tags file for you.
 Using <a href="https://github.com/majutsushi/tagbar">majutsushi/tagbar</a>, <a href="https://github.com/Shougo/unite.vim">Shougo/unite.vim</a>, <a href="https://github.com/ctrlpvim/ctrlp.vim">ctrlpvim/ctrlp.vim</a>, or a bunch
-of other plugins, you can browse through those tags.</p>
+of other plugins (and plugins that work with them -- plugin-plugins), you can
+browse through those tags.</p>
 <p>Of particular note on the generation side is <a href="https://github.com/ramitos/jsctags">ramitos/jsctags</a>, which will
 generate ctags using TernJS.</p>
+<ul>
+<li><a href="https://github.com/ramitos/jsctags">ramitos/jsctags</a></li>
+</ul>
 <h2 id="linting">Linting</h2>
 <p>While there are actually JSHint, JSLint, eslint, etc. runners for Vim, for your
 own sanity just use <a href="https://github.com/scrooloose/syntastic">scrooloose/syntastic</a>. It supports a variety of syntax
@@ -283,6 +319,9 @@ the docs are only in Japanese. The plugins <a href="https://github.com/Shougo/vi
 it isn&#39;t easily configurable as a lint-runner.</p>
 <p>If you&#39;re running Neovim, <a href="https://github.com/benekastah/neomake">neomake</a> is
 an option.</p>
+<ul>
+<li><a href="https://github.com/scrooloose/syntastic">scrooloose/syntastic</a></li>
+</ul>
 <h2 id="formatting">Formatting</h2>
 <p>Vim has a built-in reformatter for whitespace. Visually select some text and
 use the <code>=</code> key to re-indent all of it.</p>
@@ -290,11 +329,17 @@ use the <code>=</code> key to re-indent all of it.</p>
 through jsbeautifier for you. I personally don&#39;t use this and prefer to go to
 the jsbeautifier website, copying and pasting it there if I need to un-minify
 something.</p>
+<ul>
+<li><a href="https://github.com/maksimr/vim-jsbeautify">vim-jsbeautify</a></li>
+</ul>
 <h2 id="my-vim-setup">My Vim setup</h2>
 <p>You can dig through <a href="https://github.com/davidosomething/dotfiles/tree/master/vim">my Vim configuration on GitHub</a>. The plugins I use are
 all in the main <code>vimrc</code> file, and their configurations are interspersed into
 <code>plugin/</code>, <code>ftplugin/</code>, and <code>after/*/</code> to cope with the order in which Vim loads
 files.</p>
+<ul>
+<li><a href="https://github.com/davidosomething/dotfiles/tree/master/vim">my Vim configuration on GitHub</a></li>
+</ul>
 </section>
 	<footer class="article__footer"><div id="disqus_thread"></div>
 <script>
@@ -353,15 +398,15 @@ s.setAttribute('data-timestamp', +new Date());
 		<ol class="widget__postlist">
 			<li><article class="articleTile">
 	<h2><a href="/blog/vim-for-javascript">Setting up Vim for JavaScript&nbsp;development</a></h2>
-	<time datetime="2016-01-09T00:00:00.000Z">January 8, 2016</time>
+	<time datetime="2016-01-09T00:00:00.000Z">January 9, 2016</time>
 </article>
 </li><li><article class="articleTile">
 	<h2><a href="/blog/rebuilding-davidosomethingcom-as-a-static-site">Rebuilding davidosomething.com as a static&nbsp;site</a></h2>
-	<time datetime="2015-12-29T00:00:00.000Z">December 28, 2015</time>
+	<time datetime="2015-12-29T00:00:00.000Z">December 29, 2015</time>
 </article>
 </li><li><article class="articleTile">
 	<h2><a href="/blog/grunt-wendy-casperjs">grunt-wendy – CasperJS for&nbsp;GruntJS</a></h2>
-	<time datetime="2015-09-19T00:00:07.000Z">September 18, 2015</time>
+	<time datetime="2015-09-19T00:00:07.000Z">September 19, 2015</time>
 </article>
 </li><li><article class="articleTile">
 	<h2><a href="/blog/git-my">git-my</a></h2>
