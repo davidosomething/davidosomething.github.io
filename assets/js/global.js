@@ -9,6 +9,8 @@ $__System.register('2', [], function (_export) {
    * Web intents for sharing
    * Adapted from twitter's code
    * @see {@link https://dev.twitter.com/web/intents#follow-intent}
+   *
+   * @module shareIntent
    */
 
   'use strict';
@@ -16,6 +18,15 @@ $__System.register('2', [], function (_export) {
   var windowOptions, configs;
 
   _export('shareIntent', shareIntent);
+
+  /**
+   * shareIntent opens a popup window to share a ShareIntent
+   *
+   * @param {Object} config
+   * @param {RegExp} config.intentRegex
+   * @param {Number} config.height
+   * @param {Number} config.width
+   */
 
   function shareIntent(config) {
     var winHeight = screen.height;
@@ -61,6 +72,10 @@ $__System.register('2', [], function (_export) {
     setters: [],
     execute: function () {
       windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes';
+
+      /**
+       * @constant
+       */
       configs = {
         facebook: {
           intentRegex: /facebook\.com\/dialog\/share\?(\w+)/,
@@ -84,6 +99,11 @@ $__System.register('2', [], function (_export) {
   };
 });
 $__System.register('1', ['2'], function (_export) {
+  /**
+   * @author David O'Trakoun <me@davidosomething.com>
+   * @module global
+   */
+
   'use strict';
 
   var configs, shareIntent;
