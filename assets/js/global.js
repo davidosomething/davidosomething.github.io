@@ -8,27 +8,28 @@ $__System.register('2', [], function (_export) {
   /**
    * Web intents for sharing
    * Adapted from twitter's code
-   * @see {@link https://dev.twitter.com/web/intents#follow-intent}
    *
+   * @see {@link https://dev.twitter.com/web/intents#follow-intent}
    * @module shareIntent
    */
 
+  /**
+   * @constant
+   * @type {String}
+   */
   'use strict';
 
   var windowOptions, configs;
 
-  _export('shareIntent', shareIntent);
+  _export('bindSharePopup', bindSharePopup);
 
   /**
    * shareIntent opens a popup window to share a ShareIntent
    *
-   * @param {Object} config
-   * @param {RegExp} config.intentRegex
-   * @param {Number} config.height
-   * @param {Number} config.width
+   * @param {IntentProvider} config
    */
 
-  function shareIntent(config) {
+  function bindSharePopup(config) {
     var winHeight = screen.height;
     var winWidth = screen.width;
 
@@ -74,7 +75,16 @@ $__System.register('2', [], function (_export) {
       windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes';
 
       /**
+       * @typedef {Object} IntentProvider
+       * @property {RegExp} intentRegex matches an HREF
+       * @property {Number} width of pop-up window
+       * @property {Number} height of pop-up window
+       */
+
+      /**
+       * Settings for each share pop-up provider
        * @constant
+       * @type {Object.<String, IntentProvider>}
        */
       configs = {
         facebook: {
@@ -102,21 +112,22 @@ $__System.register('1', ['2'], function (_export) {
   /**
    * @author David O'Trakoun <me@davidosomething.com>
    * @module global
+   * @requires module:shareIntent
    */
 
   'use strict';
 
-  var configs, shareIntent;
+  var configs, bindSharePopup;
   return {
     setters: [function (_) {
       configs = _.configs;
-      shareIntent = _.shareIntent;
+      bindSharePopup = _.bindSharePopup;
     }],
     execute: function () {
 
-      shareIntent(configs.facebook);
-      shareIntent(configs.google);
-      shareIntent(configs.twitter);
+      bindSharePopup(configs.facebook);
+      bindSharePopup(configs.google);
+      bindSharePopup(configs.twitter);
     }
   };
 });
