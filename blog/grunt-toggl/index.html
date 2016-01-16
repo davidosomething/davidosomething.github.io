@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Automatically start a Toggl timer with a Grunt&nbsp;task</h2>
 		<div class="article__meta">
 			<time datetime="2014-04-29T22:30:24.000Z" itemprop="datePublished">April 29, 2014</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">grunt</span></a>
@@ -98,7 +99,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p><img src="/assets/img/posts/grunt-toggl-logo.png" alt="grunt-toggl logo" class="image--left"></p>
+	<section class="article__body" itemprop="articleBody">
+		<p><img src="/assets/img/posts/grunt-toggl-logo.png" alt="grunt-toggl logo" class="image--left"></p>
 <h2 id="start-using-grunt-toggl-today-">Start using grunt-toggl today!</h2>
 <pre><code class="hljs bash">npm install --<span class="hljs-built_in">save</span>-<span class="hljs-built_in">dev</span> grunt-toggl
 </code></pre>
@@ -122,21 +124,25 @@ helper arguments in the task that to find your Workspace and Project IDs, too.
 Anyway, this is my second Grunt plugin and the first one to use <a href="https://travis-ci.org/" title="TravisCI">Travis CI for
 continuous integration</a>. Let me know if you
 use it!</p>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/grunt-toggl/';
+		this.page.identifier = 'grunt-toggl';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/grunt-toggl/';
-	this.page.identifier = 'grunt-toggl';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

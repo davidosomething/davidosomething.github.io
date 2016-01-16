@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">A really old post I resurrected about making a browser-based RPG using&nbsp;jQuery</h2>
 		<div class="article__meta">
 			<time datetime="2010-02-19T13:55:19.000Z" itemprop="datePublished">February 19, 2010</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">css</span></a>
@@ -101,7 +102,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>JavaScript/<a href="http://docs.jquery.com/Browser_Compatibility">jQuery</a> and CSS
+	<section class="article__body" itemprop="articleBody">
+		<p>JavaScript/<a href="http://docs.jquery.com/Browser_Compatibility">jQuery</a> and CSS
 compatibility is finally at a decent state amongst major browsers (IE and ACID3
 notwithstanding). At least, similar/the same DOM manipulation behavior can be
 reproduced across those browsers. Not only that, but the JavaScript rendering
@@ -143,21 +145,25 @@ games. I am looking forward to jQuery being the new QBASIC.</p>
 <li><a href="http://stephband.info/jparallax/">jParallax</a></li>
 <li><a href="http://dev.jonraasch.com/scrolling-parallax/examples/scrolling-parallax">Scrolling Parallax jQuery Plugin</a></li>
 </ol>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/jqrpg-an-old-school-style-rpg-in-jquery/';
+		this.page.identifier = 'jqrpg-an-old-school-style-rpg-in-jquery';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/jqrpg-an-old-school-style-rpg-in-jquery/';
-	this.page.identifier = 'jqrpg-an-old-school-style-rpg-in-jquery';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">The things I do for web&nbsp;projects.</h2>
 		<div class="article__meta">
 			<time datetime="2014-06-11T21:35:24.000Z" itemprop="datePublished">June 11, 2014</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">bower</span></a>
@@ -134,7 +135,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>Creating a website is just not as simple as it used to be. In order to do things
+	<section class="article__body" itemprop="articleBody">
+		<p>Creating a website is just not as simple as it used to be. In order to do things
 right, I need all kinds of tools: compilers, linters, package managers,
 optimizers and minifiers, etc. Aside from that I need to consider things like
 portability, organization, and maintainability.</p>
@@ -314,21 +316,25 @@ a main project as a dependency, or as a git subtree<ul>
 <li>README.md</li>
 <li>TODO.md</li>
 </ul>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/how-i-work/';
+		this.page.identifier = 'how-i-work';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/how-i-work/';
-	this.page.identifier = 'how-i-work';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

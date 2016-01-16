@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">List the remote branches where you were the last&nbsp;committer</h2>
 		<div class="article__meta">
 			<time datetime="2015-03-29T22:39:39.000Z" itemprop="datePublished">March 29, 2015</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">git</span></a>
@@ -92,28 +93,33 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>Git doesn’t track who created branches. This makes it difficult to keep track of
+	<section class="article__body" itemprop="articleBody">
+		<p>Git doesn’t track who created branches. This makes it difficult to keep track of
 your own branches when you have a lot of them checked out locally.</p>
 <p>To remedy this, I wrote a shell script that gets all the remote git branches and
 filters them out based on the last committer. It then lists the ones where you
 were the last committer.</p>
 <p>You can find the script here:<br><a href="https://github.com/davidosomething/git-my">https://github.com/davidosomething/git-my</a></p>
 <p>Here’s a screenshot of it in action:<br><img src="https://raw.githubusercontent.com/davidosomething/git-my/docs/screenshot.png" alt="Screenshot of git-my"></p>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/git-my/';
+		this.page.identifier = 'git-my';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/git-my/';
-	this.page.identifier = 'git-my';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

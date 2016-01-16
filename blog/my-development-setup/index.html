@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">How I set up my dev environment and projects for&nbsp;2010</h2>
 		<div class="article__meta">
 			<time datetime="2010-11-29T20:35:48.000Z" itemprop="datePublished">November 29, 2010</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">apache</span></a>
@@ -140,7 +141,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>Although I primarily develop on a Windows PC, I still consider Linux (also Unix
+	<section class="article__body" itemprop="articleBody">
+		<p>Although I primarily develop on a Windows PC, I still consider Linux (also Unix
 and OSX) the most powerful and practical environment for setting up web and
 database servers, DNS, and version control repositories (as a master on DVCS).
 A few of the benefits include:</p>
@@ -368,21 +370,25 @@ machine if something needs changing, SSH into the VM to do updates or set up
 virtual hosts, and do an Hg push to this address as a master repository. Getting
 all the puzzle pieces working together and having a good setup has really
 improved my workflow.</p>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/my-development-setup/';
+		this.page.identifier = 'my-development-setup';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/my-development-setup/';
-	this.page.identifier = 'my-development-setup';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

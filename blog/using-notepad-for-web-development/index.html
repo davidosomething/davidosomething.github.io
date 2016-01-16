@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Configuring the Notepad++ text editor my&nbsp;way</h2>
 		<div class="article__meta">
 			<time datetime="2010-02-02T09:27:01.000Z" itemprop="datePublished">February 02, 2010</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">software</span></a>
@@ -92,7 +93,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>I like real IDEs for console and application programming, but for web
+	<section class="article__body" itemprop="articleBody">
+		<p>I like real IDEs for console and application programming, but for web
 development I’ve always felt most comfortable using a text editor. Notepad++ is
 my editor of choice because it is fast and feature rich.</p>
 <p><img src="/assets/img/posts/npp-350x238.png" alt="Notepad++ screenshot" title="Notepad++ screenshot"></p>
@@ -131,21 +133,25 @@ Notepad++pluginsdocWebEditWebEdit.txt to learn how to add more.</li>
 Ctrl-(Shift)-U to toggle case. I also add Ctrl-; as short date format (I always
 liked that combination from Excel). The TextFX shortcuts are good things to map.
 You can add keyboard shortcuts through Settings -&gt; Shortcut Mapper.</p>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/using-notepad-for-web-development/';
+		this.page.identifier = 'using-notepad-for-web-development';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/using-notepad-for-web-development/';
-	this.page.identifier = 'using-notepad-for-web-development';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

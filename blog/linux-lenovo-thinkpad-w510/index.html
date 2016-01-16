@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">A post on configuring and using an old Lenovo ThinkPad&nbsp;W510.</h2>
 		<div class="article__meta">
 			<time datetime="2014-05-01T22:15:13.000Z" itemprop="datePublished">May 01, 2014</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">cinnamon</span></a>
@@ -101,7 +102,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>I bought a crappy PC laptop as a backup since my MacBook’s been failing. I’ve
+	<section class="article__body" itemprop="articleBody">
+		<p>I bought a crappy PC laptop as a backup since my MacBook’s been failing. I’ve
 gone full Linux on it since I spend most of the day in a terminal and browser,
 so except for Photoshop I’m comfortable. I’ll probably buy a new MacBook when
 they release 2014 Pro Retina ones. Until then, I’ll document my experience here.</p>
@@ -143,21 +145,25 @@ freezes when resuming from suspend. To fix that, add this line to the file
 <var>/etc/pm/config.d/unload_modules</var> (you may have to create it):</p>
 <pre><code class="hljs bash"><span class="hljs-attr">SUSPEND_MODULES</span>=<span class="hljs-string">"$SUSPEND_MODULES nvidia"</span>
 </code></pre>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/linux-lenovo-thinkpad-w510/';
+		this.page.identifier = 'linux-lenovo-thinkpad-w510';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/linux-lenovo-thinkpad-w510/';
-	this.page.identifier = 'linux-lenovo-thinkpad-w510';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

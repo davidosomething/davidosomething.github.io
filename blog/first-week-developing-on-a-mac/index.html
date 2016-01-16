@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Anecdotal writing about my experience switching from Windows XP to&nbsp;OSX</h2>
 		<div class="article__meta">
 			<time datetime="2011-06-20T19:59:45.000Z" itemprop="datePublished">June 20, 2011</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">osx</span></a>
@@ -92,7 +93,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>The following is a whining session about developing on OSX. It’s not all bad.</p>
+	<section class="article__body" itemprop="articleBody">
+		<p>The following is a whining session about developing on OSX. It’s not all bad.</p>
 <p>I had been using an old (2004) DELL machine at work with Windows XP. Needless to
 say, the machine was pagefaulting and had a bunch of problems with its RAM. So
 they finally got me a new computer to work on — a 24″ iMac with an i3 processor.
@@ -168,21 +170,25 @@ Homebrew because I already have things going in /usr/local/).</p>
 now and then, too. It’s the software’s fault, of course, but anyone who says
 Macs don’t crash is probably just browsing the internet all day or crunching
 numbers.</p>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/first-week-developing-on-a-mac/';
+		this.page.identifier = 'first-week-developing-on-a-mac';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/first-week-developing-on-a-mac/';
-	this.page.identifier = 'first-week-developing-on-a-mac';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">

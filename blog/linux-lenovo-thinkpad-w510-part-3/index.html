@@ -82,6 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">ArchLinux NVidia 340.xx Legacy Driver&nbsp;Updates</h2>
 		<div class="article__meta">
 			<time datetime="2014-10-30T21:45:11.000Z" itemprop="datePublished">October 30, 2014</time>
+			
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">archlinux</span></a>
@@ -98,7 +99,8 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody"><p>The NVidia drivers after 343.22 no longer support the NVidia Quadro FX 880M GPU
+	<section class="article__body" itemprop="articleBody">
+		<p>The NVidia drivers after 343.22 no longer support the NVidia Quadro FX 880M GPU
 for the ThinkPad W510 so I had to switch to legacy drivers (340-xx).</p>
 <p>To get everything working again, I make some changes to my kernel mode settings
 and my xorg.conf. In <var>/boot/syslinux/syslinux.cfg</var> and
@@ -107,21 +109,25 @@ and my xorg.conf. In <var>/boot/syslinux/syslinux.cfg</var> and
 
 <p>And in the <var>syslinux.cfg</var> the line <code>DEFAULT arch</code> is now
 <code>DEFAULT archnvidia</code> to default to the new kernel settings.</p>
+
+	</section>
+	<footer class="article__footer">
+		<section class="article_comments">
+	<div id="disqus_thread"></div>
+	<script>
+	var disqus_config = function () {
+		this.page.url = 'https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-3/';
+		this.page.identifier = 'linux-lenovo-thinkpad-w510-part-3';
+	};
+	(function() {
+	var d = document, s = d.createElement('script');
+	s.src = '//davidosomething.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+	})();
+	</script>
 </section>
-	<footer class="article__footer"><div id="disqus_thread"></div>
-<script>
-var disqus_config = function () {
-	this.page.url = 'https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-3/';
-	this.page.identifier = 'linux-lenovo-thinkpad-w510-part-3';
-};
-(function() {
-var d = document, s = d.createElement('script');
-s.src = '//davidosomething.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-</footer>
+	</footer>
 </article>
 			</main>
 			<nav class="globalDiv globalNav">
