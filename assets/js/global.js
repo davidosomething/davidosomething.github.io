@@ -33,6 +33,11 @@ $__System.register('2', [], function (_export) {
     var winHeight = screen.height;
     var winWidth = screen.width;
 
+    /**
+     * handleIntent
+     *
+     * @param {Event} e
+     */
     var handleIntent = function handleIntent(e) {
       e = e || window.event;
       var target = e.target || e.srcElement;
