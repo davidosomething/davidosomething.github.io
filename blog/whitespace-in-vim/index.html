@@ -112,10 +112,11 @@ details, so the most useful information I can give is an example of how the
 setting affects editing. (Why the Vim help pages don&#x27;t include this? I don&#x27;t
 know.)</p>
 <p>To turn a setting on or off, use <code>set settingname</code> or <code>set nosettingname</code> or
-(<code>set settingname=0</code> to turn off numeric settings). Use <code>setlocal</code> in an
-autocommand or <code>ftplugin</code> instead of <code>set</code> to make the setting specific to the
-buffer. Example of using an autocommand to set <code>shiftwidth</code> on JavaScript files
-only:</p>
+(<code>set settingname=0</code> to turn off numeric settings).</p>
+<h2>Filetype-local settings</h2>
+<p>Use <code>setlocal</code> in an autocommand or <code>ftplugin</code> instead of <code>set</code> to make the
+setting specific to the buffer. Example of using an autocommand to set
+<code>shiftwidth</code> on JavaScript files only:</p>
 <pre><code class="hljs language-vim"><span class="hljs-keyword">autocmd</span> FileType javascript <span class="hljs-keyword">setlocal</span> <span class="hljs-built_in">shiftwidth</span>=<span class="hljs-number">2</span></code></pre>
 <p>Note that autocommands are executed in the order they are added, so if a plugin
 decides to use that same autocommand to change the <code>shiftwidth</code> later, it will
@@ -129,6 +130,17 @@ help you debug rogue whitespace settings.</p>
 do.</p>
 <div class="citation">&mdash; <cite>Everyone in #vim on Freenode</cite></div>
 </blockquote>
+<h2>Persistent file-local settings</h2>
+<p>To make special cases for a specific file, you can either make an autocommand
+specifically to match the filename, or use Vim&#x27;s <code>modeline</code> feature. You need
+<code>set modeline</code> somewhere in your vimrc to make sure the feature is enabled.</p>
+<p>A <code>modeline</code> is a comment (in the current syntax) at the beginning or end of
+your file that Vim will parse commands from and execute. By default, Vim
+assumes the command is <code>set</code>. Here&#x27;s an example of setting the <code>modeline</code> in
+a vimrc file:</p>
+<pre><code class="hljs language-vim">" vim: set ai sw=4:</code></pre>
+<p>The double quote at the beginning indicates a VimL comment. This will set <code>set autoindent</code> and <code>set shiftwidth=4</code> for the buffer. The use of the short form is
+optional.</p>
 <h3>Display options</h3>
 <p>These options affect how whitespace appears in Vim. If someone else were to
 open your file, they might see something completely different based on their
