@@ -103,48 +103,46 @@
 		</div>
 	</header>
 	<section class="article__body" itemprop="articleBody">
-		<p>I bought a crappy PC laptop as a backup since my MacBook’s been failing. I’ve
+		<p>I bought a crappy PC laptop as a backup since my MacBook&rsquo;s been failing. I&rsquo;ve
 gone full Linux on it since I spend most of the day in a terminal and browser,
-so except for Photoshop I’m comfortable. I’ll probably buy a new MacBook when
-they release 2014 Pro Retina ones. Until then, I’ll document my experience here.</p>
-<p>First off, I’m running <a href="http://www.linuxmint.com/">Linux Mint 16 Petra with the Cinnamon Desktop
-Environment</a>. I’ve got to say, it’s really pretty in
+so except for Photoshop I&rsquo;m comfortable. I&rsquo;ll probably buy a new MacBook when
+they release 2014 Pro Retina ones. Until then, I&rsquo;ll document my experience here.</p>
+<p>First off, I&rsquo;m running <a href="http://www.linuxmint.com/">Linux Mint 16 Petra with the Cinnamon Desktop
+Environment</a>. I&rsquo;ve got to say, it&rsquo;s really pretty in
 comparison to Windows 7 that the laptop came with and Windows 8.1 that my
 Shuttle PC is now running.</p>
-<h2 id="fixes-i-ve-had-to-make">Fixes I’ve had to make</h2>
-<h3 id="brightness-controls">Brightness Controls</h3>
+<h2>Fixes I&rsquo;ve had to make</h2>
+<h3>Brightness Controls</h3>
 <p>The brightness keys cause Linux to crash. Also, software controls like panel
-widgets don’t work. Despite <a href="http://www.thinkwiki.org/wiki/Category:W510">it saying not to on
+widgets don&rsquo;t work. Despite <a href="http://www.thinkwiki.org/wiki/Category:W510">it saying not to on
 thinkwiki.org</a>, the
 <var>EnableBrightnessControl</var> registry flag was the right way to enable
 brightness controls. Switching to a virtual console, changing the brightness,
-and switching back worked… except that Cinnamon DE crashed upon returning to it.</p>
-<p>Here’s what your <var>/etc/X11/xorg.conf</var> file should look like:</p>
-<pre><code class="hljs coffee">Section <span class="hljs-string">"Device"</span>
+and switching back worked&hellip; except that Cinnamon DE crashed upon returning to it.</p>
+<p>Here&rsquo;s what your <var>/etc/X11/xorg.conf</var> file should look like:</p>
+<pre><code class="hljs language-coffee">Section <span class="hljs-string">"Device"</span>
   Identifier <span class="hljs-string">"Device0"</span>
   Driver <span class="hljs-string">"nvidia"</span>
   VendorName <span class="hljs-string">"NVIDIA Corporation"</span>
   BoardName <span class="hljs-string">"Quadro FX 880M"</span>
   Option <span class="hljs-string">"RegistryDwords"</span> <span class="hljs-string">"EnableBrightnessControl=1"</span>
-EndSection
-</code></pre>
-<h3 id="keyboard-mapping">Keyboard Mapping</h3>
-<p>I don’t use Caps Lock. I always remap it to Control. To do this in Linux Mint
+EndSection</code></pre>
+<h3>Keyboard Mapping</h3>
+<p>I don&rsquo;t use Caps Lock. I always remap it to Control. To do this in Linux Mint
 16, you need to go to the Regional &amp; Language settings, Keyboard Layouts, and
-Options in there. Don’t change “Caps Lock key behavior” — change “Ctrl key
-position” and add “Caps Lock as Ctrl” there. This is so your Caps Lock key
-doesn’t have two KeySyms associated with it (if you’re familiar with
+Options in there. Don&rsquo;t change &ldquo;Caps Lock key behavior&rdquo; &mdash; change &ldquo;Ctrl key
+position&rdquo; and add &ldquo;Caps Lock as Ctrl&rdquo; there. This is so your Caps Lock key
+doesn&rsquo;t have two KeySyms associated with it (if you&rsquo;re familiar with
 <var>.XModmap</var> settings). Additionally you can add pressing both Shift keys
-at once to toggle Caps Lock in the “Miscellaneous compatibility options.”</p>
-<p>The mdm display manager doesn’t run <var>.XModmap</var> and it’ll take a lot
-more effort than it’s worth to modify the XClient/.Xsession setup that Mint
+at once to toggle Caps Lock in the &ldquo;Miscellaneous compatibility options.&rdquo;</p>
+<p>The mdm display manager doesn&rsquo;t run <var>.XModmap</var> and it&rsquo;ll take a lot
+more effort than it&rsquo;s worth to modify the XClient/.Xsession setup that Mint
 provides, so I went with the gui setting in this case.</p>
-<h3 id="suspend-mode">Suspend Mode</h3>
+<h3>Suspend Mode</h3>
 <p>I use the proprietary nVidia graphics driver for full 3d support. There system
 freezes when resuming from suspend. To fix that, add this line to the file
 <var>/etc/pm/config.d/unload_modules</var> (you may have to create it):</p>
-<pre><code class="hljs bash">SUSPEND_MODULES=<span class="hljs-string">"<span class="hljs-variable">$SUSPEND_MODULES</span> nvidia"</span>
-</code></pre>
+<pre><code class="hljs language-bash">SUSPEND_MODULES=<span class="hljs-string">"<span class="hljs-variable">$SUSPEND_MODULES</span> nvidia"</span></code></pre>
 
 	</section>
 	<footer class="article__footer">

@@ -104,20 +104,19 @@
 Vim has a lot of built-in settings and features for handling whitespace, and
 this article will go over those with the examples the Vim help pages lack.</p>
 <p>For the purposes of this article, tabs are represented as blocks of the
-character: <code>░</code>.</p>
-<h2 id="settings">Settings</h2>
-<p>This section pertains to Vim&#39;s built-in settings flags. You can use
-<code>:help &#39;somesettingname&#39;</code> with single quotes from within in Vim to see the full
+character: <code>&#x2591;</code>.</p>
+<h2>Settings</h2>
+<p>This section pertains to Vim&#x27;s built-in settings flags. You can use
+<code>:help &#x27;somesettingname&#x27;</code> with single quotes from within in Vim to see the full
 details, so the most useful information I can give is an example of how the
-setting affects editing. (Why the Vim help pages don&#39;t include this? I don&#39;t
+setting affects editing. (Why the Vim help pages don&#x27;t include this? I don&#x27;t
 know.)</p>
 <p>To turn a setting on or off, use <code>set settingname</code> or <code>set nosettingname</code> or
 (<code>set settingname=0</code> to turn off numeric settings). Use <code>setlocal</code> in an
 autocommand or <code>ftplugin</code> instead of <code>set</code> to make the setting specific to the
 buffer. Example of using an autocommand to set <code>shiftwidth</code> on JavaScript files
 only:</p>
-<pre><code class="hljs vim"><span class="hljs-keyword">autocmd</span> FileType javascript <span class="hljs-keyword">setlocal</span> <span class="hljs-built_in">shiftwidth</span>=<span class="hljs-number">2</span>
-</code></pre>
+<pre><code class="hljs language-vim"><span class="hljs-keyword">autocmd</span> FileType javascript <span class="hljs-keyword">setlocal</span> <span class="hljs-built_in">shiftwidth</span>=<span class="hljs-number">2</span></code></pre>
 <p>Note that autocommands are executed in the order they are added, so if a plugin
 decides to use that same autocommand to change the <code>shiftwidth</code> later, it will
 override your. That is why I recommend you using an ftplugin instead.</p>
@@ -126,235 +125,209 @@ override your. That is why I recommend you using an ftplugin instead.</p>
 <p>A good understanding of the order in which Vim runs files and commands will
 help you debug rogue whitespace settings.</p>
 <blockquote>
-<p>Don&#39;t just copy settings from someone else without understanding what they
+<p>Don&#x27;t just copy settings from someone else without understanding what they
 do.</p>
 <div class="citation">&mdash; <cite>Everyone in #vim on Freenode</cite></div>
-
 </blockquote>
-<h3 id="display-options">Display options</h3>
+<h3>Display options</h3>
 <p>These options affect how whitespace appears in Vim. If someone else were to
 open your file, they might see something completely different based on their
 display options.</p>
-<h4 id="list-and-listchars">list and listchars</h4>
+<h4>list and listchars</h4>
 <p>The option <code>set list</code> will turn this feature on. This is used to highlight
 trailing spaces, differentiate tabs from regular spaces, and show a
 continuation symbol when you have <code>set nowrap</code> and a line is longer than the
 window.</p>
 <p>My options are:</p>
-<pre><code class="hljs vim"><span class="hljs-keyword">set</span> <span class="hljs-keyword">list</span>
+<pre><code class="hljs language-vim"><span class="hljs-keyword">set</span> <span class="hljs-keyword">list</span>
 <span class="hljs-keyword">set</span> listchars=<span class="hljs-string">""</span>                      <span class="hljs-string">" reset
 </span><span class="hljs-keyword">set</span> listchars=<span class="hljs-keyword">ta</span><span class="hljs-variable">b:</span>→\ 
-<span class="hljs-keyword">set</span> listchars+=trai<span class="hljs-variable">l:</span>·
-</code></pre>
+<span class="hljs-keyword">set</span> listchars+=trai<span class="hljs-variable">l:</span>·</code></pre>
 <p>Note there is a trailing space after the backslash on the tab line (for
 escaping the literal space symbol). So 4-character-wide tabs look like this:</p>
-<pre><code class="hljs handlebars"><span class="xml">    normal code indented with 4 spaces and no trailing spaces
+<pre><code class="hljs language-handlebars">    normal code indented with 4 spaces and no trailing spaces
 →░░░→░░░code indented with two tabs and with two trailing spaces··
-  normal code indented with 2 spaces and no trailing spaces</span>
-</code></pre>
-<h4 id="tabstop-number">tabstop=NUMBER</h4>
+  normal code indented with 2 spaces and no trailing spaces</code></pre>
+<h4>tabstop=NUMBER</h4>
 <p>A real tab will be this wide. E.g. <code>set tabstop=4</code>:</p>
-<pre><code class="hljs handlebars"><span class="xml">→░░░text</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">→░░░text</code></pre>
 <p>With <code>set tabstop=8</code>:</p>
-<pre><code class="hljs handlebars"><span class="xml">→░░░░░░░text</span>
-</code></pre>
-<h4 id="wrap">wrap</h4>
+<pre><code class="hljs language-handlebars">→░░░░░░░text</code></pre>
+<h4>wrap</h4>
 <p>The <code>wrap</code> setting affects display lines. When it is off, text appears like so:</p>
-<pre><code class="hljs handlebars"><span class="xml">This option changes how text is displayed.  It doesn't change the text in the buffer, see 'textwidth' for that.</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">This option changes how text is displayed.  It doesn't change the text in the buffer, see 'textwidth' for that.</code></pre>
 <p>When it is on, text is displayed as:</p>
-<pre><code class="hljs handlebars"><span class="xml">This option changes how text is displayed.  It doesn't change the text in the
-buffer, see 'textwidth' for that.</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">This option changes how text is displayed.  It doesn't change the text in the
+buffer, see 'textwidth' for that.</code></pre>
 <p>When you save the file, the text is saved as one long line -- this setting is
 a display setting only.</p>
-<h3 id="whitespace-in-lines">Whitespace in lines</h3>
+<h3>Whitespace in lines</h3>
 <p>These settings affect the actual text content of the file.</p>
-<h4 id="backspace">backspace</h4>
+<h4>backspace</h4>
 <p>This affects what backspace deletes. With the following settings:</p>
-<pre><code class="hljs vim"><span class="hljs-keyword">set</span> backspace=<span class="hljs-built_in">indent</span>,eol,start
-</code></pre>
+<pre><code class="hljs language-vim"><span class="hljs-keyword">set</span> backspace=<span class="hljs-built_in">indent</span>,eol,start</code></pre>
 <p>Before backspace:</p>
-<pre><code class="hljs handlebars"><span class="xml">→░░░→░░░Code that was indented with two tabs</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">→░░░→░░░Code that was indented with two tabs</code></pre>
 <p>After backspace:</p>
-<pre><code class="hljs handlebars"><span class="xml">→░░░Code that was indented with two tabs</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">→░░░Code that was indented with two tabs</code></pre>
 <p>The indent can be deleted with backspace. Your settings for <code>expandtab</code>, and
 <code>shiftwidth</code> will determine how many characters are deleted, so if you have
 a <code>set tabstop=4</code> and <code>set shiftwidth=2</code> and you hit backspace, you will delete
 two spaces from the tab, leaving a two space indent (if <code>expandtab</code> is on).</p>
-<h4 id="expandtab">expandtab</h4>
+<h4>expandtab</h4>
 <p>Use spaces instead of tabs. This is a personal coding preference, and sometimes
 dictated by your language, but I recommend turning this on (<code>set expandtab</code>)
 for consistency and overriding it using an autocommand or filetype plugin
 specific to whatever needs to use real tabs (<code>set noexpandtab</code>).</p>
-<h4 id="shiftwidth-number">shiftwidth=NUMBER</h4>
+<h4>shiftwidth=NUMBER</h4>
 <p>This affects all of the auto-indenting settings like <code>cindent</code>. When you use
 <code>&gt;&gt;</code> or <code>&lt;&lt;</code> to indent or un-indent a line it will remove this many spaces
 (or tabs).</p>
 <p>Before:</p>
-<pre><code class="hljs handlebars"><span class="xml">    Unindented when sw=2
-    Unindented when sw=4</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">    Unindented when sw=2
+    Unindented when sw=4</code></pre>
 <p>After:</p>
-<pre><code class="hljs handlebars"><span class="xml">  Unindented when sw=2
-Unindented when sw=4</span>
-</code></pre>
-<h4 id="softtabstop-number">softtabstop=NUMBER</h4>
+<pre><code class="hljs language-handlebars">  Unindented when sw=2
+Unindented when sw=4</code></pre>
+<h4>softtabstop=NUMBER</h4>
 <p>This tells Vim how many spaces or to insert when you hit <code>&lt;Tab&gt;</code> in insert
 mode. If you use real tabs, it will insert spaces until the number of spaces
 is equivalent to a <code>tabstop</code>, in which case it will merge that many spaces
 into a single tab.</p>
 <p>Example when <code>softtabstop=2</code> and for varying values of <code>tabstop</code>:</p>
-<pre><code class="hljs handlebars"><span class="xml">  Indented once, ts=4 sts=2
+<pre><code class="hljs language-handlebars">  Indented once, ts=4 sts=2
 →░░░Indented twice, ts=4 sts=2
-    Indented twice, ts=8 sts=2</span>
-</code></pre>
+    Indented twice, ts=8 sts=2</code></pre>
 <p>When the <strong>NUMBER</strong> is negative (e.g. -1 or -2 or whatever), this will use the
 value of <code>shiftwidth</code>. Since I use a <code>shiftwidth</code> of 2, I keep it at
 <code>softtabstop=-2</code> so I know how much it counts for, even though it is using the
 value from <code>shiftwidth</code>. This may have side effects on 3rd party plugins that
-don&#39;t account for negative values, but I&#39;d sooner fork the plugin than change
+don&#x27;t account for negative values, but I&#x27;d sooner fork the plugin than change
 my value.</p>
-<h4 id="shiftround">shiftround</h4>
+<h4>shiftround</h4>
 <p>This is for <code>&gt;&gt;</code> and <code>&lt;&lt;</code> indenting. Vim will round odd numbers of leading
 spaces to the nearest <code>shiftwidth</code>.</p>
 <p>Example of when <code>shiftround</code> is on, before:</p>
-<pre><code class="hljs handlebars"><span class="xml">   Three spaces with shiftwidth=4, indent me</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">   Three spaces with shiftwidth=4, indent me</code></pre>
 <p>After, the line gets indented to 4 spaces since that was the nearest
 <code>shiftwidth</code>:</p>
-<pre><code class="hljs handlebars"><span class="xml">    Three spaces with shiftwidth=4, indent me</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">    Three spaces with shiftwidth=4, indent me</code></pre>
 <p>I have this setting off (<code>set noshiftround</code>) so I can control odd-numbers of
 indents, particularly for cases like JSDoc blocks, where you have an extra
 alignment space that you want to preserve:</p>
-<pre><code class="hljs javascript">    <span class="hljs-comment">/**
+<pre><code class="hljs language-javascript">    <span class="hljs-comment">/**
      * &lt;-- alignment space left of asterisk
-     */</span>
-</code></pre>
+     */</span></code></pre>
 <p>Example of bad unindenting when <code>set expandtab</code> and <code>set shiftround</code> and you
 use <code>&lt;&lt;</code> to unindent the JSDoc:</p>
-<pre><code class="hljs javascript">  <span class="hljs-comment">/**
+<pre><code class="hljs language-javascript">  <span class="hljs-comment">/**
     * &lt;-- alignment space left of asterisk
-    */</span>
-</code></pre>
-<h4 id="joinspaces">joinspaces</h4>
+    */</span></code></pre>
+<h4>joinspaces</h4>
 <p>When you press <code>gj</code> in normal mode, vim takes the line below and moves it to
 the end of the current line. With this setting on, Vim inserts spaces after
 punctuation.</p>
-<pre><code class="hljs handlebars"><span class="xml">Before text. _
-After text.</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">Before text. _
+After text.</code></pre>
 <p>Becomes:</p>
-<pre><code class="hljs handlebars"><span class="xml">Before text._  After text.</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">Before text._  After text.</code></pre>
 <p>When the <code>cpoptions</code> flag has J, it will become:</p>
-<pre><code class="hljs handlebars"><span class="xml">Before text. After text._</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">Before text. After text._</code></pre>
 <p>In all examples, the <code>_</code> is the cursor position.</p>
-<p>You probably want to turn this off so you don&#39;t get extra spaces when coding.</p>
-<h3 id="indenting">Indenting</h3>
-<h4 id="autoindent">autoindent</h4>
+<p>You probably want to turn this off so you don&#x27;t get extra spaces when coding.</p>
+<h3>Indenting</h3>
+<h4>autoindent</h4>
 <p>Starting from insert mode with:</p>
-<pre><code class="hljs handlebars"><span class="xml">    Indented line 1_</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">    Indented line 1_</code></pre>
 <p>Pressing <code>&lt;CR&gt;</code> (Return/Enter) will put you at the next line, same indent
 level:</p>
-<pre><code class="hljs handlebars"><span class="xml">    Indented line 1
-    _</span>
-</code></pre>
-<p>You probably want this on if you use <code>smartindent</code>.<br>This setting is modified by <code>smartindent</code>, <code>cindent</code>, <code>indentexpr</code>, and
+<pre><code class="hljs language-handlebars">    Indented line 1
+    _</code></pre>
+<p>You probably want this on if you use <code>smartindent</code>.<br>
+This setting is modified by <code>smartindent</code>, <code>cindent</code>, <code>indentexpr</code>, and
 <code>paste</code>.</p>
-<h4 id="smartindent">smartindent</h4>
+<h4>smartindent</h4>
 <p>This setting tells Vim to parse your code a little, and based on curly-braces
 and keywords defined in the indent syntax for the filetype, it will add an
 indent going from one line to another.</p>
 <p>There are built-in exceptions for lines starting with the character <code>#</code>. For no
 good reason, in my opinion.</p>
 <p>Before:</p>
-<pre><code class="hljs handlebars"><span class="xml">    if (true) {_</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">    if (true) {_</code></pre>
 <p>After:</p>
-<pre><code class="hljs handlebars"><span class="xml">    if (true) {
-        _</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">    if (true) {
+        _</code></pre>
 <p>This setting modifies <code>autoindent</code>. It is recommended to use both of them
 together for consistent behavior.</p>
 <p>It is not applied when <code>cindent</code> is on or <code>indentexpr</code> is set.</p>
-<h4 id="cindent">cindent</h4>
+<h4>cindent</h4>
 <p>This is more programmatic than <code>smartindent</code> and uses even more parsing and
 some Vim options that can be defined in indent plugins. Your milage may vary
 with this, so turn it on or off as desired. It produces pretty much the same
 result as <code>smartindent</code> for C, but might not do anything for other languages
-where the required Vim options like <code>cinkeys</code> aren&#39;t defined.</p>
-<p>This setting modifies the formatting of <code>autoindent</code>.<br>This setting supercedes <code>smartindent</code>.<br>This setting is not applied when <code>indentexpr</code> is set.</p>
+where the required Vim options like <code>cinkeys</code> aren&#x27;t defined.</p>
+<p>This setting modifies the formatting of <code>autoindent</code>.<br>
+This setting supercedes <code>smartindent</code>.<br>
+This setting is not applied when <code>indentexpr</code> is set.</p>
 <p>I leave this off in favor of just <code>smartindent</code> since the languages I work in
-aren&#39;t always as C-style.</p>
-<h4 id="indentexpr">indentexpr</h4>
+aren&#x27;t always as C-style.</p>
+<h4>indentexpr</h4>
 <p>This is typically set by indent plugins (including the ones provided by Vim) to
-give programmatic rules for indenting. Unless you&#39;re writing custom logic to
-indent code, you don&#39;t need to set it manually. These settings will override
+give programmatic rules for indenting. Unless you&#x27;re writing custom logic to
+indent code, you don&#x27;t need to set it manually. These settings will override
 <code>smartindent</code> and <code>cindent</code>, so indent plugins have the greatest priority in
 determining how to indent.</p>
 <p>The <a href="https://github.com/pangloss/vim-javascript/blob/master/indent/javascript.vim">indent plugin code for pangloss/vim-javascript</a> is a pretty clear example
 of how <code>indentexpr</code> works -- basically it parses lines of code to determine
-what the next line&#39;s indent should be.</p>
-<h4 id="copyindent">copyindent</h4>
-<p>If you have mixed tabs and spaces for some reason, and you&#39;re a strict coder
+what the next line&#x27;s indent should be.</p>
+<h4>copyindent</h4>
+<p>If you have mixed tabs and spaces for some reason, and you&#x27;re a strict coder
 when it comes to whitespace, the mix is probably intentional.</p>
 <p>When using <code>autoindent</code> and the <code>copyindent</code> setting is on:</p>
-<pre><code class="hljs handlebars"><span class="xml">░░░░ ░░░░ code_</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">░░░░ ░░░░ code_</code></pre>
 <p>Will yield the following on the next line:</p>
-<pre><code class="hljs handlebars"><span class="xml">░░░░ ░░░░ code
-░░░░ ░░░░ another line</span>
-</code></pre>
-<p>When off, you&#39;ll get Vim&#39;s attempt to reconstruct the whitespace:</p>
-<pre><code class="hljs handlebars"><span class="xml">░░░░ ░░░░ code
-░░░░░░░░  another line</span>
-</code></pre>
+<pre><code class="hljs language-handlebars">░░░░ ░░░░ code
+░░░░ ░░░░ another line</code></pre>
+<p>When off, you&#x27;ll get Vim&#x27;s attempt to reconstruct the whitespace:</p>
+<pre><code class="hljs language-handlebars">░░░░ ░░░░ code
+░░░░░░░░  another line</code></pre>
 <p>This is a good setting to keep on if you like to control your own whitespace.</p>
-<h4 id="preserveindent">preserveindent</h4>
+<h4>preserveindent</h4>
 <p>When this is on:</p>
-<pre><code class="hljs handlebars"><span class="xml">░░░░ ░░░░ unindentme
+<pre><code class="hljs language-handlebars">░░░░ ░░░░ unindentme
 ░░░░ ░░░░ indentme
-░░░░  ░░░░ indentme</span>
-</code></pre>
+░░░░  ░░░░ indentme</code></pre>
 <p>And you un-indent your code using <code>&lt;&lt;</code> or <code>&gt;&gt;</code>, you get:</p>
-<pre><code class="hljs handlebars"><span class="xml">░░░░ unindentme
+<pre><code class="hljs language-handlebars">░░░░ unindentme
 ░░░░ ░░░░ ░░░░ indentme
-░░░░  ░░░░ ░░░░ indentme</span>
-</code></pre>
+░░░░  ░░░░ ░░░░ indentme</code></pre>
 <p>Basically, Vim will keep your original indent pattern if you indent, and remove
-as little as possible -- tabs first, and then spaces. In the last line, you&#39;ll
+as little as possible -- tabs first, and then spaces. In the last line, you&#x27;ll
 notice Vim detected the tab pattern as <code>&lt;Tab&gt;&lt;Space&gt;</code> so it continues to add
 both every time you indent.</p>
-<p>I keep this setting on because I don&#39;t want Vim to change what I probably
+<p>I keep this setting on because I don&#x27;t want Vim to change what I probably
 intentially wrote -- which is the only scenario where I would intermix tabs and
 spaces.</p>
-<h4 id="formatoptions-and-cpoptions">formatoptions and cpoptions</h4>
-<p>You definitely need to tweak these to your liking, but I think Vim&#39;s help info
+<h4>formatoptions and cpoptions</h4>
+<p>You definitely need to tweak these to your liking, but I think Vim&#x27;s help info
 is sufficient in this case since some visual samples are provided. Check out
 <code>:help formatoptions</code>, <code>:help fo-table</code> and <code>:help cpoptions</code>.</p>
-<h2 id="plugins">Plugins</h2>
-<p>Vim&#39;s built-in whitespace options may be enough for plain text and C code, but
+<h2>Plugins</h2>
+<p>Vim&#x27;s built-in whitespace options may be enough for plain text and C code, but
 for other languages, Vim supports indent plugins. There are many indent plugins
 that come bundled with vim, and to automatically enable them use this line in
 your vimrc:</p>
-<pre><code class="hljs vim"><span class="hljs-keyword">filetype</span> <span class="hljs-built_in">indent</span> <span class="hljs-keyword">on</span>
-</code></pre>
+<pre><code class="hljs language-vim"><span class="hljs-keyword">filetype</span> <span class="hljs-built_in">indent</span> <span class="hljs-keyword">on</span></code></pre>
 <p>You may have <code>filetype plugin indent on</code>, which also loads the rest of the
-filetype related plugins, so that&#39;s fine. If you&#39;re using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> to manage
+filetype related plugins, so that&#x27;s fine. If you&#x27;re using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> to manage
 plugins, it will automatically turn the setting on after plugins have loaded,
-so don&#39;t include the line in your vimrc or things will load twice!</p>
-<h3 id="editorconfig">editorconfig</h3>
+so don&#x27;t include the line in your vimrc or things will load twice!</p>
+<h3>editorconfig</h3>
 <p>I recommend this plugin for anyone working in open source or collaborating with
 others.</p>
 <p>Editorconfig lets you define whitespace standards in an <code>.editorconfig</code> file
-(but it&#39;s not <a href="https://github.com/sirbrillig/mixedindentlint">a linting plugin</a>!).<br>The rules are grouped by file extension , and it will set the <code>expandtab</code>,
+(but it&#x27;s not <a href="https://github.com/sirbrillig/mixedindentlint">a linting plugin</a>!).<br>
+The rules are grouped by file extension , and it will set the <code>expandtab</code>,
 <code>shiftwidth</code>, <code>tabstop</code>, <code>softtabstop</code>, and other settings for you after you
 open a file with a definition in the <code>.editorconfig</code> file you provide.</p>
 <p>Many non-Vim text editors and IDEs support editorconfig, too. This is
@@ -362,15 +335,14 @@ especially nice because you can keep the file along with your project and other
 editorconfig users will automatically be conforming to your whitespace
 standards.</p>
 <p>This plugin requires vim to be compiled with Python support (or takes some
-configuration to use a binary), so check in command mode (<code>:has(&#39;python&#39;)</code> or
-<code>:has(&#39;python3&#39;)</code>) or starting vim with the <code>--version</code> flag:</p>
-<pre><code class="hljs bash">vim --version
-</code></pre>
+configuration to use a binary), so check in command mode (<code>:has(&#x27;python&#x27;)</code> or
+<code>:has(&#x27;python3&#x27;)</code>) or starting vim with the <code>--version</code> flag:</p>
+<pre><code class="hljs language-bash">vim --version</code></pre>
 <ul>
 <li><a href="https://github.com/editorconfig/editorconfig-vim">editorconfig/editorconfig-vim</a></li>
 </ul>
-<h3 id="auto-determine-whitespace-settings">Auto-determine whitespace settings</h3>
-<p>As an alternative to editorconfig, Tim Pope&#39;s plugin <a href="https://github.com/tpope/vim-sleuth">tpope/vim-sleuth</a> will
+<h3>Auto-determine whitespace settings</h3>
+<p>As an alternative to editorconfig, Tim Pope&#x27;s plugin <a href="https://github.com/tpope/vim-sleuth">tpope/vim-sleuth</a> will
 run through the current file or similar files and try to automatically
 determine what <code>expandtab</code>, <code>shiftwidth</code>, etc. settings were used on them
 during creation and set those on the current file. Another option is
@@ -379,33 +351,35 @@ during creation and set those on the current file. Another option is
 <li><a href="https://github.com/tpope/vim-sleuth">tpope/vim-sleuth</a> detects and applies settings on file open</li>
 <li><a href="https://github.com/ciaranm/detectindent">ciaranm/detectindent</a> detects when you run <code>:DetectIndent</code></li>
 </ul>
-<h3 id="better-indent-visibility">Better indent visibility</h3>
+<h3>Better indent visibility</h3>
 <p>The <code>listchars</code> option is helpful, but sometimes it gets hard to look at
 symbols, or you need a better way to distinguish your current indent level.
 There are two <em>good</em> plugins that can provide you with this. Check the links to
 their GitHub repos for screenshots.</p>
 <ul>
-<li><p><a href="https://github.com/nathanaelkane/vim-indent-guides">nathanaelkane/vim-indent-guides</a> changes the background color at each level of
+<li>
+<p><a href="https://github.com/nathanaelkane/vim-indent-guides">nathanaelkane/vim-indent-guides</a> changes the background color at each level of
 indent. I use this one and toggle it on/off as desired using its built-in
 commands.</p>
 </li>
-<li><p><a href="https://github.com/Yggdroot/indentLine">Yggdroot/indentLine</a> actually inserts symbols at the start of each indent.
-This may have some performance problems on large files though, so I&#39;d be wary
+<li>
+<p><a href="https://github.com/Yggdroot/indentLine">Yggdroot/indentLine</a> actually inserts symbols at the start of each indent.
+This may have some performance problems on large files though, so I&#x27;d be wary
 of it.</p>
 </li>
 </ul>
-<h3 id="line-splitting">Line splitting</h3>
+<h3>Line splitting</h3>
 <p>For a bunch of programming languages, you can put code all on one line. Using
-native Vim, you&#39;d have to manually press <code>&lt;CR&gt;</code> at points to properly break it
+native Vim, you&#x27;d have to manually press <code>&lt;CR&gt;</code> at points to properly break it
 up into several lines (sure, you could automate it with macros or regex, but
 every time is different).</p>
 <p>The plugin <a href="https://github.com/AndrewRadev/splitjoin.vim">AndrewRadev/splitjoin.vim</a> adds mappings to automaticaly do
-this for you (for certain syntaxes only). Check out the plugin&#39;s README to see
+this for you (for certain syntaxes only). Check out the plugin&#x27;s README to see
 visual examples, and <code>doc/</code> on how to configure it.</p>
 <ul>
 <li><a href="https://github.com/AndrewRadev/splitjoin.vim">AndrewRadev/splitjoin.vim</a></li>
 </ul>
-<h3 id="alignment">Alignment</h3>
+<h3>Alignment</h3>
 <p>There are some plugins that will reformat your code for you by adding
 whitespace to align things together. See each page for examples:</p>
 <ul>
@@ -413,7 +387,7 @@ whitespace to align things together. See each page for examples:</p>
 <li><a href="https://github.com/junegunn/vim-easy-align">junegunn/vim-easy-align</a></li>
 <li><a href="https://github.com/godlygeek/tabular">godlygeek/tabular</a></li>
 </ul>
-<h2 id="my-vim-setup">My Vim setup</h2>
+<h2>My Vim setup</h2>
 <p>You can dig through <a href="https://github.com/davidosomething/dotfiles/tree/master/vim">my Vim configuration on GitHub</a>. My whitespace settings
 and the plugins I use are all in the main vimrc file, and their configurations
 are interspersed into <code>plugin/</code>, <code>ftplugin/</code>, and <code>after/*/</code> to cope with the

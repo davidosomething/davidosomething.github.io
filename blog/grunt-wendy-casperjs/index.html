@@ -105,14 +105,13 @@
 	<section class="article__body" itemprop="articleBody">
 		<p><img src="/assets/img/posts/wendy.png" class="image--left" alt="grunt-wendy logo">
 <a href="https://github.com/davidosomething/grunt-wendy">grunt-wendy</a> is my latest Grunt
-plugin. It’s a CasperJS test runner with customizable filtering and formatting
+plugin. It&rsquo;s a CasperJS test runner with customizable filtering and formatting
 options, which CasperJS alone lacks.</p>
-<h2 id="installation">Installation</h2>
-<pre><code class="hljs bash">npm install --save-dev grunt-wendy
-</code></pre>
+<h2>Installation</h2>
+<pre><code class="hljs language-bash">npm install --save-dev grunt-wendy</code></pre>
 <p>See the docs and contribute to grunt-wendy on the GitHub repository here:
 <a href="https://github.com/davidosomething/grunt-wendy">grunt-wendy on GitHub</a></p>
-<h2 id="vs-others">VS others</h2>
+<h2>VS others</h2>
 <p>Compared to
 <a href="https://github.com/iamchrismiller/grunt-casper">iamchrismiller/grunt-casper</a>
 and
@@ -120,27 +119,27 @@ and
 the top two Grunt CasperJS test runners (all others are no longer maintained),
 this task:</p>
 <ul>
-<li>adds formatting options to format CasperJS’ output</li>
+<li>adds formatting options to format CasperJS&rsquo; output</li>
 <li>adds filtering to filter out unwanted CasperJS output</li>
-<li>adds option to <strong>not fail</strong> on conditions — e.g. just output a warning when
+<li>adds option to <strong>not fail</strong> on conditions &mdash; e.g. just output a warning when
 there are dubious or skipped tests</li>
 <li>is version locked to PhantomJS 1.9.7 via the <a href="https://github.com/Medium/phantomjs">node phantomjs 1.9.11
-module</a> — this is a troublemaker for
+module</a> &mdash; this is a troublemaker for
 a lot of errors with the other tasks</li>
-<li>fully exposes the casper cli (iamchrismiller’s uses options only), including
+<li>fully exposes the casper cli (iamchrismiller&rsquo;s uses options only), including
 allowing custom test runner instead of just <kbd>casper test</kbd> (neither
 of the others do)</li>
-<li>currently maintained by original developer (ronaldloker’s is not, and
+<li>currently maintained by original developer (ronaldloker&rsquo;s is not, and
 although pull requests are merged by
 <a href="https://github.com/gorillamania">@gorillamania</a> other chores are not
 guaranteed: changelog, bump, npm publish)</li>
 </ul>
-<h2 id="what-s-next-">What’s next?</h2>
+<h2>What&rsquo;s next?</h2>
 <p>Planned additions are:</p>
 <ul>
-<li>SlimerJS support for gecko (use iamchrismiller’s if you need this) and possibly trifleJS support for IE.</li>
-<li>Optional polyfill auto-injection for <var>Function.prototype.bind</var>, since PhantomJS 1.9.7 doesn’t implement it.</li>
-<li>Inclusion of other output formats for reporting besides CasperJS’ included xunit xml file</li>
+<li>SlimerJS support for gecko (use iamchrismiller&rsquo;s if you need this) and possibly trifleJS support for IE.</li>
+<li>Optional polyfill auto-injection for <var>Function.prototype.bind</var>, since PhantomJS 1.9.7 doesn&rsquo;t implement it.</li>
+<li>Inclusion of other output formats for reporting besides CasperJS&rsquo; included xunit xml file</li>
 </ul>
 
 	</section>

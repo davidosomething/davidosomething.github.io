@@ -94,12 +94,12 @@
 		</div>
 	</header>
 	<section class="article__body" itemprop="articleBody">
-		<p>I&#39;ve rebuilt my website from the ground-up for the new year, finishing it just
+		<p>I&#x27;ve rebuilt my website from the ground-up for the new year, finishing it just
 in time. This site is now fully static, templates in Handlebars syntax and posts
 written in Markdown are combined into plain old HTML, where WordPress and PHP
 were previously providing the templating and storing the post formatting as
 HTML in a database.</p>
-<h2 id="the-new-stack">The new stack</h2>
+<h2>The new stack</h2>
 <ul>
 <li>Replaced PHP templating with Handlebars</li>
 <li>Replaced WordPress serving with Metalsmith generation</li>
@@ -111,30 +111,30 @@ and sass-lint instead of the scss-lint gem.</p>
 arrow functions and dynamic templating. Metalsmith uses generators, so it
 requires either node version 4.2+ or 0.12 with the harmony flag on; I opted to
 use node v4.2.</p>
-<h2 id="migrating-from-wordpress">Migrating from WordPress</h2>
+<h2>Migrating from WordPress</h2>
 <p>There was a brief period of time where I secretly added a query parameter to the
 WordPress version of this site which would cause it to spit out the raw contents
-of each post as plain text. I only had 40 posts so it wasn&#39;t a big deal to grab
+of each post as plain text. I only had 40 posts so it wasn&#x27;t a big deal to grab
 each one and reformat them into Markdown using an HTML to markdown converter.
 I output the post meta data into YAML format above each post and saved it out as
 the frontmatter for each new markdown file.</p>
 <p>The interim scripts I used to clean up the PHP to HTML to Markdown files are
 left in the github repo in
 <a href="https://github.com/davidosomething/16.davidosomething.com/tree/962ba928f4500410d0b2f1469b3fed7361708f97/bin">bin/</a>.
-It&#39;s one of the few times I&#39;ve ever decided to use PHP from the command-line,
+It&#x27;s one of the few times I&#x27;ve ever decided to use PHP from the command-line,
 and also the only PHP in the repo.</p>
-<h2 id="seo">SEO</h2>
+<h2>SEO</h2>
 <p>Getting rid of WordPress meant that I would have to do a lot of plugin-provided
-SEO work myself. I&#39;ve fully marked-up this site using
+SEO work myself. I&#x27;ve fully marked-up this site using
 <a href="https://schema.org/BlogPosting">schema.org</a> Microdata. I prefer that over
 JSON-LD since it is more specific regarding which DOM node represents an entity.
 Twitter cards, OpenGraph tags, standard meta tags and site validation are all
 trivial in comparison to the verbosity of Microdata.</p>
-<h2 id="templating">Templating</h2>
+<h2>Templating</h2>
 <p>I redid the HTML templating with Handlebars, which is amazingly clean compared
-to jumping in and out of PHP tags. If you&#39;re doing that in WordPress, consider
-using twig or something - I really don&#39;t know how anyone can live like that.</p>
-<h2 id="setting-up-metalsmith">Setting up Metalsmith</h2>
+to jumping in and out of PHP tags. If you&#x27;re doing that in WordPress, consider
+using twig or something - I really don&#x27;t know how anyone can live like that.</p>
+<h2>Setting up Metalsmith</h2>
 <p>Metalsmith is like gulp in that it is pretty much just a task runner. Or maybe
 it is more like broccoli in that it works on a directory (tree) rather than on
 a stream.</p>
@@ -143,21 +143,21 @@ tell it to <code>use(someplugin())</code>, which will transform those files. Thi
 exactly a functional map operation, but it works similarly, and the plugins
 basically provide a function that serves as the map iteratee.</p>
 <p>Despite Metalsmith providing its own CLI tool and being capable of running
-Gulp plugins, I opted to use it as a JS module from within Gulp. It&#39;s just
+Gulp plugins, I opted to use it as a JS module from within Gulp. It&#x27;s just
 easier to remember <code>gulp html</code> to generate my html since it is mentally the same
 as <code>gulp css</code> and <code>gulp js</code> for those respective build steps. Also my CSS task
 actually operates on two different streams so it was worth keeping Gulp around.</p>
-<h2 id="future-plan">Future plan</h2>
-<p>I&#39;m looking to switch to <a href="https://github.com/gatsbyjs/gatsby">gatsby</a> -- a react
+<h2>Future plan</h2>
+<p>I&#x27;m looking to switch to <a href="https://github.com/gatsbyjs/gatsby">gatsby</a> -- a react
 based static site generator. Basically all this does is use react templating
-instead of handlebars, and uses react&#39;s output to static html to generate the
+instead of handlebars, and uses react&#x27;s output to static html to generate the
 file. Converting handlebars templates to react is trivial (it is practically
 just wrapping the handlebars template in some React code) and this will have the
 added bonus of hot-reloading for previewing posts.</p>
-<h2 id="open-source">Open source</h2>
+<h2>Open source</h2>
 <p>The site source is <a href="https://github.com/davidosomething/16.davidosomething.com">on github</a>.
-Kinda nice that there&#39;s nothing to hide (database pws, dot-env files, whatever),
-now that there&#39;s no backend.</p>
+Kinda nice that there&#x27;s nothing to hide (database pws, dot-env files, whatever),
+now that there&#x27;s no backend.</p>
 
 	</section>
 	<footer class="article__footer">
