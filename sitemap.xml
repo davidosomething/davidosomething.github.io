@@ -20,4 +20,5 @@
 <url> <loc>https://davidosomething.com/blog/understanding-font-face-and-typography/</loc> <lastmod>2010-02-04</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://davidosomething.com/blog/using-notepad-for-web-development/</loc> <lastmod>2010-02-02</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://davidosomething.com/blog/vim-for-javascript/</loc> <lastmod>2016-01-09</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://davidosomething.com/blog/whitespace-in-vim/</loc> <lastmod>2016-01-12</lastmod> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>

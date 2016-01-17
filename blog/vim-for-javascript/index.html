@@ -112,14 +112,14 @@ open up a JavaScript file (where the value of <code>filetype</code> is <code>jav
 <p>By default Vim doesn&#39;t automatically detect filetypes, so if you aren&#39;t using
 <a href="https://github.com/junegunn/vim-plug">vim-plug</a> (for which the call to <code>call plug#end()</code> enables this), you&#39;ll need
 to enable it manually by adding this to your vimrc:</p>
-<pre><code class="hljs viml"><span class="hljs-keyword">filetype</span> plugin <span class="hljs-built_in">indent</span> <span class="hljs-keyword">on</span>
+<pre><code class="hljs vim"><span class="hljs-keyword">filetype</span> plugin <span class="hljs-built_in">indent</span> <span class="hljs-keyword">on</span>
 </code></pre>
 <p>This will enable filetype detection, running filetype specific plugins, and
 loading filetype specific indentation settings.</p>
 <p>You may also need to enable syntax highlighting in your vimrc file if you&#39;re not
 using <a href="https://github.com/junegunn/vim-plug">vim-plug</a>. To manually enable syntax highlighting, add the following line
 to your vimrc file:</p>
-<pre><code class="hljs viml">syntax <span class="hljs-built_in">enable</span>
+<pre><code class="hljs vim"><span class="hljs-keyword">syntax</span> enable
 </code></pre>
 <h3 id="plugins-that-provide-better-syntax-support">Plugins that provide better syntax support</h3>
 <p>The standard JavaScript syntax highlighting is typically adequate, but you may
@@ -157,7 +157,7 @@ since it has most up-to-date language support. The author also writes a few
 other plugins that can be used in conjunction with it (although they may work
 with the other syntaxes too).</p>
 <p>Using <a href="https://github.com/junegunn/vim-plug">vim-plug</a>, I recommend installing the plugin like this:</p>
-<pre><code class="hljs viml">Plug <span class="hljs-string">'othree/yajs.vim`, { '</span>fo<span class="hljs-string">r': '</span>javascript<span class="hljs-string">' }</span>
+<pre><code class="hljs vim">Plug <span class="hljs-string">'othree/yajs.vim`, { '</span><span class="hljs-keyword">for</span><span class="hljs-string">': '</span>javascript<span class="hljs-string">' }</span>
 </code></pre>
 <p>The additional requirement at the end makes sure the syntax plugin is loaded in
 a Vim autocommand based on filetype detection (as opposed to relying on Vim&#39;s
@@ -213,7 +213,7 @@ since I currently stick to the ES2015 feature set at most.</p>
 <h3 id="jsx-support-for-react">JSX support for React</h3>
 <p>If you write React and use its optional JSX syntax, adding the following plugin
 will provide you with syntax highlighting for those inline XML-nodes:</p>
-<pre><code class="hljs viml"><span class="hljs-attribute">Plug</span> <span class="hljs-string">'mxw/vim-jsx'</span>
+<pre><code class="hljs vim">Plug <span class="hljs-string">'mxw/vim-jsx'</span>
 </code></pre>
 <p>This plugin requires a JavaScript syntax plugin from above to define certain
 JavaScript regions. It specifically mentions pangloss&#39; extension in the docs but
@@ -225,7 +225,7 @@ JavaScript regions. It specifically mentions pangloss&#39; extension in the docs
 <p>A lot of things use JSON for configuration, so I recommend <a href="https://github.com/elzr/vim-json">elzr/vim-json</a> for
 that. Check out its options, though; I don&#39;t like some of the defaults so
 I turn them off, but you might want them. Install with:</p>
-<pre><code class="hljs viml"><span class="hljs-attribute">Plug</span> <span class="hljs-string">'elzr/vim-json'</span>
+<pre><code class="hljs vim">Plug <span class="hljs-string">'elzr/vim-json'</span>
 </code></pre>
 <ul>
 <li><a href="https://github.com/elzr/vim-json">elzr/vim-json</a></li>
@@ -271,7 +271,7 @@ the README at the plugin&#39;s homepage.</p>
 information on how to use that. The gist is that the completion system will
 run a function, the <code>omnifunc</code>, to populate autocompletion pop-up with results.</p>
 <p>To use the default completion function, add this to your vimrc:</p>
-<pre><code class="hljs viml"><span class="hljs-attribute">autocmd</span> FileType javascript setlocal omnifunc=javascriptcomplete<span class="hljs-comment">#CompleteJS</span>
+<pre><code class="hljs vim"><span class="hljs-keyword">autocmd</span> FileType javascript <span class="hljs-keyword">setlocal</span> omnifunc=javascriptcomplete#CompleteJS
 </code></pre>
 <p>For even better completion, consider using a plugin like
 <a href="https://github.com/Shougo/neocomplete.vim">Shougo/neocomplete.vim</a> or <a href="https://github.com/Valloric/YouCompleteMe">Valloric/YouCompleteMe</a>. On Neovim, an option is
@@ -284,10 +284,10 @@ the same feature set, though, so whatever might be missing in one can probably
 be configured into it.</p>
 <p>With <a href="https://github.com/Shougo/neocomplete.vim">Shougo/neocomplete.vim</a>, using multiple sources of completion can be done
 by providing a list of function names like so:</p>
-<pre><code class="hljs viml">  <span class="hljs-keyword">let</span> g:neocomplete<span class="hljs-comment">#sources#omni#functions.javascript = [</span>
-        <span class="hljs-string">\</span>   <span class="hljs-string">'jspc#omni'</span>,
-        <span class="hljs-string">\</span>   <span class="hljs-string">'tern#Complete'</span>,
-        <span class="hljs-string">\</span> ]
+<pre><code class="hljs vim">  <span class="hljs-keyword">let</span> <span class="hljs-variable">g:neocomplete</span>#sources#omni#functions.javascript = [
+        \   <span class="hljs-string">'jspc#omni'</span>,
+        \   <span class="hljs-string">'tern#Complete'</span>,
+        \ ]
 </code></pre>
 <h3 id="extended-omni-completion">Extended omni-completion</h3>
 <p>The plugin <a href="https://github.com/1995eaton/vim-better-javascript-completion">1995eaton/vim-better-javascript-completion</a> provides a somewhat
@@ -312,7 +312,7 @@ parameters it expects) and can extract values from related files (e.g. CommonJS
 use TernJS results instead of the default omni-completion results.</p>
 <p>Installing via <a href="https://github.com/junegunn/vim-plug">vim-plug</a>, which can run additional commands before plugin
 installation, is done like this:</p>
-<pre><code class="hljs viml"><span class="hljs-type">Plug</span> <span class="hljs-symbol">'marijnh</span>/tern_for_vim', { <span class="hljs-symbol">'do'</span>: <span class="hljs-symbol">'npm</span> install' }
+<pre><code class="hljs vim">Plug &#39;marijnh/tern_for_vim&#39;, { &#39;do&#39;: &#39;npm install&#39; }
 </code></pre>
 <p>This will install its npm dependencies for you (Tern runs a node-based analyzer
 in the background while you&#39;re editing).</p>
@@ -329,7 +329,7 @@ adds existing symbols. For example, if you&#39;re writing an event listener, it&
 suggest things like <code>click</code>, and <code>mouseover</code> for you. You can see all the
 suggestions it provides in its <a href="https://github.com/othree/jspc.vim/blob/master/autoload/jspc/javascript.vim">GitHub source</a>.
 Install the plugin via:</p>
-<pre><code class="hljs viml"><span class="hljs-attribute">Plug</span> <span class="hljs-string">'othree/jspc.vim'</span>
+<pre><code class="hljs vim">Plug <span class="hljs-string">'othree/jspc.vim'</span>
 </code></pre>
 <p>On load, the jspc.vim plugin automatically detects whatever <code>omnifunc</code> you
 already have set as your default. It wraps it with the parameter completion,
@@ -343,7 +343,7 @@ default completion is (typically <code>javascriptcomplete#CompleteJS</code>).</p
 <h3 id="jumping-between-commonjs-modules">Jumping between CommonJS modules</h3>
 <p>The plugin <a href="https://github.com/moll/vim-node">moll/vim-node</a> adds keybindings like for jumping to files in your
 CommonJS <code>require</code> statements.</p>
-<pre><code class="hljs viml">Plug 'moll/vim-<span class="hljs-keyword">node</span><span class="hljs-title">'</span>
+<pre><code class="hljs vim">Plug <span class="hljs-string">'moll/vim-node'</span>
 </code></pre>
 <ul>
 <li><a href="https://github.com/moll/vim-node">moll/vim-node</a></li>
@@ -410,30 +410,30 @@ loads files.</p>
 	</section>
 	<footer class="article__footer">
 			<section id="changelog" class="article__changelog">
-				<h2>Changelog</h2>
-				<dl>
-						<dt>Jan 16, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/2e232bdf72ee1b703c361bebead7a3267402c602">diff</a>)</dt>
-						<dd><ul>
+		<h2>Changelog</h2>
+		<dl>
+				<dt>Jan 16, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/2e232bdf72ee1b703c361bebead7a3267402c602">diff</a>)</dt>
+				<dd><ul>
 <li>Clean up some grammar</li>
 <li>Added heavenshell/vim-jsdoc</li>
 <li>Change omnifunc example to ensure copypasters don&#39;t set global omnifunc</li>
 <li>More on linters</li>
 </ul>
 </dd>
-						<dt>Jan 12, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/ee240b48380070a4f68c1063c29b79b6a724c8f6">diff</a>)</dt>
-						<dd><ul>
+				<dt>Jan 12, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/ee240b48380070a4f68c1063c29b79b6a724c8f6">diff</a>)</dt>
+				<dd><ul>
 <li>Make sure plugin names are all linkified. Add more notes on what the indent plugins do</li>
 <li>Added example of multi-omni-completion for neocomplete</li>
 <li>Some language changes</li>
 </ul>
 </dd>
-						<dt>Jan 11, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/0eb309472728f5855823d4d1b35bf4e52e524d7b">diff</a>)</dt>
-						<dd><ul>
+				<dt>Jan 11, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/0eb309472728f5855823d4d1b35bf4e52e524d7b">diff</a>)</dt>
+				<dd><ul>
 <li>Update omni-completion with basic info on how <code>omnifunc</code> works and added vim-better-javascript-completion.</li>
 </ul>
 </dd>
-				</dl>
-			</section>
+		</dl>
+	</section>
 		<section class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
@@ -489,6 +489,10 @@ loads files.</p>
 	<div class="widget__body">
 		<ol class="widget__postlist">
 			<li><article class="articleTile">
+	<h2><a href="/blog/whitespace-in-vim/">Whitespace settings in&nbsp;Vim</a></h2>
+	<time datetime="2016-01-12T00:00:00.000Z">January 12, 2016</time>
+</article>
+</li><li><article class="articleTile">
 	<h2><a href="/blog/vim-for-javascript/">Setting up Vim for JavaScript&nbsp;development</a></h2>
 	<time datetime="2016-01-09T00:00:00.000Z">January 9, 2016</time>
 </article>

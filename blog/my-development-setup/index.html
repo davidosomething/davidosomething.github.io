@@ -276,12 +276,12 @@ the source URL)</li>
 <ol>
 <li>Use apache to password protect repository (no native security in hg, use basic or digest auth. SSH can be used, too, but then why bother with hgweb?)</li>
 <li><p>Under directory directive of main.conf in /etc/apache/hg/</p>
-<pre><code class="hljs apache"> <span class="hljs-tag">&lt;Location /hg&gt;</span>
-   AuthType Basic
-   AuthName <span class="hljs-string">"Mercurial repositories"</span>
-   AuthUserFile /var/htpasswd/hg
-   Require valid-<span class="hljs-keyword">user</span>
- <span class="hljs-title">&lt;/Location</span>&gt;
+<pre><code class="hljs apache"> <span class="hljs-section">&lt;Location /hg&gt;</span>
+   <span class="hljs-attribute">AuthType</span> Basic
+   <span class="hljs-attribute">AuthName</span> <span class="hljs-string">"Mercurial repositories"</span>
+   <span class="hljs-attribute">AuthUserFile</span> /var/htpasswd/hg
+   <span class="hljs-attribute">Require</span> valid-user
+ <span class="hljs-section">&lt;/Location&gt;</span>
 </code></pre>
 </li>
 <li><p>See more on Apache security here:
@@ -373,7 +373,7 @@ improved my workflow.</p>
 
 	</section>
 	<footer class="article__footer">
-		<section class="article_comments">
+				<section class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
@@ -428,6 +428,10 @@ improved my workflow.</p>
 	<div class="widget__body">
 		<ol class="widget__postlist">
 			<li><article class="articleTile">
+	<h2><a href="/blog/whitespace-in-vim/">Whitespace settings in&nbsp;Vim</a></h2>
+	<time datetime="2016-01-12T00:00:00.000Z">January 12, 2016</time>
+</article>
+</li><li><article class="articleTile">
 	<h2><a href="/blog/vim-for-javascript/">Setting up Vim for JavaScript&nbsp;development</a></h2>
 	<time datetime="2016-01-09T00:00:00.000Z">January 9, 2016</time>
 </article>

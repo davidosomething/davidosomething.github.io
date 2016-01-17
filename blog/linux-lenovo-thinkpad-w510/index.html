@@ -120,12 +120,12 @@ thinkwiki.org</a>, the
 brightness controls. Switching to a virtual console, changing the brightness,
 and switching back worked… except that Cinnamon DE crashed upon returning to it.</p>
 <p>Here’s what your <var>/etc/X11/xorg.conf</var> file should look like:</p>
-<pre><code class="hljs coffee"><span class="hljs-meta">Section</span> <span class="hljs-string">"Device"</span>
+<pre><code class="hljs coffee">Section <span class="hljs-string">"Device"</span>
   Identifier <span class="hljs-string">"Device0"</span>
   Driver <span class="hljs-string">"nvidia"</span>
   VendorName <span class="hljs-string">"NVIDIA Corporation"</span>
   BoardName <span class="hljs-string">"Quadro FX 880M"</span>
-  <span class="hljs-meta">Option</span> <span class="hljs-string">"RegistryDwords"</span> <span class="hljs-string">"EnableBrightnessControl=1"</span>
+  Option <span class="hljs-string">"RegistryDwords"</span> <span class="hljs-string">"EnableBrightnessControl=1"</span>
 EndSection
 </code></pre>
 <h3 id="keyboard-mapping">Keyboard Mapping</h3>
@@ -143,12 +143,12 @@ provides, so I went with the gui setting in this case.</p>
 <p>I use the proprietary nVidia graphics driver for full 3d support. There system
 freezes when resuming from suspend. To fix that, add this line to the file
 <var>/etc/pm/config.d/unload_modules</var> (you may have to create it):</p>
-<pre><code class="hljs bash"><span class="hljs-attr">SUSPEND_MODULES</span>=<span class="hljs-string">"$SUSPEND_MODULES nvidia"</span>
+<pre><code class="hljs bash">SUSPEND_MODULES=<span class="hljs-string">"<span class="hljs-variable">$SUSPEND_MODULES</span> nvidia"</span>
 </code></pre>
 
 	</section>
 	<footer class="article__footer">
-		<section class="article_comments">
+				<section class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
@@ -203,6 +203,10 @@ freezes when resuming from suspend. To fix that, add this line to the file
 	<div class="widget__body">
 		<ol class="widget__postlist">
 			<li><article class="articleTile">
+	<h2><a href="/blog/whitespace-in-vim/">Whitespace settings in&nbsp;Vim</a></h2>
+	<time datetime="2016-01-12T00:00:00.000Z">January 12, 2016</time>
+</article>
+</li><li><article class="articleTile">
 	<h2><a href="/blog/vim-for-javascript/">Setting up Vim for JavaScript&nbsp;development</a></h2>
 	<time datetime="2016-01-09T00:00:00.000Z">January 9, 2016</time>
 </article>
