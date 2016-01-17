@@ -122,7 +122,8 @@ setting specific to the buffer. Example of using an autocommand to set
 decides to use that same autocommand to change the <code>shiftwidth</code> later, it will
 override your. That is why I recommend you using an ftplugin instead.</p>
 <p>For the ftplugin version, put the line <code>setlocal shiftwidth=2</code> into the file
-<code>~/.vim/after/ftplugin/javascript.vim</code>, which is how FileType plugins work.</p>
+<code>~/.vim/after/ftplugin/javascript.vim</code>, where <code>javascript</code> is the name of the
+filetype you&#x27;re changing settings for.</p>
 <p>A good understanding of the order in which Vim runs files and commands will
 help you debug rogue whitespace settings.</p>
 <blockquote>
