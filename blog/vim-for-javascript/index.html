@@ -23,7 +23,7 @@
 	<meta name="description" content="Comparisons and information for useful JavaScript-specific plugins">
 	<meta name="twitter:description" property="og:description" content="Comparisons and information for useful JavaScript-specific plugins">
 	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/posts/Vimlogo.svg.png">
-	<meta name="keywords" content="vim,plugins,javascript,tern">
+	<meta name="keywords" content="vim,plugins,javascript,syntax,completion,linting,tern">
 
 	<title>davidosomething.com | Setting up Vim for JavaScript development</title>
 	<link rel="author" type="text/plain" href="/humans.txt">
@@ -82,7 +82,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Comparisons and information for useful JavaScript-specific&nbsp;plugins</h2>
 		<div class="article__meta">
 			<time datetime="2016-01-09T00:00:00.000Z" itemprop="datePublished">January 09, 2016</time>
-			<span>Updated <time datetime="2016-01-16T00:00:00.000Z" itemprop="dateModified">January 16, 2016</time>(<a href="#changelog">log</a>)</span>
+			<span>Updated <time datetime="2016-01-17T00:00:00.000Z" itemprop="dateModified">January 17, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -92,6 +92,15 @@
 		</li>
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">javascript</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">syntax</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">completion</span></a>
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">linting</span></a>
 		</li>
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">tern</span></a>
@@ -395,11 +404,18 @@ Refer to syntastic&#x27;s <a href="https://github.com/scrooloose/syntastic/wiki/
 <p>Syntastic&#x27;s pitfalls are that it is large (it is essentially a linter
 framework for Vim) and it doesn&#x27;t run asynchronously (doesn&#x27;t mean it is slow
 though -- depends on the speed of the lint program).</p>
-<p>You could alternatively use Vim&#x27;s built-in makeprg, which can run any program
-against your file. Syntastic actually uses that under the covers. There&#x27;s
-<a href="https://github.com/osyo-manga/vim-watchdogs">osyo-manga/vim-watchdogs</a>, which runs linters asynchronously, but the docs are
-only in Japanese. The plugins <a href="https://github.com/Shougo/vimproc.vim">Shougo/vimproc.vim</a> and <a href="https://github.com/tpope/vim-dispatch">tpope/vim-dispatch</a> can
-run any tool async, but they aren&#x27;t easily configurable as lint-runners.</p>
+<p>You could alternatively use Vim&#x27;s built-in <code>makeprg</code>, which can run any program
+and output the results to Vim, but you miss out on things like using multiple
+<code>makeprg</code>s at a time (e.g. JSCS, eslint, and the flow type checker at once)
+and grouping results. Syntastic actually uses makeprg under the covers, so
+besides the minimal overhead of configuring some variables it really isn&#x27;t
+any slower.</p>
+<p>There&#x27;s <a href="https://github.com/osyo-manga/vim-watchdogs">osyo-manga/vim-watchdogs</a>, which runs linters asynchronously, but the
+docs are only in Japanese. The plugins <a href="https://github.com/Shougo/vimproc.vim">Shougo/vimproc.vim</a> and
+<a href="https://github.com/tpope/vim-dispatch">tpope/vim-dispatch</a> can run any tool async, but they aren&#x27;t easily
+configurable as lint-runners. If you follow modern JS design patterns, your
+JavaScript files should ideally be small modules so running linters
+asynchronously won&#x27;t provide noticeable benefit.</p>
 <p>If you&#x27;re running Neovim, <a href="https://github.com/benekastah/neomake">neomake</a> is
 an option that&#x27;s gaining popularity. It makes full use of Neovim&#x27;s asynchronous
 job support.</p>
@@ -436,6 +452,11 @@ loads files.</p>
 			<section id="changelog" class="article__changelog">
 		<h2>Changelog</h2>
 		<dl>
+				<dt>Jan 17, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/348ee68aee9e6c0e9d00f1754a2507a4d6be347f">diff</a>)</dt>
+				<dd><ul>
+<li>More on <code>makeprg</code> and linting</li>
+</ul>
+</dd>
 				<dt>Jan 16, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/2e232bdf72ee1b703c361bebead7a3267402c602">diff</a>)</dt>
 				<dd><ul>
 <li>Clean up some grammar</li>
