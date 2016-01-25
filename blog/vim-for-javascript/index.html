@@ -81,7 +81,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Comparisons and information for useful JavaScript-specific&nbsp;plugins</h2>
 		<div class="article__meta">
 			<time datetime="2016-01-09T00:00:00.000Z" itemprop="datePublished">January 09, 2016</time>
-			<span>Updated <time datetime="2016-01-17T00:00:00.000Z" itemprop="dateModified">January 17, 2016</time>(<a href="#changelog">log</a>)</span>
+			<span>Updated <time datetime="2016-01-25T00:00:00.000Z" itemprop="dateModified">January 25, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -231,9 +231,21 @@ what it finds.</li>
 <li>An indent plugin with an option for alignment under functions.</li>
 </ul>
 </li>
+<li>
+<p><a href="https://github.com/jason0x43/vim-js-indent">jason0x43/vim-js-indent</a></p>
+<ul>
+<li>This is a somewhat new (last updated 2014, as of this writing) indent
+script that also has some TypeScript support. It is based on an
+<a href="http://www.vim.org/scripts/script.php?script_id=1840">older indent script by Tye Zdrojewski</a> and the default JS-in-HTML indent
+logic that comes with Vim.</li>
+<li>The indent logic starts with normal <code>cindent</code> styles and adds special
+cases for comments, JSDoc, arrays, and switch/case.</li>
+</ul>
+</li>
 </ul>
 <p>Since I use <a href="https://github.com/othree/yajs.vim">othree/yajs.vim</a> for my syntax, I use <a href="https://github.com/gavocanov/vim-js-indent">gavocanov/vim-js-indent</a>
-for improved indenting.</p>
+for improved indenting. Your best bet with any of these is to try it out and
+see if you like the indent style it provides over what Vim provides by default.</p>
 <h2>Related syntaxes</h2>
 <p>During JavaScript development you may find yourself editing a lot of other
 filetypes that plain JavaScript.</p>
@@ -451,6 +463,11 @@ loads files.</p>
 			<section id="changelog" class="article__changelog">
 		<h2>Changelog</h2>
 		<dl>
+				<dt>Jan 25, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/10fa0c69759d390905ee31a7dc3a108ddeea6e7e">diff</a>)</dt>
+				<dd><ul>
+<li>Found a new indent script</li>
+</ul>
+</dd>
 				<dt>Jan 17, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/348ee68aee9e6c0e9d00f1754a2507a4d6be347f">diff</a>)</dt>
 				<dd><ul>
 <li>More on <code>makeprg</code> and linting</li>
