@@ -23,7 +23,7 @@
 	<meta name="description" content="Getting whitespace to behave in Vim using settings and plugins">
 	<meta name="twitter:description" property="og:description" content="Getting whitespace to behave in Vim using settings and plugins">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/posts/Vimlogo.svg.png">
 	<meta name="keywords" content="vim,settings,plugins,whitespace">
-<meta itemprop="dateModified" content="2016-01-12T00:00:00.000Z">
+
 	<title>davidosomething.com | Whitespace settings in Vim</title>
 	<link rel="author" type="text/plain" href="/humans.txt">
 	<link rel="canonical" href="https://davidosomething.com/blog/whitespace-in-vim/">
@@ -81,7 +81,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Getting whitespace to behave in Vim using settings and&nbsp;plugins</h2>
 		<div class="article__meta">
 			<time datetime="2016-01-12T00:00:00.000Z" itemprop="datePublished">January 12, 2016</time>
-			
+			<span>Updated <time datetime="2016-02-05T00:00:00.000Z" itemprop="dateModified">February 05, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -334,24 +334,30 @@ your vimrc:</p>
 filetype related plugins, so that&#x27;s fine. If you&#x27;re using <a href="https://github.com/junegunn/vim-plug">vim-plug</a> to manage
 plugins, it will automatically turn the setting on after plugins have loaded,
 so don&#x27;t include the line in your vimrc or things will load twice!</p>
-<h3>editorconfig</h3>
-<p>I recommend this plugin for anyone working in open source or collaborating with
-others.</p>
-<p>Editorconfig lets you define whitespace standards in an <code>.editorconfig</code> file
+<h3>EditorConfig</h3>
+<p>I recommend using the <a href="http://editorconfig.org">EditorConfig</a> standard for anyone working in open-source
+or collaborating with others.</p>
+<p>EditorConfig lets you define whitespace standards in an <code>.editorconfig</code> file
 (but it&#x27;s not <a href="https://github.com/sirbrillig/mixedindentlint">a linting plugin</a>!).<br>
 The rules are grouped by file extension , and it will set the <code>expandtab</code>,
 <code>shiftwidth</code>, <code>tabstop</code>, <code>softtabstop</code>, and other settings for you after you
 open a file with a definition in the <code>.editorconfig</code> file you provide.</p>
-<p>Many non-Vim text editors and IDEs support editorconfig, too. This is
+<p>Many non-Vim text editors and IDEs support EditorConfig, too. This is
 especially nice because you can keep the file along with your project and other
-editorconfig users will automatically be conforming to your whitespace
+EditorConfig users will automatically be conforming to your whitespace
 standards.</p>
-<p>This plugin requires vim to be compiled with Python support (or takes some
-configuration to use a binary), so check in command mode (<code>:has(&#x27;python&#x27;)</code> or
-<code>:has(&#x27;python3&#x27;)</code>) or starting vim with the <code>--version</code> flag:</p>
+<p>There are two EditorConfig plugins for Vim. The official one,
+<a href="https://github.com/editorconfig/editorconfig-vim">editorconfig/editorconfig-vim</a> requires Vim to be compiled with Python support
+(or takes some configuration to use a binary), so check in command mode
+(<code>:has(&#x27;python&#x27;)</code> or <code>:has(&#x27;python3&#x27;)</code>) or starting vim with the <code>--version</code>
+flag:</p>
 <pre><code class="hljs language-bash">vim --version</code></pre>
+<p>The unofficial one, <a href="https://github.com/sgur/vim-editorconfig">sgur/vim-editorconfig</a>, is written in pure VimScript so it
+is technically slower, but for something so simple it is unnoticable. I use
+this one myself.</p>
 <ul>
-<li><a href="https://github.com/editorconfig/editorconfig-vim">editorconfig/editorconfig-vim</a></li>
+<li><a href="https://github.com/editorconfig/editorconfig-vim">editorconfig/editorconfig-vim</a> is the official plugin</li>
+<li><a href="https://github.com/sgur/vim-editorconfig">sgur/vim-editorconfig</a> is the unofficial one that I use</li>
 </ul>
 <h3>Auto-determine whitespace settings</h3>
 <p>As an alternative to editorconfig, Tim Pope&#x27;s plugin <a href="https://github.com/tpope/vim-sleuth">tpope/vim-sleuth</a> will
@@ -418,7 +424,17 @@ order in which Vim loads files.</p>
 
 	</section>
 	<footer class="article__footer">
-				<section class="article_comments">
+			<section id="changelog" class="article__changelog">
+		<h2>Changelog</h2>
+		<dl>
+				<dt>Feb 5, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/8b464edcc24f3768af8cc1e86e1a87fb82e4b6a4">diff</a>)</dt>
+				<dd><ul>
+<li>EditorConfig linking and unofficial VimScript version</li>
+</ul>
+</dd>
+		</dl>
+	</section>
+		<section class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
