@@ -81,7 +81,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Getting whitespace to behave in Vim using settings and&nbsp;plugins</h2>
 		<div class="article__meta">
 			<time datetime="2016-01-12T00:00:00.000Z" itemprop="datePublished">January 12, 2016</time>
-			<span>Updated <time datetime="2016-02-05T00:00:00.000Z" itemprop="dateModified">February 05, 2016</time>(<a href="#changelog">log</a>)</span>
+			<span>Updated <time datetime="2016-02-06T00:00:00.000Z" itemprop="dateModified">February 06, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -346,18 +346,27 @@ open a file with a definition in the <code>.editorconfig</code> file you provide
 especially nice because you can keep the file along with your project and other
 EditorConfig users will automatically be conforming to your whitespace
 standards.</p>
-<p>There are two EditorConfig plugins for Vim. The official one,
+<p>There are three EditorConfig plugins for Vim. The official one,
 <a href="https://github.com/editorconfig/editorconfig-vim">editorconfig/editorconfig-vim</a> requires Vim to be compiled with Python support
 (or takes some configuration to use a binary), so check in command mode
 (<code>:has(&#x27;python&#x27;)</code> or <code>:has(&#x27;python3&#x27;)</code>) or starting vim with the <code>--version</code>
 flag:</p>
 <pre><code class="hljs language-bash">vim --version</code></pre>
-<p>The unofficial one, <a href="https://github.com/sgur/vim-editorconfig">sgur/vim-editorconfig</a>, is written in pure VimScript so it
+<p>An unofficial one, <a href="https://github.com/sgur/vim-editorconfig">sgur/vim-editorconfig</a>, is written in pure VimScript so it
 is technically slower, but for something so simple it is unnoticable. I use
 this one myself.</p>
+<p>There is another unofficial EditorConfig vim plugin written in pure VimScript:
+<a href="https://github.com/dahu/EditorConfig">dahu/EditorConfig</a> -- but it is in alpha and the implementation does not
+include all the EditorConfig features. Instead, it provides a <code>autocmd</code> hooks
+so you can implement your own interpretation for things it does not implement
+like <code>trim_trailing_whitespace</code> and <code>insert_final_newline</code>. I&#x27;ve checked out
+the source code (as I have for all plugins I use) and it&#x27;s quite well written
+so if you want to implement the other features (or don&#x27;t need them), it is a
+viable option.</p>
 <ul>
 <li><a href="https://github.com/editorconfig/editorconfig-vim">editorconfig/editorconfig-vim</a> is the official plugin</li>
 <li><a href="https://github.com/sgur/vim-editorconfig">sgur/vim-editorconfig</a> is the unofficial one that I use</li>
+<li><a href="https://github.com/dahu/EditorConfig">dahu/EditorConfig</a> is another unofficial one with <code>autocmd</code> hooks</li>
 </ul>
 <h3>Auto-determine whitespace settings</h3>
 <p>As an alternative to editorconfig, Tim Pope&#x27;s plugin <a href="https://github.com/tpope/vim-sleuth">tpope/vim-sleuth</a> will
@@ -427,6 +436,11 @@ order in which Vim loads files.</p>
 			<section id="changelog" class="article__changelog">
 		<h2>Changelog</h2>
 		<dl>
+				<dt>Feb 6, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/717bbe2c1ebe6514da5d3ade5d860f47ac1db7c6">diff</a>)</dt>
+				<dd><ul>
+<li>Found another EditorConfig plugin</li>
+</ul>
+</dd>
 				<dt>Feb 5, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/8b464edcc24f3768af8cc1e86e1a87fb82e4b6a4">diff</a>)</dt>
 				<dd><ul>
 <li>EditorConfig linking and unofficial VimScript version</li>
