@@ -50,7 +50,7 @@
 	<link rel="stylesheet" href="/assets/css/global.css">
 	<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments);};ga.l=+new Date;ga('create','UA-9710641-1','auto');ga('send','pageview');</script>
 </head>
-<body id="top" class="type--post section--blog slug--whitespace-in-vim">
+<body id="top" class="type--post section--blog slug--object-object">
 	<header class="siteHeader">
 		<div class="siteHeader__title">
 			<a href="/" class="siteHeader__siteName">davidosomething.com</a><span class="siteHeader__separator"> | </span><a href="#main" class="siteHeader__pageTitle">Whitespace settings in Vim</a>
@@ -75,7 +75,7 @@
 		<div class="globalContent">
 			<main class="globalDiv" id="main">
 <article class="article" itemprop="mainEntity">
-	<meta itemprop="name" content="whitespace-in-vim">
+	<meta itemprop="name" content="object-object">
 	<header class="article__header">
 		<h1 class="article__title" itemprop="headline"><a rel="bookmark" class="article__header__link article__header__link--permalink" href="https://davidosomething.com/blog/whitespace-in-vim/" itemprop="mainEntityOfPage url">Whitespace settings in&nbsp;Vim</a></h1>
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Getting whitespace to behave in Vim using settings and&nbsp;plugins</h2>
@@ -84,16 +84,16 @@
 			<span>Updated <time datetime="2016-02-06T00:00:00.000Z" itemprop="dateModified">February 06, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
+			<a href="/tag/vim/" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
 		</li>
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">settings</span></a>
+			<a href="/tag/settings/" class="article__tag" itemprop="item"><span itemprop="name">settings</span></a>
 		</li>
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">plugins</span></a>
+			<a href="/tag/plugins/" class="article__tag" itemprop="item"><span itemprop="name">plugins</span></a>
 		</li>
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-			<a href="#" class="article__tag" itemprop="item"><span itemprop="name">whitespace</span></a>
+			<a href="/tag/whitespace/" class="article__tag" itemprop="item"><span itemprop="name">whitespace</span></a>
 		</li>
 </ul>
 		</div>
@@ -138,7 +138,7 @@ specifically to match the filename, or use Vim&#x27;s <code>modeline</code> feat
 your file that Vim will parse commands from and execute. By default, Vim
 assumes the command is <code>set</code>. Here&#x27;s an example of setting the <code>modeline</code> in
 a vimrc file:</p>
-<pre><code class="hljs language-vim">" vim: set ai sw=4:</code></pre>
+<pre><code class="hljs language-vim"><span class="hljs-comment">" vim: set ai sw=4:</span></code></pre>
 <p>The double quote at the beginning indicates a VimL comment. This will set <code>set autoindent</code> and <code>set shiftwidth=4</code> for the buffer. The use of the short form is
 optional.</p>
 <h3>Display options</h3>
@@ -152,8 +152,8 @@ continuation symbol when you have <code>set nowrap</code> and a line is longer t
 window.</p>
 <p>My options are:</p>
 <pre><code class="hljs language-vim"><span class="hljs-keyword">set</span> <span class="hljs-keyword">list</span>
-<span class="hljs-keyword">set</span> listchars=<span class="hljs-string">""</span>                      <span class="hljs-string">" reset
-</span><span class="hljs-keyword">set</span> listchars=<span class="hljs-keyword">ta</span><span class="hljs-variable">b:</span>→\ 
+<span class="hljs-keyword">set</span> listchars=<span class="hljs-string">""</span>                      <span class="hljs-comment">" reset</span>
+<span class="hljs-keyword">set</span> listchars=<span class="hljs-keyword">ta</span><span class="hljs-variable">b:</span>→\ 
 <span class="hljs-keyword">set</span> listchars+=trai<span class="hljs-variable">l:</span>·</code></pre>
 <p>Note there is a trailing space after the backslash on the tab line (for
 escaping the literal space symbol). So 4-character-wide tabs look like this:</p>
@@ -453,7 +453,7 @@ order in which Vim loads files.</p>
 	<script>
 	var disqus_config = function () {
 		this.page.url = 'https://davidosomething.com/blog/whitespace-in-vim/';
-		this.page.identifier = 'whitespace-in-vim';
+		this.page.identifier = 'object-object';
 	};
 	(function() {
 	var d = document, s = d.createElement('script');
