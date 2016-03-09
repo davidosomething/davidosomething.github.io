@@ -136,8 +136,9 @@ your file that Vim will parse commands from and execute. By default, Vim
 assumes the command is <code>set</code>. Here&#x27;s an example of setting the <code>modeline</code> in
 a vimrc file:</p>
 <pre><code class="hljs language-vim"><span class="hljs-comment">" vim: set ai sw=4:</span></code></pre>
-<p>The double quote at the beginning indicates a VimL comment. This will set <code>set autoindent</code> and <code>set shiftwidth=4</code> for the buffer. The use of the short form is
-optional.</p>
+<p>The double quote at the beginning indicates a VimL comment. This will set
+<code>set autoindent</code> and <code>set shiftwidth=4</code> for the buffer. The use of the short
+form is optional.</p>
 <h3>Display options</h3>
 <p>These options affect how whitespace appears in Vim. If someone else were to
 open your file, they might see something completely different based on their
@@ -381,16 +382,12 @@ symbols, or you need a better way to distinguish your current indent level.
 There are two <em>good</em> plugins that can provide you with this. Check the links to
 their GitHub repos for screenshots.</p>
 <ul>
-<li>
-<p><a href="https://github.com/nathanaelkane/vim-indent-guides">nathanaelkane/vim-indent-guides</a> changes the background color at each level of
-indent. I use this one and toggle it on/off as desired using its built-in
-commands.</p>
-</li>
-<li>
-<p><a href="https://github.com/Yggdroot/indentLine">Yggdroot/indentLine</a> actually inserts symbols at the start of each indent.
+<li><a href="https://github.com/nathanaelkane/vim-indent-guides">nathanaelkane/vim-indent-guides</a> changes the background color at each level
+of indent. I use this one and toggle it on/off as desired using its built-in
+commands.</li>
+<li><a href="https://github.com/Yggdroot/indentLine">Yggdroot/indentLine</a> actually inserts symbols at the start of each indent.
 This may have some performance problems on large files though, so I&#x27;d be wary
-of it.</p>
-</li>
+of it.</li>
 </ul>
 <h3>Better whitespace visibility</h3>
 <p>The plugin <a href="https://github.com/ntpeters/vim-better-whitespace">ntpeters/vim-better-whitespace</a>, similar to
