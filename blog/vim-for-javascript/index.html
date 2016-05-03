@@ -81,7 +81,7 @@
 		<h2 class="article__subheader" itemprop="alternativeHeadline">Comparisons and information for useful JavaScript-specific&nbsp;plugins</h2>
 		<div class="article__meta">
 			<time datetime="2016-01-09T00:00:00.000Z" itemprop="datePublished">January 09, 2016</time>
-			<span>Updated <time datetime="2016-01-25T00:00:00.000Z" itemprop="dateModified">January 25, 2016</time>(<a href="#changelog">log</a>)</span>
+			<span>Updated <time datetime="2016-05-03T00:00:00.000Z" itemprop="dateModified">May 03, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="/tag/vim/" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -131,8 +131,20 @@ want more features such as ES2015 support, or better distinguishing of keywords.
 <ul>
 <li>Includes custom indent settings</li>
 <li>Adds special concealing symbols so to make your code pretty at a glance</li>
-<li>Not frequently updated (maybe once a month with many months in between
-periods of activity).</li>
+<li>Last updated April 2016 with additional ES2015 support (better arrow
+function and highlighting among other things) and some regex performance
+updates.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a></p>
+<ul>
+<li>This is a plugin that bundles a bunch of language syntax plugins into
+one. It includes <a href="https://github.com/pangloss/vim-javascript">pangloss/vim-javascript</a> at the latest version, as well
+as some other plugins like [vim-jsx]. Worth checking out if you don&#x27;t
+want to maintain syntax plugins on your own, but you should double-check
+to make sure you aren&#x27;t manually adding the bundled plugins outside of
+the pack (resulting in having the plugin twice).</li>
 </ul>
 </li>
 <li>
@@ -148,14 +160,6 @@ periods of activity).</li>
 <li>This is a fork of <a href="https://github.com/jelera/vim-javascript-syntax">jelera/vim-javascript-syntax</a></li>
 <li>Does not include custom indent settings</li>
 <li>Updated very often to keep in line with ES specifications</li>
-</ul>
-</li>
-<li>
-<p><a href="https://github.com/sheerun/vim-polyglot">sheerun/vim-polyglot</a>, or <a href="https://github.com/sheerun/yajs.vim">sheerun/yajs.vim</a></p>
-<ul>
-<li>This is a plugin that bundles a bunch of language syntax plugins into one.
-It particularly includes <code>sheerun/yajs.vim</code>, which is an outdated mirror
-of <code>othree/yajs.vim</code>.</li>
 </ul>
 </li>
 <li>
@@ -457,6 +461,11 @@ loads files.</p>
 			<section id="changelog" class="article__changelog">
 		<h2>Changelog</h2>
 		<dl>
+				<dt>May 3, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/4e84c59ea266aae491cf58bc0662985204c23c88">diff</a>)</dt>
+				<dd><ul>
+<li>Updated pangloss/vim-javascript and sheerun/vim-polyglot descriptions</li>
+</ul>
+</dd>
 				<dt>Jan 25, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/10fa0c69759d390905ee31a7dc3a108ddeea6e7e">diff</a>)</dt>
 				<dd><ul>
 <li>Found a new indent script</li>
