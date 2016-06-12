@@ -23,7 +23,7 @@
 	<meta name="description" content="ArchLinux NVidia 340.xx Legacy Driver Updates">
 	<meta name="twitter:description" property="og:description" content="ArchLinux NVidia 340.xx Legacy Driver Updates">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/avatar.png">
 	<meta name="keywords" content="archlinux,Linux,thinkpad,w510">
-<meta itemprop="dateModified" content="2016-05-28T23:29:59.182Z">
+<meta itemprop="dateModified" content="2016-06-12T00:17:42.356Z">
 	<title>davidosomething.com | Linux on the Lenovo Thinkpad W510 – Part 3</title>
 	<link rel="canonical" href="https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-3/">
 	<link rel="author" type="text/plain" href="/humans.txt">
@@ -99,8 +99,7 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody">
-		<p>The NVidia drivers after 343.22 no longer support the NVidia Quadro FX 880M GPU
+	<div class="article__body" itemprop="articleBody"><p>The NVidia drivers after 343.22 no longer support the NVidia Quadro FX 880M GPU
 for the ThinkPad W510 so I had to switch to legacy drivers (340-xx).</p>
 <p>To get everything working again, I make some changes to my kernel mode settings
 and my xorg.conf. In <var>/boot/syslinux/syslinux.cfg</var> and
@@ -108,10 +107,9 @@ and my xorg.conf. In <var>/boot/syslinux/syslinux.cfg</var> and
 <script src="https://gist.github.com/davidosomething/87171683d589981225a1.js"></script>
 <p>And in the <var>syslinux.cfg</var> the line <code>DEFAULT arch</code> is now
 <code>DEFAULT archnvidia</code> to default to the new kernel settings.</p>
-
-	</section>
+</div>
 	<footer class="article__footer">
-				<section class="article_comments">
+				<div class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
@@ -125,7 +123,7 @@ and my xorg.conf. In <var>/boot/syslinux/syslinux.cfg</var> and
 	(d.head || d.body).appendChild(s);
 	})();
 	</script>
-</section>
+</div>
 	</footer>
 </article>
 			</main>

@@ -23,7 +23,7 @@
 	<meta name="description" content="A post on configuring and using an old Lenovo ThinkPad W510.">
 	<meta name="twitter:description" property="og:description" content="A post on configuring and using an old Lenovo ThinkPad W510.">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/avatar.png">
 	<meta name="keywords" content="cinnamon,Linux,mint,thinkpad,w510">
-<meta itemprop="dateModified" content="2016-05-28T23:29:59.182Z">
+<meta itemprop="dateModified" content="2016-06-12T00:17:42.356Z">
 	<title>davidosomething.com | Linux on the Lenovo ThinkPad W510</title>
 	<link rel="canonical" href="https://davidosomething.com/blog/linux-lenovo-thinkpad-w510/">
 	<link rel="author" type="text/plain" href="/humans.txt">
@@ -102,8 +102,7 @@
 </ul>
 		</div>
 	</header>
-	<section class="article__body" itemprop="articleBody">
-		<p>I bought a crappy PC laptop as a backup since my MacBook&rsquo;s been failing. I&rsquo;ve
+	<div class="article__body" itemprop="articleBody"><p>I bought a crappy PC laptop as a backup since my MacBook&rsquo;s been failing. I&rsquo;ve
 gone full Linux on it since I spend most of the day in a terminal and browser,
 so except for Photoshop I&rsquo;m comfortable. I&rsquo;ll probably buy a new MacBook when
 they release 2014 Pro Retina ones. Until then, I&rsquo;ll document my experience here.</p>
@@ -143,10 +142,9 @@ provides, so I went with the gui setting in this case.</p>
 freezes when resuming from suspend. To fix that, add this line to the file
 <var>/etc/pm/config.d/unload_modules</var> (you may have to create it):</p>
 <pre><code class="hljs language-bash">SUSPEND_MODULES=<span class="hljs-string">"<span class="hljs-variable">$SUSPEND_MODULES</span> nvidia"</span></code></pre>
-
-	</section>
+</div>
 	<footer class="article__footer">
-				<section class="article_comments">
+				<div class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
@@ -160,7 +158,7 @@ freezes when resuming from suspend. To fix that, add this line to the file
 	(d.head || d.body).appendChild(s);
 	})();
 	</script>
-</section>
+</div>
 	</footer>
 </article>
 			</main>
