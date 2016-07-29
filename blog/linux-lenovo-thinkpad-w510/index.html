@@ -23,7 +23,7 @@
 	<meta name="description" content="A post on configuring and using an old Lenovo ThinkPad W510.">
 	<meta name="twitter:description" property="og:description" content="A post on configuring and using an old Lenovo ThinkPad W510.">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/avatar.png">
 	<meta name="keywords" content="cinnamon,Linux,mint,thinkpad,w510">
-<meta itemprop="dateModified" content="2016-06-21T11:47:05.902Z">
+<meta itemprop="dateModified" content="2016-07-29T06:02:57.254Z">
 	<title>davidosomething.com | Linux on the Lenovo ThinkPad W510</title>
 	<link rel="canonical" href="https://davidosomething.com/blog/linux-lenovo-thinkpad-w510/">
 	<link rel="author" type="text/plain" href="/humans.txt">
@@ -102,23 +102,23 @@
 </ul>
 		</div>
 	</header>
-	<div class="article__body" itemprop="articleBody"><p>I bought a crappy PC laptop as a backup since my MacBook&rsquo;s been failing. I&rsquo;ve
+	<div class="article__body" itemprop="articleBody"><p>I bought a crappy PC laptop as a backup since my MacBook’s been failing. I’ve
 gone full Linux on it since I spend most of the day in a terminal and browser,
-so except for Photoshop I&rsquo;m comfortable. I&rsquo;ll probably buy a new MacBook when
-they release 2014 Pro Retina ones. Until then, I&rsquo;ll document my experience here.</p>
-<p>First off, I&rsquo;m running <a href="http://www.linuxmint.com/">Linux Mint 16 Petra with the Cinnamon Desktop
-Environment</a>. I&rsquo;ve got to say, it&rsquo;s really pretty in
+so except for Photoshop I’m comfortable. I’ll probably buy a new MacBook when
+they release 2014 Pro Retina ones. Until then, I’ll document my experience here.</p>
+<p>First off, I’m running <a href="http://www.linuxmint.com/">Linux Mint 16 Petra with the Cinnamon Desktop
+Environment</a>. I’ve got to say, it’s really pretty in
 comparison to Windows 7 that the laptop came with and Windows 8.1 that my
 Shuttle PC is now running.</p>
-<h2>Fixes I&rsquo;ve had to make</h2>
+<h2>Fixes I’ve had to make</h2>
 <h3>Brightness Controls</h3>
 <p>The brightness keys cause Linux to crash. Also, software controls like panel
-widgets don&rsquo;t work. Despite <a href="http://www.thinkwiki.org/wiki/Category:W510">it saying not to on
+widgets don’t work. Despite <a href="http://www.thinkwiki.org/wiki/Category:W510">it saying not to on
 thinkwiki.org</a>, the
 <var>EnableBrightnessControl</var> registry flag was the right way to enable
 brightness controls. Switching to a virtual console, changing the brightness,
-and switching back worked&hellip; except that Cinnamon DE crashed upon returning to it.</p>
-<p>Here&rsquo;s what your <var>/etc/X11/xorg.conf</var> file should look like:</p>
+and switching back worked… except that Cinnamon DE crashed upon returning to it.</p>
+<p>Here’s what your <var>/etc/X11/xorg.conf</var> file should look like:</p>
 <pre><code class="hljs language-coffee">Section <span class="hljs-string">"Device"</span>
   Identifier <span class="hljs-string">"Device0"</span>
   Driver <span class="hljs-string">"nvidia"</span>
@@ -127,15 +127,15 @@ and switching back worked&hellip; except that Cinnamon DE crashed upon returning
   Option <span class="hljs-string">"RegistryDwords"</span> <span class="hljs-string">"EnableBrightnessControl=1"</span>
 EndSection</code></pre>
 <h3>Keyboard Mapping</h3>
-<p>I don&rsquo;t use Caps Lock. I always remap it to Control. To do this in Linux Mint
-16, you need to go to the Regional &amp; Language settings, Keyboard Layouts, and
-Options in there. Don&rsquo;t change &ldquo;Caps Lock key behavior&rdquo; &mdash; change &ldquo;Ctrl key
-position&rdquo; and add &ldquo;Caps Lock as Ctrl&rdquo; there. This is so your Caps Lock key
-doesn&rsquo;t have two KeySyms associated with it (if you&rsquo;re familiar with
+<p>I don’t use Caps Lock. I always remap it to Control. To do this in Linux Mint
+16, you need to go to the Regional &#x26; Language settings, Keyboard Layouts, and
+Options in there. Don’t change “Caps Lock key behavior” — change “Ctrl key
+position” and add “Caps Lock as Ctrl” there. This is so your Caps Lock key
+doesn’t have two KeySyms associated with it (if you’re familiar with
 <var>.XModmap</var> settings). Additionally you can add pressing both Shift keys
-at once to toggle Caps Lock in the &ldquo;Miscellaneous compatibility options.&rdquo;</p>
-<p>The mdm display manager doesn&rsquo;t run <var>.XModmap</var> and it&rsquo;ll take a lot
-more effort than it&rsquo;s worth to modify the XClient/.Xsession setup that Mint
+at once to toggle Caps Lock in the “Miscellaneous compatibility options.”</p>
+<p>The mdm display manager doesn’t run <var>.XModmap</var> and it’ll take a lot
+more effort than it’s worth to modify the XClient/.Xsession setup that Mint
 provides, so I went with the gui setting in this case.</p>
 <h3>Suspend Mode</h3>
 <p>I use the proprietary nVidia graphics driver for full 3d support. There system
@@ -294,7 +294,7 @@ freezes when resuming from suspend. To fix that, add this line to the file
 </nav>
 		</div>
 		<footer class="globalFooter">
-			<ul class="globalFooter__links"><li><a href="/">Home</a></li><li><a href="/specimen">Specimen</a></li><li><a href="/docs/jsdoc">JSDoc</a></li></ul>
+			<ul class="globalFooter__links"><li><a href="/">Home</a></li><li><a href="/specimen">Specimen</a></li><li><a href="/docs/jsdoc">JSDoc</a></li><li><a href="/orphans/untitled"></a></li></ul>
 			<div>
 				<span class="globalFooter__copyright">
 					Copyright &copy; <a href="mailto:me@davidosomething.com" rel="me">David O&#x27;Trakoun</a>.

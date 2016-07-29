@@ -23,7 +23,7 @@
 	<meta name="description" content="How I set up my dev environment and projects for 2010">
 	<meta name="twitter:description" property="og:description" content="How I set up my dev environment and projects for 2010">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/avatar.png">
 	<meta name="keywords" content="apache,bitbucket,cygwin,development,LAMP,Mercurial,MongoDB,mysql,node,php,Ubuntu,virtualbox">
-<meta itemprop="dateModified" content="2016-06-21T11:47:05.902Z">
+<meta itemprop="dateModified" content="2016-07-29T06:02:57.254Z">
 	<title>davidosomething.com | My Development Setup</title>
 	<link rel="canonical" href="https://davidosomething.com/blog/my-development-setup/">
 	<link rel="author" type="text/plain" href="/humans.txt">
@@ -128,19 +128,19 @@ and OSX) the most powerful and practical environment for setting up web and
 database servers, DNS, and version control repositories (as a master on DVCS).
 A few of the benefits include:</p>
 <ul>
-<li>Using SSH to connect to a Linux commandline is faster compared to RDP&rsquo;ing or
-VNC&rsquo;ing into a Windows machine (also saves battery life on smartphones).
+<li>Using SSH to connect to a Linux commandline is faster compared to RDP’ing or
+VNC’ing into a Windows machine (also saves battery life on smartphones).
 Cygwin is a slow alternative.</li>
 <li>Package management for easy (and frequent) upgrades.</li>
 <li>More robustly integrated file permissions between the file system and web
-server (that is, IIS doesn&rsquo;t use NTFS file permissions, but instead Windows
+server (that is, IIS doesn’t use NTFS file permissions, but instead Windows
 account permissions).</li>
 <li>File paths and naming make more sense on *nix than Windows. For instance,
 <samp>.htaccess</samp> is a system file, not an unnamed file with the
 htaccess extension.</li>
 </ul>
 <h2>The setup</h2>
-<p>For my personal set up, I&rsquo;ve currently got a VM running on my media center PC
+<p>For my personal set up, I’ve currently got a VM running on my media center PC
 with the following:</p>
 <ul>
 <li>OpenSSH on port 22</li>
@@ -151,20 +151,20 @@ with the following:</p>
 <li>PHP 5</li>
 <li>Railo for Adobe Coldfusion</li>
 <li>MySQL</li>
-<li>Git &ndash; to get node.js and other source</li>
-<li>Mercurial &ndash; for my own version control</li>
+<li>Git – to get node.js and other source</li>
+<li>Mercurial – for my own version control</li>
 <li>node.js as a daemon</li>
 <li>MongoDB (for Hummingbird and anything else)</li>
 <li>Hummingbird through node.js server, listening on port 8000 for <strong>live</strong>
-analytics&hellip; just to play with</li>
+analytics… just to play with</li>
 <li>Icinga (Nagios fork) for service monitoring</li>
 </ul>
-<p>It&rsquo;s accessible via RDP using VirtualBox&rsquo;s VRDP on port 4000. That means I can
+<p>It’s accessible via RDP using VirtualBox’s VRDP on port 4000. That means I can
 access it using a Remote Desktop client like the one that comes with Windows.
 With that I can access an X-Windows environment (xinit, or desktops like Gnome,
 KDE, XFCE) without having to do X11 forwarding to the local computer (such as
 through XMing or Cygwin/X). For the record, RDP is faster than X11 forwarding
-but doesn&rsquo;t allow for seamless integration.</p>
+but doesn’t allow for seamless integration.</p>
 <h2>Here are the steps I took to set up my VM</h2>
 <h3>Setting up the host computer</h3>
 <ol>
@@ -212,7 +212,7 @@ VBoxHeadlessTray: <a href="http://www.toptensoftware.com/VBoxHeadlessTray/">http
 </li>
 </ol>
 <h3>Setting up LAMP</h3>
-<p>There&rsquo;s so many tutorials on this, it&rsquo;s ridiculously easy. Also, the default
+<p>There’s so many tutorials on this, it’s ridiculously easy. Also, the default
 config is not bad for development purposes.</p>
 <h3>Setting up phpMyAdmin</h3>
 <p>You can basically just let the aptitude installer do everything. The instance
@@ -239,10 +239,10 @@ will be accessible at <code>http://localhost/phpmyadmin</code></p>
 <li>
 <p>Then, follow this to add the mercurial repository and install it
 <a href="http://icephoenix.us/linuxunix/installing-mercurial-1-5-or-1-6-on-ubuntu-lucid-lynx-10-04/">http://icephoenix.us/linuxunix/installing-mercurial-1-5-or-1-6-on-ubuntu-lucid-lynx-10-04/</a>.
-TortoiseHg is not needed since we&rsquo;re doing everything from the commandline.</p>
+TortoiseHg is not needed since we’re doing everything from the commandline.</p>
 </li>
 <li>
-<p>I didn&rsquo;t want to use bitbucket, so I installed hg cgi server (hg serve only
+<p>I didn’t want to use bitbucket, so I installed hg cgi server (hg serve only
 allows one unsecured connection at a time) to create my own web based
 repository:</p>
 <ol>
@@ -250,9 +250,9 @@ repository:</p>
 <li>Copy hgweb.cgi and all the folders from /templates/ to
 /var/hg (chmod -R g+w www-data:www-data)</li>
 <li>Edit hgweb.cgi, set:
-<code>config = &quot;/var/hg/hgweb.config&quot;</code></li>
+<code>config = "/var/hg/hgweb.config"</code></li>
 <li>Put the repo paths/collections on the drive that is shared with the host
-(this way the files aren&rsquo;t stored in the virtual hard disk&ndash;you can back
+(this way the files aren’t stored in the virtual hard disk–you can back
 them up easily). I mounted my share drive at <samp>/mnt/share</samp> and
 created the <var>repos</var> folder in there. Because the share is on
 a windows host, the permissions are always 777 chowned to root:root</li>
@@ -265,7 +265,7 @@ a windows host, the permissions are always 777 chowned to root:root</li>
 I wanted centralized onto this computer so I cloned them:</p>
 <ol>
 <li>Use hg serve on the development PC (can be done through TortoiseHg!)</li>
-<li>From the VM, hg clone the existing repos (use the development PC&rsquo;s IP as
+<li>From the VM, hg clone the existing repos (use the development PC’s IP as
 the source URL)</li>
 </ol>
 </li>
@@ -277,12 +277,12 @@ the source URL)</li>
 </li>
 <li>
 <p>Under directory directive of main.conf in /etc/apache/hg/</p>
-<pre><code class="hljs language-apache"><span class="hljs-section">&lt;Location /hg&gt;</span>
+<pre><code class="hljs language-apache"><span class="hljs-section">&#x3C;Location /hg></span>
   <span class="hljs-attribute">AuthType</span> Basic
   <span class="hljs-attribute">AuthName</span> <span class="hljs-string">"Mercurial repositories"</span>
   <span class="hljs-attribute">AuthUserFile</span> /var/htpasswd/hg
   <span class="hljs-attribute">Require</span> valid-user
-<span class="hljs-section">&lt;/Location&gt;</span></code></pre>
+<span class="hljs-section">&#x3C;/Location></span></code></pre>
 </li>
 <li>
 <p>See more on Apache security here:
@@ -301,11 +301,11 @@ the source URL)</li>
 <var>default-jdk</var> (same thing).</p>
 <h3>Notes on setting up MongoDB</h3>
 <ol>
-<li><kbd>sudo apt-get install mongodb-stable</kbd> (not mongodb, they&rsquo;re
+<li><kbd>sudo apt-get install mongodb-stable</kbd> (not mongodb, they’re
 different).</li>
-<li>Set up for PHP/Apache using php&rsquo;s PECL (need php-dev for phpize and php-pear
+<li>Set up for PHP/Apache using php’s PECL (need php-dev for phpize and php-pear
 for pecl)</li>
-<li>If mongod won&rsquo;t start, make sure the default dbpath isn&rsquo;t locked.</li>
+<li>If mongod won’t start, make sure the default dbpath isn’t locked.</li>
 </ol>
 <h3>Setting up node.js</h3>
 <ol>
@@ -325,21 +325,21 @@ for pecl)</li>
 <li>Requires STABLE version of node.js</li>
 <li>Install via
 <a href="https://github.com/mnutt/hummingbird/blob/master/README.md">https://github.com/mnutt/hummingbird/blob/master/README.md</a>
-&ndash; the instructions on the Hummingbird site website are outdated.</li>
+– the instructions on the Hummingbird site website are outdated.</li>
 </ol>
 <h3>Icinga</h3>
 <ol>
 <li><kbd>sudo apt-get install icinga</kbd></li>
-<li>Use NO CONFIG for postfix when it comes to it. You&rsquo;ll have to set this up
+<li>Use NO CONFIG for postfix when it comes to it. You’ll have to set this up
 later if you want e-mail notifications.</li>
-<li>The instance will be available at <code>http://localhost/icinga</code> &ndash; username is
+<li>The instance will be available at <code>http://localhost/icinga</code> – username is
 icingaadmin</li>
 </ol>
 <h3>Final router configuration</h3>
 <ol>
 <li>
 <p>Bridging network connections gives the VM its own network IP. This changes
-the host&rsquo;s network IP to a new IP so any previous port forwarding or virtual
+the host’s network IP to a new IP so any previous port forwarding or virtual
 servers will have to point to the new IP.</p>
 <ol>
 <li>Select host and VirtualBox connection</li>
@@ -353,8 +353,8 @@ servers will have to point to the new IP.</p>
 <p>Finding your IP addresses:</p>
 <ol>
 <li>From the host machine, go to whatismyip.com for the router / external IP.</li>
-<li>From the host machine, run cmd &gt; ipconfig for the bridged network IP.</li>
-<li>From the VM, type ifconfig for the VM&rsquo;s network IP.</li>
+<li>From the host machine, run cmd > ipconfig for the bridged network IP.</li>
+<li>From the VM, type ifconfig for the VM’s network IP.</li>
 </ol>
 </li>
 <li>
@@ -378,7 +378,7 @@ machine forward to VM.</li>
 </li>
 </ol>
 <p>From this point on I was able to access my VM and all of the forwarded ports
-using the DynDNS address. It&rsquo;s really convenient to be able to VNC onto the host
+using the DynDNS address. It’s really convenient to be able to VNC onto the host
 machine if something needs changing, SSH into the VM to do updates or set up
 virtual hosts, and do an Hg push to this address as a master repository. Getting
 all the puzzle pieces working together and having a good setup has really
@@ -535,7 +535,7 @@ improved my workflow.</p>
 </nav>
 		</div>
 		<footer class="globalFooter">
-			<ul class="globalFooter__links"><li><a href="/">Home</a></li><li><a href="/specimen">Specimen</a></li><li><a href="/docs/jsdoc">JSDoc</a></li></ul>
+			<ul class="globalFooter__links"><li><a href="/">Home</a></li><li><a href="/specimen">Specimen</a></li><li><a href="/docs/jsdoc">JSDoc</a></li><li><a href="/orphans/untitled"></a></li></ul>
 			<div>
 				<span class="globalFooter__copyright">
 					Copyright &copy; <a href="mailto:me@davidosomething.com" rel="me">David O&#x27;Trakoun</a>.
