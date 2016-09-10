@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://davidosomething.com/blog/first-week-developing-on-a-mac/</loc> <lastmod>2011-06-20</lastmod> </url>
 <url> <loc>https://davidosomething.com/blog/git-my/</loc> <lastmod>2015-03-29</lastmod> </url>
 <url> <loc>https://davidosomething.com/blog/grunt-toggl/</loc> <lastmod>2014-04-29</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/first-week-developing-on-a-mac/</loc> <lastmod>2011-06-20</lastmod> </url>
 <url> <loc>https://davidosomething.com/blog/grunt-wendy-casperjs/</loc> <lastmod>2015-09-19</lastmod> </url>
 <url> <loc>https://davidosomething.com/blog/gulp-markdown-linter/</loc> <lastmod>2016-01-22</lastmod> </url>
 <url> <loc>https://davidosomething.com/blog/honda-metropolitan-in-boston/</loc> <lastmod>2010-04-02</lastmod> </url>
@@ -23,14 +23,14 @@
 <url> <loc>https://davidosomething.com/blog/vim-for-javascript/</loc> <lastmod>2016-01-09</lastmod> </url>
 <url> <loc>https://davidosomething.com/blog/whitespace-in-vim/</loc> <lastmod>2016-01-12</lastmod> </url>
 <url> <loc>https://davidosomething.com/orphans/untitled/</loc> </url>
+<url> <loc>https://davidosomething.com/tag/osx/</loc> </url>
+<url> <loc>https://davidosomething.com/tag/development/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/git/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/script/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/grunt/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/toggl/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/timetracking/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/gtd/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/osx/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/development/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/casperjs/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/e2e/</loc> </url>
 <url> <loc>https://davidosomething.com/tag/phantomjs/</loc> </url>
