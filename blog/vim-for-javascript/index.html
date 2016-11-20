@@ -17,15 +17,15 @@
 	<meta name="twitter:site" content="@davidosomething">
 <meta name="robots" content="index,noodp,follow">
 <meta name="twitter:title" property="og:title" content="Setting up Vim for JavaScript development">
-<meta property="og:url" content="https://davidosomething.com/blog/vim-for-javascript/">
+<meta property="og:url" content="https://davidosomething.com/blog/vim-for-javascript">
 <meta property="og:site_name" content="davidosomething.com">
 <meta property="og:type" content="article">
-	<meta name="description" content="Setting up Vim and comparisons of JavaScript-specific Vim plugins">
-	<meta name="twitter:description" property="og:description" content="Setting up Vim and comparisons of JavaScript-specific Vim plugins">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/posts/Vimlogo.svg.png">
+	<meta name="description" content="Configuring Vim and comparisons of JavaScript-specific Vim plugins">
+	<meta name="twitter:description" property="og:description" content="Configuring Vim and comparisons of JavaScript-specific Vim plugins">	<meta name="twitter:image" property="og:image" content="https://davidosomething.com//assets/img/posts/Vimlogo.svg.png">
 	<meta name="keywords" content="vim,plugins,javascript,linting,tern">
 
 	<title>davidosomething.com | Setting up Vim for JavaScript development</title>
-	<link rel="canonical" href="https://davidosomething.com/blog/vim-for-javascript/">
+	<link rel="canonical" href="https://davidosomething.com/blog/vim-for-javascript">
 	<link rel="author" type="text/plain" href="/humans.txt">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 	<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
@@ -54,7 +54,11 @@
 <body id="top" class="type--post section--blog slug--vim-for-javascript">
 	<header class="siteHeader">
 		<div class="siteHeader__title">
-			<a href="/" class="siteHeader__siteName">davidosomething.com</a><span class="siteHeader__separator"> | </span><a href="#main" class="siteHeader__pageTitle">Setting up Vim for JavaScript development</a>
+			<a href="/" class="siteHeader__siteName">davidosomething.com</a>
+				<span class="siteHeader__separator"> | </span>
+				<a href="#main" class="siteHeader__pageTitle">Setting up Vim for JavaScript development</a>
+				<a href="#changelog" class="siteHeader__changelog">#changelog (upd <time>2016-11-20</time>)</a>
+				<a href="#comments" class="siteHeader__comments">#comments</a>
 		</div>
 	</header>
 	<div class="globalBody">
@@ -78,11 +82,11 @@
 <article class="article" itemprop="mainEntity">
 	<meta itemprop="name" content="vim-for-javascript">
 	<header class="article__header">
-		<h1 class="article__title" itemprop="headline"><a rel="bookmark" class="article__header__link article__header__link--permalink" href="https://davidosomething.com/blog/vim-for-javascript/" itemprop="mainEntityOfPage url">Setting up Vim for JavaScript&nbsp;development</a></h1>
-		<p class="article__subheader" itemprop="alternativeHeadline">Setting up Vim and comparisons of JavaScript-specific Vim&nbsp;plugins</p>
+		<h1 class="article__title" itemprop="headline"><a rel="bookmark" class="article__header__link article__header__link--permalink" href="https://davidosomething.com/blog/vim-for-javascript" itemprop="mainEntityOfPage url">Setting up Vim for JavaScript&nbsp;development</a></h1>
+		<p class="article__subheader" itemprop="alternativeHeadline">Configuring Vim and comparisons of JavaScript-specific Vim&nbsp;plugins</p>
 		<div class="article__meta">
 			<time datetime="2016-01-09T00:00:00.000Z" itemprop="datePublished">January 09, 2016</time>
-			<span>Updated <time datetime="2016-11-17T00:00:00.000Z" itemprop="dateModified">November 17, 2016</time>(<a href="#changelog">log</a>)</span>
+			<span>Updated <time datetime="2016-11-20T00:00:00.000Z" itemprop="dateModified">November 20, 2016</time>(<a href="#changelog">log</a>)</span>
 			<ul class="article__tags" itemscope="" itemtype="http://schema.org/ItemList">
 		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 			<a href="/tag/vim/" class="article__tag" itemprop="item"><span itemprop="name">vim</span></a>
@@ -334,14 +338,22 @@ the README at the plugin's homepage.</p>
 <ul>
 <li><a href="https://github.com/othree/javascript-libraries-syntax.vim">othree/javascript-libraries-syntax.vim</a></li>
 </ul>
-<h2>JavaScript code completion for Vim</h2>
+<h2>Code completion for Vim</h2>
+<p>This is what you might know as "autocomplete" or "Intellisense."</p>
+<p>Vim has a built-in completion feature that you can trigger by just using
+<code>&#x3C;C-X></code> (that's the <code>control-x</code> key) and then another control-key sequence like
+<code>&#x3C;C-F></code> to complete filenames or <code>&#x3C;C-O></code> to trigger omni-completion. You should
+try it before trying to install a bunch of plugins to modify this behavior.</p>
 <h3>Omni completion</h3>
 <p>I won't go into too much detail about this since it isn't JavaScript specific.</p>
 <p>Vim includes basic code completion built in. See <a href="http://vim.wikia.com/wiki/Omni_completion">this wikia article</a> for
 information on how to use that. The gist is that the completion system will
 run a function, the <code>omnifunc</code>, to populate autocompletion pop-up with results.</p>
-<p>To use the default completion function, add this to your vimrc:</p>
+<p>To use the default completion function, you may need to add this to your
+<code>.vimrc</code> file:</p>
 <pre><code class="hljs language-vim"><span class="hljs-keyword">autocmd</span> FileType javascript <span class="hljs-keyword">setlocal</span> omnifunc=javascriptcomplete#CompleteJS</code></pre>
+<p>You might not need to add it if the <code>&#x3C;C-X>&#x3C;C-O></code> trigger already works for you,
+it depends on what version of Vim and the Vim runtime you have.</p>
 <p>For even better completion, consider using a plugin like
 <a href="https://github.com/Shougo/neocomplete.vim">Shougo/neocomplete.vim</a> or <a href="https://github.com/Valloric/YouCompleteMe">Valloric/YouCompleteMe</a>. On Neovim, an option is
 <a href="https://github.com/Shougo/deoplete.nvim">Shougo/deoplete.nvim</a>.<br>
@@ -358,6 +370,9 @@ by providing a list of function names like so:</p>
         \   <span class="hljs-string">'jspc#omni'</span>,
         \   <span class="hljs-string">'tern#Complete'</span>,
         \ ]</code></pre>
+<p>I won't guarantee that the above works, since the plugins get updated regularly
+and neocomplete does not like <code>omnifunc</code>s that move the cursor around when the
+function is executed.</p>
 <h3>Extended omni-completion</h3>
 <p>The plugin <a href="https://github.com/1995eaton/vim-better-javascript-completion">1995eaton/vim-better-javascript-completion</a> provides a somewhat
 up-to-date JavaScript with HTML5 methods (e.g. <code>localStorage</code> and <code>canvas</code>
@@ -381,13 +396,13 @@ parameters it expects) and can extract values from related files (e.g. CommonJS
 use TernJS results instead of the default omni-completion results.</p>
 <p>Installing via <a href="https://github.com/junegunn/vim-plug">vim-plug</a>, which can run additional commands before plugin
 installation, is done like this:</p>
-<pre><code class="hljs language-vim">Plug <span class="hljs-string">'marijnh/tern_for_vim'</span>, { <span class="hljs-string">'do'</span>: <span class="hljs-string">'npm install'</span> }</code></pre>
+<pre><code class="hljs language-vim">Plug <span class="hljs-string">'ternjs/tern_for_vim'</span>, { <span class="hljs-string">'do'</span>: <span class="hljs-string">'npm install'</span> }</code></pre>
 <p>This will install its npm dependencies for you (Tern runs a node-based analyzer
 in the background while you're editing).</p>
 <p>I use this plugin with many of its extra features turned off, just keeping the
 completion.</p>
 <ul>
-<li><a href="https://github.com/marijnh/tern_for_vim">marijnh/tern_for_vim</a></li>
+<li><a href="https://github.com/ternjs/tern_for_vim">ternjs/tern_for_vim</a></li>
 </ul>
 <h3>Function parameter completion</h3>
 <p>othree has a plugin called JavaScript Parameter Complete that detects when
@@ -476,10 +491,12 @@ different languages. Of note is <a href="http://jscs.info/">jscs</a> and
 <li><a href="https://github.com/Chiel92/vim-autoformat">Chiel92/vim-autoformat</a></li>
 </ul>
 <h2>My Vim setup</h2>
-<p>You can dig through <a href="https://github.com/davidosomething/dotfiles/tree/master/vim">my Vim configuration on GitHub</a>. The plugins I use are
-all in the main vimrc file, and their configurations are interspersed into
-<code>plugin/</code>, <code>ftplugin/</code>, and <code>after/*/</code> to cope with the order in which Vim
-loads files.</p>
+<p>You can dig through <a href="https://github.com/davidosomething/dotfiles/tree/master/vim">my Vim configuration on GitHub</a>. Please note that this
+article was written a while ago, and since then I've completely switched over
+to Neovim so a lot of the configuration may not apply to you. The plugins
+I use are all in the main vimrc file, and their configurations are
+interspersed into <code>plugin/</code>, <code>ftplugin/</code>, and <code>after/*/</code> to cope with the
+order in which Vim loads files.</p>
 <ul>
 <li><a href="https://github.com/davidosomething/dotfiles/tree/master/vim">my Vim configuration on GitHub</a></li>
 </ul>
@@ -488,6 +505,12 @@ loads files.</p>
 			<section id="changelog" class="article__changelog">
 		<h2>Changelog</h2>
 		<dl>
+				<dt>Nov 20, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/3686c4d83d51538d96d28c991a1766e6ea4f76d9">diff</a>)</dt>
+				<dd><ul>
+<li>Updated general completion details and caveat that I've moved on to
+Neovim.</li>
+</ul>
+</dd>
 				<dt>Nov 17, 2016 (<a href="https://github.com/davidosomething/16.davidosomething.com/commit/5f0086be063229030c1d75832bdd2c26f14118dd">diff</a>)</dt>
 				<dd><ul>
 <li>Added a preface in case any n00bs run into this article.</li>
@@ -543,11 +566,11 @@ up @bounceme!</li>
 </dd>
 		</dl>
 	</section>
-		<div class="article_comments">
+		<div id="comments" class="article_comments">
 	<div id="disqus_thread"></div>
 	<script>
 	var disqus_config = function () {
-		this.page.url = 'https://davidosomething.com/blog/vim-for-javascript/';
+		this.page.url = 'https://davidosomething.com/blog/vim-for-javascript';
 		this.page.identifier = 'vim-for-javascript';
 	};
 	(function() {
@@ -568,9 +591,9 @@ up @bounceme!</li>
 	</header>
 	<div class="widget__body">
 		<ul class="shareButtonList">
-			<li><a class="shareButton shareButton--twitter" href="https://twitter.com/intent/tweet?text=Setting%20up%20Vim%20for%20JavaScript%20development&amp;url=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript%2F&amp;via=davidosomething"><i class="icon-twitter-with-circle"></i><span>Tweet this post</span></a></li>
-			<li><a class="shareButton shareButton--facebook" href="http://www.facebook.com/dialog/share?app_id=285126294854913&amp;display=popup&amp;href=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript%2F&amp;redirect_uri=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript%2F"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
-			<li><a class="shareButton shareButton--google" href="https://plus.google.com/share?url=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript%2F"><i class="icon-google-plus3"></i><span>Share on Google+</span></a></li>
+			<li><a class="shareButton shareButton--twitter" href="https://twitter.com/intent/tweet?text=Setting%20up%20Vim%20for%20JavaScript%20development&amp;url=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript&amp;via=davidosomething"><i class="icon-twitter-with-circle"></i><span>Tweet this post</span></a></li>
+			<li><a class="shareButton shareButton--facebook" href="http://www.facebook.com/dialog/share?app_id=285126294854913&amp;display=popup&amp;href=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript&amp;redirect_uri=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript"><i class="icon-facebook"></i><span>Share on Facebook</span></a></li>
+			<li><a class="shareButton shareButton--google" href="https://plus.google.com/share?url=https%3A%2F%2Fdavidosomething.com%2Fblog%2Fvim-for-javascript"><i class="icon-google-plus3"></i><span>Share on Google+</span></a></li>
 		</ul>
 	</div>
 </aside>
@@ -598,91 +621,91 @@ up @bounceme!</li>
 	<div class="widget__body">
 		<ol class="widget__postlist">
 			<li><article class="articleTile">
-	<h2><a href="/blog/gulp-markdown-linter/index.html/">Lint your markdown files with&nbsp;gulp‑remark‑lint‑dko</a></h2>
+	<h2><a href="/blog/gulp-markdown-linter/index.html">Lint your markdown files with&nbsp;gulp‑remark‑lint‑dko</a></h2>
 	<time datetime="2016-01-22T00:00:00.000Z">January 22, 2016</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/whitespace-in-vim/index.html/">Whitespace settings in&nbsp;Vim</a></h2>
+	<h2><a href="/blog/whitespace-in-vim/index.html">Whitespace settings in&nbsp;Vim</a></h2>
 	<time datetime="2016-01-12T00:00:00.000Z">January 12, 2016</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/vim-for-javascript/index.html/">Setting up Vim for JavaScript&nbsp;development</a></h2>
+	<h2><a href="/blog/vim-for-javascript/index.html">Setting up Vim for JavaScript&nbsp;development</a></h2>
 	<time datetime="2016-01-09T00:00:00.000Z">January 9, 2016</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/rebuilding-davidosomethingcom-as-a-static-site/index.html/">Rebuilding davidosomething.com as a static&nbsp;site</a></h2>
+	<h2><a href="/blog/rebuilding-davidosomethingcom-as-a-static-site/index.html">Rebuilding davidosomething.com as a static&nbsp;site</a></h2>
 	<time datetime="2015-12-29T00:00:00.000Z">December 29, 2015</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/grunt-wendy-casperjs/index.html/">grunt-wendy – CasperJS for&nbsp;GruntJS</a></h2>
+	<h2><a href="/blog/grunt-wendy-casperjs/index.html">grunt-wendy – CasperJS for&nbsp;GruntJS</a></h2>
 	<time datetime="2015-09-19T00:00:07.000Z">September 19, 2015</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/git-my/index.html/">git-my</a></h2>
+	<h2><a href="/blog/git-my/index.html">git-my</a></h2>
 	<time datetime="2015-03-29T22:39:39.000Z">March 29, 2015</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-3/index.html/">Linux on the Lenovo Thinkpad W510 – Part&nbsp;3</a></h2>
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-3/index.html">Linux on the Lenovo Thinkpad W510 – Part&nbsp;3</a></h2>
 	<time datetime="2014-10-30T21:45:11.000Z">October 30, 2014</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/how-i-work/index.html/">How I Work&nbsp;(2014)</a></h2>
+	<h2><a href="/blog/how-i-work/index.html">How I Work&nbsp;(2014)</a></h2>
 	<time datetime="2014-06-11T21:35:24.000Z">June 11, 2014</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-2/index.html/">Linux on the Lenovo ThinkPad W510 – Part&nbsp;2</a></h2>
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510-part-2/index.html">Linux on the Lenovo ThinkPad W510 – Part&nbsp;2</a></h2>
 	<time datetime="2014-05-29T18:25:31.000Z">May 29, 2014</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/linux-lenovo-thinkpad-w510/index.html/">Linux on the Lenovo ThinkPad&nbsp;W510</a></h2>
+	<h2><a href="/blog/linux-lenovo-thinkpad-w510/index.html">Linux on the Lenovo ThinkPad&nbsp;W510</a></h2>
 	<time datetime="2014-05-01T22:15:13.000Z">May 1, 2014</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/grunt-toggl/index.html/">grunt-toggl</a></h2>
+	<h2><a href="/blog/grunt-toggl/index.html">grunt-toggl</a></h2>
 	<time datetime="2014-04-29T22:30:24.000Z">April 29, 2014</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/first-week-developing-on-a-mac/index.html/">First week developing on a&nbsp;Mac</a></h2>
+	<h2><a href="/blog/first-week-developing-on-a-mac/index.html">First week developing on a&nbsp;Mac</a></h2>
 	<time datetime="2011-06-20T19:59:45.000Z">June 20, 2011</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/shuttle-pc-new-harddrive-clonezilla-windows-7/index.html/">Shuttle PC - new harddrive, Clonezilla &#038; Windows&nbsp;7</a></h2>
+	<h2><a href="/blog/shuttle-pc-new-harddrive-clonezilla-windows-7/index.html">Shuttle PC - new harddrive, Clonezilla &#038; Windows&nbsp;7</a></h2>
 	<time datetime="2010-12-03T23:12:44.000Z">December 3, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/my-development-setup/index.html/">My Development&nbsp;Setup</a></h2>
+	<h2><a href="/blog/my-development-setup/index.html">My Development&nbsp;Setup</a></h2>
 	<time datetime="2010-11-29T20:35:48.000Z">November 29, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/shuttle-pc-part-2/index.html/">Shuttle PC - Part&nbsp;2</a></h2>
+	<h2><a href="/blog/shuttle-pc-part-2/index.html">Shuttle PC - Part&nbsp;2</a></h2>
 	<time datetime="2010-10-28T15:08:45.000Z">October 28, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/putting-together-my-new-shuttle-pc/index.html/">Putting together my new Shuttle&nbsp;PC</a></h2>
+	<h2><a href="/blog/putting-together-my-new-shuttle-pc/index.html">Putting together my new Shuttle&nbsp;PC</a></h2>
 	<time datetime="2010-10-20T12:12:16.000Z">October 20, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/takeaways-from-an-event-apart-dc-2010/index.html/">An Event Apart DC&nbsp;2010</a></h2>
+	<h2><a href="/blog/takeaways-from-an-event-apart-dc-2010/index.html">An Event Apart DC&nbsp;2010</a></h2>
 	<time datetime="2010-09-20T11:02:26.000Z">September 20, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/honda-metropolitan-in-boston/index.html/">Honda Metropolitan in&nbsp;Boston</a></h2>
+	<h2><a href="/blog/honda-metropolitan-in-boston/index.html">Honda Metropolitan in&nbsp;Boston</a></h2>
 	<time datetime="2010-04-02T13:58:46.000Z">April 2, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/tips-faster-psd-html-conversions/index.html/">Tips for Faster PSD to HTML&nbsp;Conversions</a></h2>
+	<h2><a href="/blog/tips-faster-psd-html-conversions/index.html">Tips for Faster PSD to HTML&nbsp;Conversions</a></h2>
 	<time datetime="2010-02-27T21:33:38.000Z">February 27, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/jqrpg-an-old-school-style-rpg-in-jquery/index.html/">jQRPG — An Old-School Style RPG in&nbsp;jQuery</a></h2>
+	<h2><a href="/blog/jqrpg-an-old-school-style-rpg-in-jquery/index.html">jQRPG — An Old-School Style RPG in&nbsp;jQuery</a></h2>
 	<time datetime="2010-02-19T13:55:19.000Z">February 19, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/understanding-font-face-and-typography/index.html/">Understanding @font-face and&nbsp;Typography</a></h2>
+	<h2><a href="/blog/understanding-font-face-and-typography/index.html">Understanding @font-face and&nbsp;Typography</a></h2>
 	<time datetime="2010-02-04T12:58:10.000Z">February 4, 2010</time>
 </article>
 </li><li><article class="articleTile">
-	<h2><a href="/blog/using-notepad-for-web-development/index.html/">Using Notepad++ for Web&nbsp;Development</a></h2>
+	<h2><a href="/blog/using-notepad-for-web-development/index.html">Using Notepad++ for Web&nbsp;Development</a></h2>
 	<time datetime="2010-02-02T09:27:01.000Z">February 2, 2010</time>
 </article>
 </li>

@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-<url> <loc>https://davidosomething.com/blog/first-week-developing-on-a-mac/</loc> <lastmod>2011-06-20</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/git-my/</loc> <lastmod>2015-03-29</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/grunt-toggl/</loc> <lastmod>2014-04-29</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/grunt-wendy-casperjs/</loc> <lastmod>2015-09-19</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/gulp-markdown-linter/</loc> <lastmod>2016-01-22</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/honda-metropolitan-in-boston/</loc> <lastmod>2010-04-02</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/how-i-work/</loc> <lastmod>2014-06-11</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/jqrpg-an-old-school-style-rpg-in-jquery/</loc> <lastmod>2010-02-19</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-2/</loc> <lastmod>2014-05-29</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-3/</loc> <lastmod>2014-10-30</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/linux-lenovo-thinkpad-w510/</loc> <lastmod>2014-05-01</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/my-development-setup/</loc> <lastmod>2010-11-29</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/putting-together-my-new-shuttle-pc/</loc> <lastmod>2010-10-20</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site/</loc> <lastmod>2015-12-29</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/shuttle-pc-new-harddrive-clonezilla-windows-7/</loc> <lastmod>2010-12-03</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/shuttle-pc-part-2/</loc> <lastmod>2010-10-28</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/takeaways-from-an-event-apart-dc-2010/</loc> <lastmod>2010-09-20</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/tips-faster-psd-html-conversions/</loc> <lastmod>2010-02-27</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/understanding-font-face-and-typography/</loc> <lastmod>2010-02-04</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/using-notepad-for-web-development/</loc> <lastmod>2010-02-02</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/vim-for-javascript/</loc> <lastmod>2016-01-09</lastmod> </url>
-<url> <loc>https://davidosomething.com/blog/whitespace-in-vim/</loc> <lastmod>2016-01-12</lastmod> </url>
-<url> <loc>https://davidosomething.com/orphans/untitled/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/osx/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/development/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/git/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/script/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/grunt/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/toggl/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/timetracking/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/gtd/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/casperjs/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/e2e/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/phantomjs/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/testing/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/gulp/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/markdown/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/plugins/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/linting/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/remark/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/boston/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/insurance/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/scooter/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/tooling/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/vagrant/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/games/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/javascript/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/jquery/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/archlinux/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/linux/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/mint/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/thinkpad/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/w510/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/cinnamon/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/apache/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/bitbucket/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/cygwin/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/lamp/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/mercurial/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/mongodb/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/mysql/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/node/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/php/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/ubuntu/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/virtualbox/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/hardware/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/photoshop/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/shuttle/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/static-site-generation/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/metalsmith/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/windows/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/css/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/typography/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/software/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/vim/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/tern/</loc> </url>
-<url> <loc>https://davidosomething.com/tag/whitespace/</loc> </url>
+<url> <loc>https://davidosomething.com/blog/first-week-developing-on-a-mac</loc> <lastmod>2011-06-20</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/git-my</loc> <lastmod>2015-03-29</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/grunt-toggl</loc> <lastmod>2014-04-29</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/grunt-wendy-casperjs</loc> <lastmod>2015-09-19</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/gulp-markdown-linter</loc> <lastmod>2016-01-22</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/honda-metropolitan-in-boston</loc> <lastmod>2010-04-02</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/how-i-work</loc> <lastmod>2014-06-11</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/jqrpg-an-old-school-style-rpg-in-jquery</loc> <lastmod>2010-02-19</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-2</loc> <lastmod>2014-05-29</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/linux-lenovo-thinkpad-w510-part-3</loc> <lastmod>2014-10-30</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/linux-lenovo-thinkpad-w510</loc> <lastmod>2014-05-01</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/my-development-setup</loc> <lastmod>2010-11-29</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/putting-together-my-new-shuttle-pc</loc> <lastmod>2010-10-20</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/rebuilding-davidosomethingcom-as-a-static-site</loc> <lastmod>2015-12-29</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/shuttle-pc-new-harddrive-clonezilla-windows-7</loc> <lastmod>2010-12-03</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/shuttle-pc-part-2</loc> <lastmod>2010-10-28</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/takeaways-from-an-event-apart-dc-2010</loc> <lastmod>2010-09-20</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/tips-faster-psd-html-conversions</loc> <lastmod>2010-02-27</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/understanding-font-face-and-typography</loc> <lastmod>2010-02-04</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/using-notepad-for-web-development</loc> <lastmod>2010-02-02</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/whitespace-in-vim</loc> <lastmod>2016-01-12</lastmod> </url>
+<url> <loc>https://davidosomething.com/blog/vim-for-javascript</loc> <lastmod>2016-01-09</lastmod> </url>
+<url> <loc>https://davidosomething.com/orphans/untitled</loc> </url>
+<url> <loc>https://davidosomething.com/tag/osx</loc> </url>
+<url> <loc>https://davidosomething.com/tag/development</loc> </url>
+<url> <loc>https://davidosomething.com/tag/git</loc> </url>
+<url> <loc>https://davidosomething.com/tag/script</loc> </url>
+<url> <loc>https://davidosomething.com/tag/grunt</loc> </url>
+<url> <loc>https://davidosomething.com/tag/toggl</loc> </url>
+<url> <loc>https://davidosomething.com/tag/timetracking</loc> </url>
+<url> <loc>https://davidosomething.com/tag/gtd</loc> </url>
+<url> <loc>https://davidosomething.com/tag/casperjs</loc> </url>
+<url> <loc>https://davidosomething.com/tag/e2e</loc> </url>
+<url> <loc>https://davidosomething.com/tag/phantomjs</loc> </url>
+<url> <loc>https://davidosomething.com/tag/testing</loc> </url>
+<url> <loc>https://davidosomething.com/tag/gulp</loc> </url>
+<url> <loc>https://davidosomething.com/tag/markdown</loc> </url>
+<url> <loc>https://davidosomething.com/tag/plugins</loc> </url>
+<url> <loc>https://davidosomething.com/tag/linting</loc> </url>
+<url> <loc>https://davidosomething.com/tag/remark</loc> </url>
+<url> <loc>https://davidosomething.com/tag/boston</loc> </url>
+<url> <loc>https://davidosomething.com/tag/insurance</loc> </url>
+<url> <loc>https://davidosomething.com/tag/scooter</loc> </url>
+<url> <loc>https://davidosomething.com/tag/tooling</loc> </url>
+<url> <loc>https://davidosomething.com/tag/vagrant</loc> </url>
+<url> <loc>https://davidosomething.com/tag/games</loc> </url>
+<url> <loc>https://davidosomething.com/tag/javascript</loc> </url>
+<url> <loc>https://davidosomething.com/tag/jquery</loc> </url>
+<url> <loc>https://davidosomething.com/tag/archlinux</loc> </url>
+<url> <loc>https://davidosomething.com/tag/linux</loc> </url>
+<url> <loc>https://davidosomething.com/tag/mint</loc> </url>
+<url> <loc>https://davidosomething.com/tag/thinkpad</loc> </url>
+<url> <loc>https://davidosomething.com/tag/w510</loc> </url>
+<url> <loc>https://davidosomething.com/tag/cinnamon</loc> </url>
+<url> <loc>https://davidosomething.com/tag/apache</loc> </url>
+<url> <loc>https://davidosomething.com/tag/bitbucket</loc> </url>
+<url> <loc>https://davidosomething.com/tag/cygwin</loc> </url>
+<url> <loc>https://davidosomething.com/tag/lamp</loc> </url>
+<url> <loc>https://davidosomething.com/tag/mercurial</loc> </url>
+<url> <loc>https://davidosomething.com/tag/mongodb</loc> </url>
+<url> <loc>https://davidosomething.com/tag/mysql</loc> </url>
+<url> <loc>https://davidosomething.com/tag/node</loc> </url>
+<url> <loc>https://davidosomething.com/tag/php</loc> </url>
+<url> <loc>https://davidosomething.com/tag/ubuntu</loc> </url>
+<url> <loc>https://davidosomething.com/tag/virtualbox</loc> </url>
+<url> <loc>https://davidosomething.com/tag/hardware</loc> </url>
+<url> <loc>https://davidosomething.com/tag/photoshop</loc> </url>
+<url> <loc>https://davidosomething.com/tag/shuttle</loc> </url>
+<url> <loc>https://davidosomething.com/tag/static-site-generation</loc> </url>
+<url> <loc>https://davidosomething.com/tag/metalsmith</loc> </url>
+<url> <loc>https://davidosomething.com/tag/windows</loc> </url>
+<url> <loc>https://davidosomething.com/tag/css</loc> </url>
+<url> <loc>https://davidosomething.com/tag/typography</loc> </url>
+<url> <loc>https://davidosomething.com/tag/software</loc> </url>
+<url> <loc>https://davidosomething.com/tag/vim</loc> </url>
+<url> <loc>https://davidosomething.com/tag/whitespace</loc> </url>
+<url> <loc>https://davidosomething.com/tag/tern</loc> </url>
 </urlset>
